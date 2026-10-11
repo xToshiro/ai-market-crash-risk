@@ -1,7 +1,7 @@
 # Dossiê Estratégico: Métricas Financeiras, Histórico de Mercado e Modelagem dos 3 Cenários de Quebra (2026–2029)
 **Análise de Ações Líderes, Valuations Privados, Capex vs Retorno e Matriz Probabilística de Ruptura de Mercado**
 
-> 📑 **Relatório Executivo Completo em PDF (5 Páginas):** [Baixar Relatorio_Cenarios_Quebra_Mercado_IA_2026_2029.pdf](file:///c:/Users/jairo/OneDrive/Desktop/Projetos/avalia%C3%A7%C3%A3o%20de%20mercado/Relatorio_Cenarios_Quebra_Mercado_IA_2026_2029.pdf)
+> 📑 **Relatório Executivo Completo em PDF (5 Páginas):** [Baixar Relatorio_Cenarios_Quebra_Mercado_IA_2026_2029.pdf](../../reports/pt/Relatorio_Cenarios_Quebra_Mercado_IA_2026_2029.pdf)
 
 ---
 

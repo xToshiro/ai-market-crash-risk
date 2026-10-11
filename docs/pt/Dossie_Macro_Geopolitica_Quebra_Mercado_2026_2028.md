@@ -2,7 +2,7 @@
 
 **Auditoria Macro-Geopolítica Global, Decomposição Causal de Ruptura Financeira e Mapeamento Cartográfico de Impacto Regional**
 
-> 📑 **Relatório Executivo Completo em PDF (10 Páginas com Gráficos e Mapas):** [Baixar Relatorio_Macro_Geopolitica_Quebra_Mercado_2026_2028.pdf](file:///c:/Users/jairo/OneDrive/Desktop/Projetos/avalia%C3%A7%C3%A3o%20de%20mercado/Relatorio_Macro_Geopolitica_Quebra_Mercado_2026_2028.pdf)
+> 📑 **Relatório Executivo Completo em PDF (10 Páginas com Gráficos e Mapas):** [Baixar Relatorio_Macro_Geopolitica_Quebra_Mercado_2026_2028.pdf](../../reports/pt/Relatorio_Macro_Geopolitica_Quebra_Mercado_2026_2028.pdf)
 
 ---
 

@@ -1,7 +1,7 @@
 # Strategic Dossier: Financial Metrics, Market History, and Modeling of 3 Crash Scenarios (2026–2029)
 **Analysis of Leading Equities, Private Valuations, Capex vs. Cash Return, and Probabilistic Market Disruption Matrix**
 
-> 📑 **Full Executive Report in PDF (5 Pages):** [Download Relatorio_Cenarios_Quebra_Mercado_IA_2026_2029_EN.pdf](file:///c:/Users/jairo/OneDrive/Desktop/Projetos/avalia%C3%A7%C3%A3o%20de%20mercado/Relatorio_Cenarios_Quebra_Mercado_IA_2026_2029_EN.pdf)
+> 📑 **Full Executive Report in PDF (5 Pages):** [Download Relatorio_Cenarios_Quebra_Mercado_IA_2026_2029_EN.pdf](../../reports/en/Relatorio_Cenarios_Quebra_Mercado_IA_2026_2029_EN.pdf)
 
 ---
 
