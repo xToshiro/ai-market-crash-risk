@@ -87,15 +87,16 @@ class NumberedCanvasEN(canvas.Canvas):
         self.drawRightString(612 - 54, 32, f"Page {self._pageNumber} of {page_count}")
         self.restoreState()
 
+from utils_paths import get_chart_path, get_report_en_path
 def _img(path, width_in):
-    p = os.path.join(HERE, path)
+    p = get_chart_path(os.path.basename(path), lang="en")
     iw, ih = ImageReader(p).getSize()
     w = width_in * inch
     return Image(p, width=w, height=w * ih / iw)
 
 def build_pdf_report_en(d, rows, ranking, output_filename="Relatorio_Macro_Geopolitica_Quebra_Mercado_2026_2028_EN.pdf"):
     f = FACTS
-    doc = SimpleDocTemplate(output_filename, pagesize=letter, leftMargin=54, rightMargin=54,
+    doc = SimpleDocTemplate(get_report_en_path(output_filename), pagesize=letter, leftMargin=54, rightMargin=54,
                             topMargin=54, bottomMargin=54)
     ss = getSampleStyleSheet()
     S = {}

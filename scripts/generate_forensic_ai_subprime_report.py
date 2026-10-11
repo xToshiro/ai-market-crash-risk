@@ -1,3 +1,4 @@
+from utils_paths import get_chart_path, get_report_pt_path
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
@@ -280,8 +281,7 @@ class NumberedCanvas(canvas.Canvas):
 # ---------------------------------------------------------
 
 def build_pdf_report(output_filename="Relatorio_Forense_Subprime_IA_Repacotamento_AAA.pdf"):
-    doc = SimpleDocTemplate(
-        output_filename,
+    doc = SimpleDocTemplate(get_report_pt_path(output_filename),
         pagesize=letter,
         leftMargin=54,
         rightMargin=54,
@@ -441,8 +441,8 @@ def build_pdf_report(output_filename="Relatorio_Forense_Subprime_IA_Repacotament
     story.append(Paragraph("1. A Alquimia da Securitização: Paralelo Estrutural 2008 vs 2026", style_h1))
     story.append(HRFlowable(width="100%", thickness=1, color=colors.HexColor('#CBD5E1'), spaceAfter=5, spaceBefore=0))
 
-    if os.path.exists("chart_repackaging_alchemy.png"):
-        story.append(Image("chart_repackaging_alchemy.png", width=6.8*inch, height=2.4*inch))
+    if os.path.exists(get_chart_path("chart_repackaging_alchemy.png", lang="pt")):
+        story.append(Image(get_chart_path("chart_repackaging_alchemy.png", lang="pt"), width=6.8*inch, height=2.4*inch))
         story.append(Spacer(1, 5))
 
     story.append(Paragraph(
@@ -464,8 +464,8 @@ def build_pdf_report(output_filename="Relatorio_Forense_Subprime_IA_Repacotament
         style_body
     ))
 
-    if os.path.exists("chart_subcomponents_decomposition.png"):
-        story.append(Image("chart_subcomponents_decomposition.png", width=6.8*inch, height=2.4*inch))
+    if os.path.exists(get_chart_path("chart_subcomponents_decomposition.png", lang="pt")):
+        story.append(Image(get_chart_path("chart_subcomponents_decomposition.png", lang="pt"), width=6.8*inch, height=2.4*inch))
         story.append(Spacer(1, 5))
 
     decomp_table_data = [
@@ -527,8 +527,8 @@ def build_pdf_report(output_filename="Relatorio_Forense_Subprime_IA_Repacotament
         style_body
     ))
 
-    if os.path.exists("chart_gpu_depreciation_vs_debt.png"):
-        story.append(Image("chart_gpu_depreciation_vs_debt.png", width=6.8*inch, height=2.4*inch))
+    if os.path.exists(get_chart_path("chart_gpu_depreciation_vs_debt.png", lang="pt")):
+        story.append(Image(get_chart_path("chart_gpu_depreciation_vs_debt.png", lang="pt"), width=6.8*inch, height=2.4*inch))
         story.append(Spacer(1, 5))
 
     story.append(Paragraph("<b>Os 3 Fatores de Comprometimento Estrutural do Colateral:</b>", style_body_bold))
@@ -552,8 +552,8 @@ def build_pdf_report(output_filename="Relatorio_Forense_Subprime_IA_Repacotament
         style_body
     ))
 
-    if os.path.exists("chart_stress_loss_simulation.png"):
-        story.append(Image("chart_stress_loss_simulation.png", width=6.8*inch, height=2.4*inch))
+    if os.path.exists(get_chart_path("chart_stress_loss_simulation.png", lang="pt")):
+        story.append(Image(get_chart_path("chart_stress_loss_simulation.png", lang="pt"), width=6.8*inch, height=2.4*inch))
         story.append(Spacer(1, 5))
 
     stress_table_data = [

@@ -4,11 +4,7 @@ __pycache__/
 *.tmp
 .DS_Store
 Thumbs.db
-
-# Preview page renders
-page_*.png
-crash_page_*.png
-dc_abs_page_*.png
-forensic_page_*.png
-leverage_page_*.png
 test_imports.py
+
+# Ignore loose screenshots at repository root
+/*.png

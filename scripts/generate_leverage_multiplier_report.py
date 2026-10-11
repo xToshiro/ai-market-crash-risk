@@ -1,3 +1,4 @@
+from utils_paths import get_chart_path, get_report_pt_path
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
@@ -292,8 +293,7 @@ class NumberedCanvas(canvas.Canvas):
 # ---------------------------------------------------------
 
 def build_pdf_report(output_filename="Relatorio_Alavancagem_e_Vendor_Financing_IA.pdf"):
-    doc = SimpleDocTemplate(
-        output_filename,
+    doc = SimpleDocTemplate(get_report_pt_path(output_filename),
         pagesize=letter,
         leftMargin=54,
         rightMargin=54,
@@ -453,8 +453,8 @@ def build_pdf_report(output_filename="Relatorio_Alavancagem_e_Vendor_Financing_I
     story.append(Paragraph("1. A Pirâmide Invertida de Alavancagem em IA", style_h1))
     story.append(HRFlowable(width="100%", thickness=1, color=colors.HexColor('#CBD5E1'), spaceAfter=5, spaceBefore=0))
 
-    if os.path.exists("chart_leverage_pyramid.png"):
-        story.append(Image("chart_leverage_pyramid.png", width=6.8*inch, height=2.4*inch))
+    if os.path.exists(get_chart_path("chart_leverage_pyramid.png", lang="pt")):
+        story.append(Image(get_chart_path("chart_leverage_pyramid.png", lang="pt"), width=6.8*inch, height=2.4*inch))
         story.append(Spacer(1, 5))
 
     story.append(Paragraph(
@@ -479,8 +479,8 @@ def build_pdf_report(output_filename="Relatorio_Alavancagem_e_Vendor_Financing_I
         style_body
     ))
 
-    if os.path.exists("chart_vendor_financing_loop.png"):
-        story.append(Image("chart_vendor_financing_loop.png", width=6.8*inch, height=2.4*inch))
+    if os.path.exists(get_chart_path("chart_vendor_financing_loop.png", lang="pt")):
+        story.append(Image(get_chart_path("chart_vendor_financing_loop.png", lang="pt"), width=6.8*inch, height=2.4*inch))
         story.append(Spacer(1, 5))
 
     loop_table_data = [
@@ -548,8 +548,8 @@ def build_pdf_report(output_filename="Relatorio_Alavancagem_e_Vendor_Financing_I
         style_body
     ))
 
-    if os.path.exists("chart_spending_vs_software_revenue.png"):
-        story.append(Image("chart_spending_vs_software_revenue.png", width=6.8*inch, height=2.4*inch))
+    if os.path.exists(get_chart_path("chart_spending_vs_software_revenue.png", lang="pt")):
+        story.append(Image(get_chart_path("chart_spending_vs_software_revenue.png", lang="pt"), width=6.8*inch, height=2.4*inch))
         story.append(Spacer(1, 5))
 
     story.append(Paragraph("<b>Diagnóstico da Trajetória por Ano:</b>", style_body_bold))
@@ -573,8 +573,8 @@ def build_pdf_report(output_filename="Relatorio_Alavancagem_e_Vendor_Financing_I
         style_body
     ))
 
-    if os.path.exists("chart_debt_snowball_neoclouds.png"):
-        story.append(Image("chart_debt_snowball_neoclouds.png", width=6.8*inch, height=2.4*inch))
+    if os.path.exists(get_chart_path("chart_debt_snowball_neoclouds.png", lang="pt")):
+        story.append(Image(get_chart_path("chart_debt_snowball_neoclouds.png", lang="pt"), width=6.8*inch, height=2.4*inch))
         story.append(Spacer(1, 5))
 
     risk_table_data = [

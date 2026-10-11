@@ -4,8 +4,10 @@
 build_all_reports.py
 --------------------
 Master build orchestration script for the AI Market Crash Risk project.
-Sequentially executes all 12 executive PDF report generators (PT & EN)
-and validates output page counts and asset integrity.
+1. Generates English visual charts into `assets/charts/en/`.
+2. Sequentially executes all 12 executive PDF report generators (PT & EN).
+3. Renders high-resolution page previews into `assets/previews/pt/` and `assets/previews/en/`.
+4. Runs automated validation suite.
 """
 
 import os
@@ -13,7 +15,7 @@ import sys
 import subprocess
 import time
 
-# UTF-8 encoding for console output
+# UTF-8 console output
 if sys.platform == "win32":
     try:
         sys.stdout.reconfigure(encoding="utf-8")
@@ -23,7 +25,7 @@ if sys.platform == "win32":
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(SCRIPT_DIR)
 
-SCRIPTS = [
+REPORT_SCRIPTS = [
     ("generate_macro_geopolitical_crash_report.py", "Macro Geopolítica (PT, 10 Págs)"),
     ("generate_macro_geopolitical_crash_report_en.py", "Macro Geopolitics (EN, 10 Pages)"),
     ("generate_us_market_report.py", "Mercado Americano (PT, 8 Págs)"),
@@ -38,42 +40,60 @@ SCRIPTS = [
     ("generate_leverage_multiplier_report_en.py", "Leverage & Vendor Financing (EN, 4 Pages)"),
 ]
 
+def run_step(cmd, desc):
+    print(f"\n>>> {desc}...", flush=True)
+    t0 = time.time()
+    res = subprocess.run(cmd, cwd=SCRIPT_DIR, capture_output=True, text=True)
+    elapsed = time.time() - t0
+    if res.returncode == 0:
+        print(f"    ✅ SUCCESS ({elapsed:.2f}s)")
+        return True
+    else:
+        print(f"    ❌ FAILED ({elapsed:.2f}s)")
+        print("    --- STDERR ---")
+        print(res.stderr[:600])
+        print("    --------------")
+        return False
+
 def main():
     start_total = time.time()
     print("=" * 75)
     print("  AI MARKET CRASH RISK — MASTER REPORT BUILDER & PIPELINE RUNNER")
     print("=" * 75)
 
+    # Step 1: Generate English charts
+    ok_charts = run_step([sys.executable, "generate_charts_en.py"], "Step 1/4: Generating 31 English Charts (assets/charts/en/)")
+
+    # Step 2: Build all 12 PDFs
+    print("\n>>> Step 2/4: Compiling 12 Institutional PDF Reports (70 Pages)...")
     success_count = 0
     fail_count = 0
-
-    for idx, (script_name, label) in enumerate(SCRIPTS, 1):
+    for idx, (script_name, label) in enumerate(REPORT_SCRIPTS, 1):
         script_path = os.path.join(SCRIPT_DIR, script_name)
-        print(f"\n[{idx:02d}/12] Compiling: {label}...")
         t0 = time.time()
         res = subprocess.run([sys.executable, script_path], cwd=SCRIPT_DIR, capture_output=True, text=True)
         elapsed = time.time() - t0
-
         if res.returncode == 0:
-            print(f"  -> SUCCESS ({elapsed:.2f}s)")
+            print(f"    [{idx:02d}/12] ✅ {label:<45} ({elapsed:.2f}s)")
             success_count += 1
         else:
-            print(f"  -> FAILED ({elapsed:.2f}s)")
-            print("  --- ERROR STDERR ---")
-            print(res.stderr[:500])
-            print("  --------------------")
+            print(f"    [{idx:02d}/12] ❌ {label:<45} ({elapsed:.2f}s)")
+            print(res.stderr[:400])
             fail_count += 1
+
+    # Step 3: Render Page Previews
+    ok_previews = run_step([sys.executable, "generate_page_previews.py"], "Step 3/4: Rendering 70 Page Previews (assets/previews/)")
+
+    # Step 4: Run Validation Suite
+    val_path = os.path.join(ROOT_DIR, ".agents", "skills", "ai-market-risk-updater", "scripts", "validate_models.py")
+    if os.path.exists(val_path):
+        print("\n>>> Step 4/4: Executing Validation Suite...")
+        subprocess.run([sys.executable, val_path], cwd=ROOT_DIR)
 
     total_time = time.time() - start_total
     print("\n" + "=" * 75)
-    print(f"  Build Completed in {total_time:.2f}s: {success_count} succeeded, {fail_count} failed.")
+    print(f"  Master Pipeline Completed in {total_time:.2f}s: {success_count} PDFs succeeded, {fail_count} failed.")
     print("=" * 75)
-
-    # Run validator
-    validator_path = os.path.join(ROOT_DIR, ".agents", "skills", "ai-market-risk-updater", "scripts", "validate_models.py")
-    if os.path.exists(validator_path):
-        print("\nExecuting validation suite...")
-        subprocess.run([sys.executable, validator_path], cwd=ROOT_DIR)
 
     return fail_count
 

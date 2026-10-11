@@ -1,3 +1,4 @@
+from utils_paths import get_chart_path, get_report_en_path
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
@@ -74,8 +75,7 @@ def build_pdf_report(market_data=None, output_filename="Relatorio_Mercado_Financ
             '^VIX': {'current_price': 14.88}
         }
 
-    doc = SimpleDocTemplate(
-        output_filename,
+    doc = SimpleDocTemplate(get_report_en_path(output_filename),
         pagesize=letter,
         leftMargin=54,
         rightMargin=54,
@@ -267,8 +267,8 @@ def build_pdf_report(market_data=None, output_filename="Relatorio_Mercado_Financ
         style_body
     ))
 
-    if os.path.exists("chart_indices.png"):
-        story.append(Image("chart_indices.png", width=6.8*inch, height=2.72*inch))
+    if os.path.exists(get_chart_path("chart_indices.png", lang="en")):
+        story.append(Image(get_chart_path("chart_indices.png", lang="en"), width=6.8*inch, height=2.72*inch))
         story.append(Spacer(1, 6))
 
     story.append(Paragraph("<b>Valuation Diagnosis and Sectoral Dispersion:</b>", style_body_bold))
@@ -292,8 +292,8 @@ def build_pdf_report(market_data=None, output_filename="Relatorio_Mercado_Financ
         style_body
     ))
 
-    if os.path.exists("chart_yields_debt.png"):
-        story.append(Image("chart_yields_debt.png", width=6.8*inch, height=2.64*inch))
+    if os.path.exists(get_chart_path("chart_yields_debt.png", lang="en")):
+        story.append(Image(get_chart_path("chart_yields_debt.png", lang="en"), width=6.8*inch, height=2.64*inch))
         story.append(Spacer(1, 6))
 
     story.append(Paragraph("<b>Critical Vectors of Fiscal Vulnerability:</b>", style_body_bold))
@@ -317,8 +317,8 @@ def build_pdf_report(market_data=None, output_filename="Relatorio_Mercado_Financ
         style_body
     ))
 
-    if os.path.exists("chart_ai_capex.png"):
-        story.append(Image("chart_ai_capex.png", width=6.8*inch, height=2.64*inch))
+    if os.path.exists(get_chart_path("chart_ai_capex.png", lang="en")):
+        story.append(Image(get_chart_path("chart_ai_capex.png", lang="en"), width=6.8*inch, height=2.64*inch))
         story.append(Spacer(1, 6))
 
     story.append(Paragraph("<b>Structural Dynamics of the AI Ecosystem in 2026:</b>", style_body_bold))
@@ -342,8 +342,8 @@ def build_pdf_report(market_data=None, output_filename="Relatorio_Mercado_Financ
         style_body
     ))
 
-    if os.path.exists("chart_ai_subprime.png"):
-        story.append(Image("chart_ai_subprime.png", width=6.8*inch, height=2.45*inch))
+    if os.path.exists(get_chart_path("chart_ai_subprime.png", lang="en")):
+        story.append(Image(get_chart_path("chart_ai_subprime.png", lang="en"), width=6.8*inch, height=2.45*inch))
         story.append(Spacer(1, 5))
 
     story.append(Paragraph("<b>The Four Subprime-Analogous Mechanisms in AI:</b>", style_body_bold))
@@ -368,8 +368,8 @@ def build_pdf_report(market_data=None, output_filename="Relatorio_Mercado_Financ
         style_body
     ))
 
-    if os.path.exists("chart_solidity.png"):
-        story.append(Image("chart_solidity.png", width=6.8*inch, height=2.45*inch))
+    if os.path.exists(get_chart_path("chart_solidity.png", lang="en")):
+        story.append(Image(get_chart_path("chart_solidity.png", lang="en"), width=6.8*inch, height=2.45*inch))
         story.append(Spacer(1, 5))
 
     solidity_table_data = [
@@ -438,8 +438,8 @@ def build_pdf_report(market_data=None, output_filename="Relatorio_Mercado_Financ
         style_body
     ))
 
-    if os.path.exists("chart_crisis_probs.png"):
-        story.append(Image("chart_crisis_probs.png", width=6.8*inch, height=2.40*inch))
+    if os.path.exists(get_chart_path("chart_crisis_probs.png", lang="en")):
+        story.append(Image(get_chart_path("chart_crisis_probs.png", lang="en"), width=6.8*inch, height=2.40*inch))
         story.append(Spacer(1, 5))
 
     crisis_comp_table = [

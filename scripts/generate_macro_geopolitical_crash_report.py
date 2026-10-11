@@ -40,7 +40,8 @@ from reportlab.pdfgen import canvas
 
 REPORT_DATE = "11/10/2026"
 HERE = os.path.dirname(os.path.abspath(__file__))
-GEOJSON = os.path.join(HERE, "world_countries_110m.geojson")
+from utils_paths import get_geo_path, get_chart_path, get_report_pt_path
+GEOJSON = get_geo_path("world_countries_110m.geojson")
 
 # ---------------------------------------------------------
 # 0. FATOS COLETADOS (11/10/2026) - com fonte e confiança
@@ -311,9 +312,10 @@ def setup_chart_style():
 
 
 def _finish(fig, path, label):
-    fig.savefig(path, dpi=200, bbox_inches='tight', facecolor='white')
+    pt_path = get_chart_path(os.path.basename(path), lang="pt")
+    fig.savefig(pt_path, dpi=200, bbox_inches='tight', facecolor='white')
     plt.close(fig)
-    print(f"{label} gerado: {path}", flush=True)
+    print(f"{label} gerado: {pt_path}", flush=True)
 
 
 def chart_fiscal_dashboard(d, path="chart_us_fiscal_dashboard.png"):
@@ -791,7 +793,7 @@ class NumberedCanvas(canvas.Canvas):
 # 5. PDF
 # ---------------------------------------------------------
 def _img(path, width_in):
-    p = os.path.join(HERE, path)
+    p = get_chart_path(os.path.basename(path), lang="pt")
     iw, ih = ImageReader(p).getSize()
     w = width_in * inch
     return Image(p, width=w, height=w * ih / iw)
@@ -799,7 +801,8 @@ def _img(path, width_in):
 
 def build_pdf_report(d, rows, ranking, output_filename):
     f = FACTS
-    doc = SimpleDocTemplate(output_filename, pagesize=letter, leftMargin=54, rightMargin=54,
+    pdf_out = get_report_pt_path(os.path.basename(output_filename))
+    doc = SimpleDocTemplate(pdf_out, pagesize=letter, leftMargin=54, rightMargin=54,
                             topMargin=54, bottomMargin=54)
     ss = getSampleStyleSheet()
     S = {}

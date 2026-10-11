@@ -1,3 +1,4 @@
+from utils_paths import get_chart_path, get_report_en_path
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
@@ -65,8 +66,7 @@ class NumberedCanvas(canvas.Canvas):
         self.restoreState()
 
 def build_pdf_report(output_filename="Relatorio_Data_Center_ABS_Tranches_Oficiais_EN.pdf"):
-    doc = SimpleDocTemplate(
-        output_filename,
+    doc = SimpleDocTemplate(get_report_en_path(output_filename),
         pagesize=letter,
         leftMargin=54,
         rightMargin=54,
@@ -226,8 +226,8 @@ def build_pdf_report(output_filename="Relatorio_Data_Center_ABS_Tranches_Oficiai
     story.append(Paragraph("1. Detailed Anatomy of the Capital Stack Tranches", style_h1))
     story.append(HRFlowable(width="100%", thickness=1, color=colors.HexColor('#CBD5E1'), spaceAfter=5, spaceBefore=0))
 
-    if os.path.exists("chart_tranche_structure.png"):
-        story.append(Image("chart_tranche_structure.png", width=6.8*inch, height=2.4*inch))
+    if os.path.exists(get_chart_path("chart_tranche_structure.png", lang="en")):
+        story.append(Image(get_chart_path("chart_tranche_structure.png", lang="en"), width=6.8*inch, height=2.4*inch))
         story.append(Spacer(1, 5))
 
     tranche_table_data = [
@@ -287,8 +287,8 @@ def build_pdf_report(output_filename="Relatorio_Data_Center_ABS_Tranches_Oficiai
         style_body
     ))
 
-    if os.path.exists("chart_deals_comparison.png"):
-        story.append(Image("chart_deals_comparison.png", width=6.8*inch, height=2.4*inch))
+    if os.path.exists(get_chart_path("chart_deals_comparison.png", lang="en")):
+        story.append(Image(get_chart_path("chart_deals_comparison.png", lang="en"), width=6.8*inch, height=2.4*inch))
         story.append(Spacer(1, 5))
 
     deals_table_data = [
@@ -369,8 +369,8 @@ def build_pdf_report(output_filename="Relatorio_Data_Center_ABS_Tranches_Oficiai
         style_body
     ))
 
-    if os.path.exists("chart_spreads_yields.png"):
-        story.append(Image("chart_spreads_yields.png", width=6.8*inch, height=2.4*inch))
+    if os.path.exists(get_chart_path("chart_spreads_yields.png", lang="en")):
+        story.append(Image(get_chart_path("chart_spreads_yields.png", lang="en"), width=6.8*inch, height=2.4*inch))
         story.append(Spacer(1, 5))
 
     story.append(Paragraph("<b>Strict Priority of Monthly Cash Flow Disbursements:</b>", style_body_bold))
@@ -436,8 +436,8 @@ def build_pdf_report(output_filename="Relatorio_Data_Center_ABS_Tranches_Oficiai
         style_body
     ))
 
-    if os.path.exists("chart_issuance_and_health.png"):
-        story.append(Image("chart_issuance_and_health.png", width=6.8*inch, height=2.4*inch))
+    if os.path.exists(get_chart_path("chart_issuance_and_health.png", lang="en")):
+        story.append(Image(get_chart_path("chart_issuance_and_health.png", lang="en"), width=6.8*inch, height=2.4*inch))
         story.append(Spacer(1, 5))
 
     story.append(Paragraph("<b>2026 Diagnosis Across Tranche Classes:</b>", style_body_bold))

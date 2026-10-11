@@ -13,6 +13,7 @@
   <img src="https://img.shields.io/badge/Coverage_Horizon-2026_--_2029-C53030?style=for-the-badge" alt="Coverage Horizon"/>
   <img src="https://img.shields.io/badge/Methodology-KBRA_ABS_%2B_Basel_III_%2B_Monte_Carlo-1B365D?style=for-the-badge" alt="Methodology"/>
   <img src="https://img.shields.io/badge/Reports-12_Executive_PDFs_(70_Pages)-2E7D32?style=for-the-badge" alt="Reports"/>
+  <img src="https://img.shields.io/badge/Bilingual_Charts-31_EN_%7C_31_PT-D97706?style=for-the-badge" alt="Bilingual Charts"/>
   <img src="https://img.shields.io/badge/Skills-Antigravity_Forecast_Updater-6B21A8?style=for-the-badge" alt="Skills"/>
 </p>
 
@@ -31,7 +32,7 @@ Between 2023 and 2026, over **$350 billion** in capital expenditure (CapEx) was 
 4. **Macro-Geopolitical Vulnerability & Fiscal Cliff**: The intersection of rising US sovereign debt servicing ($36.5T debt, >$1.1T annual interest), election cycle regulatory shifts, Middle Eastern sovereign wealth fund reallocations, and semiconductor supply chain choke points in the Taiwan Strait.
 
 <p align="center">
-  <img src="assets/charts/chart_crash_composition.png" width="850" alt="Financial Market Crash Composition 2026-2028"/>
+  <img src="assets/charts/en/chart_crash_composition.png" width="850" alt="Financial Market Crash Composition 2026-2028 (EN)"/>
   <br>
   <em>Figure 1: Anatomy and transmission channels of the projected market crash (2026–2028).</em>
 </p>
@@ -65,7 +66,7 @@ Between 2023 and 2026, over **$350 billion** in capital expenditure (CapEx) was 
 - **Systemic Risk**: Upwards of 20% to 35% of reported hardware revenue across key suppliers reflects balance-sheet recycling rather than organic corporate end-user demand.
 
 <p align="center">
-  <img src="assets/charts/chart_vendor_financing_loop.png" width="800" alt="Vendor Financing Closed Loop"/>
+  <img src="assets/charts/en/chart_vendor_financing_loop.png" width="800" alt="Vendor Financing Closed Loop (EN)"/>
   <br>
   <em>Figure 2: The closed-loop vendor financing dynamic between hardware providers, neoclouds, and hyper-scalers.</em>
 </p>
@@ -75,7 +76,7 @@ Between 2023 and 2026, over **$350 billion** in capital expenditure (CapEx) was 
 - **Negative Equity Dynamic**: Loans structured with 70–80% Loan-to-Value (LTV) ratios on hardware enter technical default when secondary market GPU rental prices drop below $1.50/GPU-hour, breaching debt service coverage covenants ($DSCR < 1.10x$).
 
 <p align="center">
-  <img src="assets/charts/chart_gpu_depreciation_vs_debt.png" width="800" alt="GPU Depreciation vs Debt Amortization"/>
+  <img src="assets/charts/en/chart_gpu_depreciation_vs_debt.png" width="800" alt="GPU Depreciation vs Debt Amortization (EN)"/>
   <br>
   <em>Figure 3: Divergence between physical/economic GPU depreciation curves and amortizing debt schedules.</em>
 </p>
@@ -85,7 +86,7 @@ Between 2023 and 2026, over **$350 billion** in capital expenditure (CapEx) was 
 - **Subprime Parallel**: Similar to pre-2008 residential mortgage-backed securities (RMBS), correlation risks between unrated tech counterparties and high concentration risks (>60% of revenues tied to single unrated AI startups) are diluted through credit enhancement to achieve investment-grade ratings for senior debt.
 
 <p align="center">
-  <img src="assets/charts/chart_tranche_structure.png" width="800" alt="Data Center ABS Tranche Structure"/>
+  <img src="assets/charts/en/chart_tranche_structure.png" width="800" alt="Data Center ABS Tranche Structure (EN)"/>
   <br>
   <em>Figure 4: Data Center ABS Capital Structure (Senior Class A Notes, Subordinated Class B, and Residual Equity).</em>
 </p>
@@ -95,7 +96,7 @@ Between 2023 and 2026, over **$350 billion** in capital expenditure (CapEx) was 
 - **Geopolitical Bottlenecks**: High geographic concentration in advanced packaging (TSMC CoWoS, Taiwan) creates severe tail-risk vulnerabilities to supply interruptions.
 
 <p align="center">
-  <img src="assets/charts/chart_map_vulnerability.png" width="900" alt="Global Geopolitical Vulnerability Map"/>
+  <img src="assets/charts/en/chart_map_vulnerability.png" width="900" alt="Global Geopolitical Vulnerability Map (EN)"/>
   <br>
   <em>Figure 5: Systemic Vulnerability Index across global financial and technological epicenters (2026–2028).</em>
 </p>
@@ -113,7 +114,7 @@ Our multi-factor stress models project cumulative systemic stress across three p
 | **Systemic Case: Multi-Contagion** | 2027–2029 | **20%** | Geopolitical supply shock (Taiwan Strait) + US sovereign debt auction friction + AI revenue cliff. | S&P -50% to -60%<br>Nasdaq -65% | Global liquidity freeze; sovereign yield spike; emergency Fed interventions. |
 
 <p align="center">
-  <img src="assets/charts/chart_leverage_pyramid.png" width="800" alt="AI Credit Leverage Pyramid"/>
+  <img src="assets/charts/en/chart_leverage_pyramid.png" width="800" alt="AI Credit Leverage Pyramid (EN)"/>
   <br>
   <em>Figure 6: The AI Credit Leverage Pyramid — From physical silicon assets to synthetic credit derivatives.</em>
 </p>
@@ -138,13 +139,20 @@ ai-market-crash-risk/
 │
 ├── scripts/                                    # Python orchestration & generation scripts
 │   ├── build_all_reports.py                    # Master pipeline runner
+│   ├── generate_charts_en.py                   # Dedicated English charts compiler
+│   ├── generate_page_previews.py               # High-res PDF page preview generator
 │   ├── utils_paths.py                          # Path resolution utility
 │   ├── generate_macro_geopolitical_crash_report.py
 │   ├── generate_macro_geopolitical_crash_report_en.py
 │   └── ...                                     # 10 other modular report generators
 │
 ├── assets/
-│   ├── charts/                                 # 30+ High-resolution financial & risk charts
+│   ├── charts/                                 # 62 Bilingual financial & risk charts
+│   │   ├── en/                                 # 31 English charts (chart_*.png)
+│   │   └── pt/                                 # 31 Portuguese charts (chart_*.png)
+│   ├── previews/                               # 70 High-resolution report page previews
+│   │   ├── en/                                 # 35 English report page preview PNGs
+│   │   └── pt/                                 # 35 Portuguese report page preview PNGs
 │   └── geo/                                    # world_countries_110m.geojson spatial database
 │
 └── .agents/skills/
@@ -162,20 +170,20 @@ All executive reports are available in full institutional-grade PDF format (70 p
 
 ### 📑 Executive PDF Reports (Institutional Format)
 
-| Document Title | Language | Pages | Download / Access | Core Focus |
-|:---|:---:|:---:|:---:|:---|
-| **Macro Geopolitical Market Crash (2026–2028)** | 🇺🇸 English | 10 | [Download PDF](reports/en/Relatorio_Macro_Geopolitica_Quebra_Mercado_2026_2028_EN.pdf) | US fiscal cliff, election dynamics, geopolitical war-gaming & world vulnerability map. |
-| **Macro Geopolítica Quebra de Mercado (2026–2028)** | 🇧🇷 Português | 10 | [Download PDF](reports/pt/Relatorio_Macro_Geopolitica_Quebra_Mercado_2026_2028.pdf) | Versão integral em português do dossiê geopolítico e mapa global de contágio. |
-| **US Financial Market & AI Bubble Architecture** | 🇺🇸 English | 8 | [Download PDF](reports/en/Relatorio_Mercado_Financeiro_Americano_EN.pdf) | Valuation vs 10Y Treasury, private credit build-up & software revenue monetization gap. |
-| **Mercado Financeiro Americano e Bolha de IA** | 🇧🇷 Português | 8 | [Download PDF](reports/pt/Relatorio_Mercado_Financeiro_Americano.pdf) | Análise abrangente dos mercados de capitais norte-americanos e risco de bolha. |
-| **AI Infrastructure Crash Scenarios (2026–2029)** | 🇺🇸 English | 5 | [Download PDF](reports/en/Relatorio_Cenarios_Quebra_Mercado_IA_2026_2029_EN.pdf) | Multi-year stress tests, probability buildup, liquidation triggers & contagion sequence. |
-| **Cenários de Quebra do Mercado de IA (2026–2029)** | 🇧🇷 Português | 5 | [Download PDF](reports/pt/Relatorio_Cenarios_Quebra_Mercado_IA_2026_2029.pdf) | Modelagem de liquidação forçada, gatilhos de inadimplência e contração de liquidez. |
-| **Data Center ABS Official Tranches & KBRA** | 🇺🇸 English | 4 | [Download PDF](reports/en/Relatorio_Data_Center_ABS_Tranches_Oficiais_EN.pdf) | Securitization mechanics, KBRA rating criteria, LTV thresholds & tranche waterfalls. |
-| **Data Center ABS Tranches Oficiais e KBRA** | 🇧🇷 Português | 4 | [Download PDF](reports/pt/Relatorio_Data_Center_ABS_Tranches_Oficiais.pdf) | Estruturação de recebíveis de data centers e critérios de agências de rating. |
-| **Forensic AI Subprime & AAA Repackaging** | 🇺🇸 English | 4 | [Download PDF](reports/en/Relatorio_Forense_Subprime_IA_Repacotamento_AAA_EN.pdf) | 2008 MBS vs 2026 AI ABS analogies, credit enhancement alchemy & counterparty risk. |
-| **Dossiê Forense Subprime de IA e Repacotamento AAA**| 🇧🇷 Português | 4 | [Download PDF](reports/pt/Relatorio_Forense_Subprime_IA_Repacotamento_AAA.pdf) | Alquimia de reempacotamento de notas seniores e analogia forense à crise de 2008. |
-| **Leverage Multiplier & Vendor Financing** | 🇺🇸 English | 4 | [Download PDF](reports/en/Relatorio_Alavancagem_e_Vendor_Financing_IA_EN.pdf) | Neocloud circular debt, GPU debt service coverage ratios & vendor financing loops. |
-| **Alavancagem e Vendor Financing de IA** | 🇧🇷 Português | 4 | [Download PDF](reports/pt/Relatorio_Alavancagem_e_Vendor_Financing_IA.pdf) | Multiplicador de crédito, balanço patrimonial de neoclouds e circularidade de capital. |
+| Document Title | Language | Pages | Download / Access | Page Previews |
+|:---|:---:|:---:|:---:|:---:|
+| **Macro Geopolitical Market Crash (2026–2028)** | 🇺🇸 English | 10 | [Download PDF](reports/en/Relatorio_Macro_Geopolitica_Quebra_Mercado_2026_2028_EN.pdf) | [View Previews](assets/previews/en/) |
+| **Macro Geopolítica Quebra de Mercado (2026–2028)** | 🇧🇷 Português | 10 | [Download PDF](reports/pt/Relatorio_Macro_Geopolitica_Quebra_Mercado_2026_2028.pdf) | [Ver Prévias](assets/previews/pt/) |
+| **US Financial Market & AI Bubble Architecture** | 🇺🇸 English | 8 | [Download PDF](reports/en/Relatorio_Mercado_Financeiro_Americano_EN.pdf) | [View Previews](assets/previews/en/) |
+| **Mercado Financeiro Americano e Bolha de IA** | 🇧🇷 Português | 8 | [Download PDF](reports/pt/Relatorio_Mercado_Financeiro_Americano.pdf) | [Ver Prévias](assets/previews/pt/) |
+| **AI Infrastructure Crash Scenarios (2026–2029)** | 🇺🇸 English | 5 | [Download PDF](reports/en/Relatorio_Cenarios_Quebra_Mercado_IA_2026_2029_EN.pdf) | [View Previews](assets/previews/en/) |
+| **Cenários de Quebra do Mercado de IA (2026–2029)** | 🇧🇷 Português | 5 | [Download PDF](reports/pt/Relatorio_Cenarios_Quebra_Mercado_IA_2026_2029.pdf) | [Ver Prévias](assets/previews/pt/) |
+| **Data Center ABS Official Tranches & KBRA** | 🇺🇸 English | 4 | [Download PDF](reports/en/Relatorio_Data_Center_ABS_Tranches_Oficiais_EN.pdf) | [View Previews](assets/previews/en/) |
+| **Data Center ABS Tranches Oficiais e KBRA** | 🇧🇷 Português | 4 | [Download PDF](reports/pt/Relatorio_Data_Center_ABS_Tranches_Oficiais.pdf) | [Ver Prévias](assets/previews/pt/) |
+| **Forensic AI Subprime & AAA Repackaging** | 🇺🇸 English | 4 | [Download PDF](reports/en/Relatorio_Forense_Subprime_IA_Repacotamento_AAA_EN.pdf) | [View Previews](assets/previews/en/) |
+| **Dossiê Forense Subprime de IA e Repacotamento AAA**| 🇧🇷 Português | 4 | [Download PDF](reports/pt/Relatorio_Forense_Subprime_IA_Repacotamento_AAA.pdf) | [Ver Prévias](assets/previews/pt/) |
+| **Leverage Multiplier & Vendor Financing** | 🇺🇸 English | 4 | [Download PDF](reports/en/Relatorio_Alavancagem_e_Vendor_Financing_IA_EN.pdf) | [View Previews](assets/previews/en/) |
+| **Alavancagem e Vendor Financing de IA** | 🇧🇷 Português | 4 | [Download PDF](reports/pt/Relatorio_Alavancagem_e_Vendor_Financing_IA.pdf) | [Ver Prévias](assets/previews/pt/) |
 
 ---
 
@@ -211,26 +219,18 @@ The skill automatically loads:
 
 ## 7. Technical Reproduction & Execution
 
-All reports and visual analytical models are programmatically generated using Python and ReportLab:
-
-### Prerequisites & Dependencies
 ```bash
 # Clone the repository
 git clone https://github.com/xToshiro/ai-market-crash-risk.git
 cd ai-market-crash-risk
 
-# Install required numerical, charting, GIS and PDF engines
+# Install required dependencies
 pip install reportlab matplotlib numpy pandas geopandas shapely pymupdf
-```
 
-### Reproducing All 12 Reports in One Step
-```bash
-# Execute master build script
+# Reproduce all 31 charts (EN & PT), compile all 12 PDF reports, and generate 70 page previews:
 python scripts/build_all_reports.py
-```
 
-### Validating Asset & PDF Integrity
-```bash
+# Validate full repository integrity:
 python .agents/skills/ai-market-risk-updater/scripts/validate_models.py
 ```
 
@@ -249,6 +249,12 @@ Entre 2023 e 2026, mais de **US$ 350 bilhões** em despesas de capital (CapEx) f
 3. **Data Center ABS e Repacotamento Sintético**: Securitização de contratos de locação de data centers via SPEs (Sociedades de Propósito Específico), fatiadas em tranches seniores com rating AAA/A (por agências como a KBRA) e tranches subordinadas, reproduzindo a mesma dinâmica de incentivos perversos dos subprime RMBS de 2007–2008.
 4. **Vulnerabilidade Geopolítica e Abismo Fiscal dos EUA**: A convergência entre o endividamento do Tesouro americano (US$ 36,5 trilhões de dívida soberana, >US$ 1,1 trilhão ao ano em juros), a rotação regulatória do ciclo eleitoral, a repatriação de fundos soberanos do Golfo Pérsico e os gargalos logísticos no Estreito de Taiwan.
 
+<p align="center">
+  <img src="assets/charts/pt/chart_crash_composition.png" width="850" alt="Composição da Quebra do Mercado Financeiro 2026-2028 (PT)"/>
+  <br>
+  <em>Figura 1: Anatomia e canais de transmissão da quebra de mercado projetada (2026–2028).</em>
+</p>
+
 ---
 
 ## 2. Pilares Forenses da Investigação
@@ -256,14 +262,44 @@ Entre 2023 e 2026, mais de **US$ 350 bilhões** em despesas de capital (CapEx) f
 ### Pilar 1: O Loop de Financiamento de Vendedores (Vendor Financing)
 Fabricantes líderes de tecnologia fornecem capital de investimento a startups de nuvem especializada (*neoclouds*) e laboratórios de IA. Os recursos recebidos são obrigatoriamente revertidos em aquisições de chips de ponta do próprio investidor. Essa circularidade infla artificialmente o faturamento de curto prazo e adia a descoberta de demanda real do mercado.
 
+<p align="center">
+  <img src="assets/charts/pt/chart_vendor_financing_loop.png" width="800" alt="Ciclo Fechado de Vendor Financing (PT)"/>
+  <br>
+  <em>Figura 2: O ciclo fechado de vendor financing entre provedores de hardware, neoclouds e hiperscalers.</em>
+</p>
+
 ### Pilar 2: Descasamento de Depreciação de Hardware e Dívida
 Uma GPU de data center tem vida útil econômica de ponta restrita a 2 ou 3 anos antes do lançamento de clusters mais eficientes. Quando operadoras contraem dívida de 5 a 7 anos para amortizar esse equipamento, o valor de revenda e o preço de aluguel por hora caem abruptamente, quebrando o índice de cobertura de serviço da dívida ($ICSD < 1,10x$) e forçando liquidações de garantias.
+
+<p align="center">
+  <img src="assets/charts/pt/chart_gpu_depreciation_vs_debt.png" width="800" alt="Depreciação de GPUs vs Amortização de Dívida (PT)"/>
+  <br>
+  <em>Figura 3: Divergência entre curvas de depreciação física/econômica de GPUs e cronogramas de amortização de dívida.</em>
+</p>
 
 ### Pilar 3: O "Subprime de IA" e o Repacotamento AAA
 Data centers são empacotados em estruturas de securitização (Data Center ABS). Por meio de reforços de crédito estruturais (*credit enhancement*), operadoras transformam fluxos de recebíveis dependentes de startups de IA deficitárias em títulos seniores de investimento comercializados a fundos de pensão institucionais.
 
+<p align="center">
+  <img src="assets/charts/pt/chart_tranche_structure.png" width="800" alt="Estrutura de Tranches de Data Center ABS (PT)"/>
+  <br>
+  <em>Figura 4: Estrutura de capital de Data Center ABS (Notas Classe A Sênior, Classe B Mezanino e Equity Residual).</em>
+</p>
+
 ### Pilar 4: Transmissão Geopolítica e Risco Soberano
 O custo do capital global subiu estruturalmente. Com as taxas de juros americanas elevadas e emissões recordes do Tesouro dos EUA, a absorção de centenas de bilhões de dólares em crédito privado para data centers disputa liquidez diretamente com títulos soberanos e fundos imobiliários tradicionais.
+
+<p align="center">
+  <img src="assets/charts/pt/chart_map_vulnerability.png" width="900" alt="Mapa Global de Vulnerabilidade Geopolítica (PT)"/>
+  <br>
+  <em>Figura 5: Índice de Vulnerabilidade Sistêmica nos epicentros financeiros e tecnológicos mundiais (2026–2028).</em>
+</p>
+
+<p align="center">
+  <img src="assets/charts/pt/chart_leverage_pyramid.png" width="800" alt="Pirâmide de Alavancagem de Crédito de IA (PT)"/>
+  <br>
+  <em>Figura 6: A Pirâmide de Alavancagem do Crédito de IA — Dos ativos físicos de silício aos derivativos sintéticos.</em>
+</p>
 
 ---
 

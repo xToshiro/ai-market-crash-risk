@@ -1,3 +1,4 @@
+from utils_paths import get_chart_path, get_report_pt_path
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
@@ -355,8 +356,7 @@ class NumberedCanvas(canvas.Canvas):
 # ---------------------------------------------------------
 
 def build_pdf_report(market_data, output_filename="Relatorio_Cenarios_Quebra_Mercado_IA_2026_2029.pdf"):
-    doc = SimpleDocTemplate(
-        output_filename,
+    doc = SimpleDocTemplate(get_report_pt_path(output_filename),
         pagesize=letter,
         leftMargin=54,
         rightMargin=54,
@@ -522,8 +522,8 @@ def build_pdf_report(market_data, output_filename="Relatorio_Cenarios_Quebra_Mer
     story.append(Paragraph("1. Desempenho Histórico das Ações Líderes de Mercado (2024–2026)", style_h1))
     story.append(HRFlowable(width="100%", thickness=1, color=colors.HexColor('#CBD5E1'), spaceAfter=5, spaceBefore=0))
 
-    if os.path.exists("chart_stocks_2y_history.png"):
-        story.append(Image("chart_stocks_2y_history.png", width=6.8*inch, height=2.4*inch))
+    if os.path.exists(get_chart_path("chart_stocks_2y_history.png", lang="pt")):
+        story.append(Image(get_chart_path("chart_stocks_2y_history.png", lang="pt"), width=6.8*inch, height=2.4*inch))
         story.append(Spacer(1, 5))
 
     stocks_table_data = [
@@ -603,8 +603,8 @@ def build_pdf_report(market_data, output_filename="Relatorio_Cenarios_Quebra_Mer
         style_body
     ))
 
-    if os.path.exists("chart_financial_metrics_matrix.png"):
-        story.append(Image("chart_financial_metrics_matrix.png", width=6.8*inch, height=2.4*inch))
+    if os.path.exists(get_chart_path("chart_financial_metrics_matrix.png", lang="pt")):
+        story.append(Image(get_chart_path("chart_financial_metrics_matrix.png", lang="pt"), width=6.8*inch, height=2.4*inch))
         story.append(Spacer(1, 5))
 
     story.append(Paragraph("<b>Diagnóstico Fundamentalista de Rentabilidade vs Investimento:</b>", style_body_bold))
@@ -628,8 +628,8 @@ def build_pdf_report(market_data, output_filename="Relatorio_Cenarios_Quebra_Mer
         style_body
     ))
 
-    if os.path.exists("chart_private_valuation_vs_burn.png"):
-        story.append(Image("chart_private_valuation_vs_burn.png", width=6.8*inch, height=2.4*inch))
+    if os.path.exists(get_chart_path("chart_private_valuation_vs_burn.png", lang="pt")):
+        story.append(Image(get_chart_path("chart_private_valuation_vs_burn.png", lang="pt"), width=6.8*inch, height=2.4*inch))
         story.append(Spacer(1, 5))
 
     private_table_data = [
@@ -701,8 +701,8 @@ def build_pdf_report(market_data, output_filename="Relatorio_Cenarios_Quebra_Mer
         style_body
     ))
 
-    if os.path.exists("chart_crash_scenarios_probabilities.png"):
-        story.append(Image("chart_crash_scenarios_probabilities.png", width=6.8*inch, height=2.4*inch))
+    if os.path.exists(get_chart_path("chart_crash_scenarios_probabilities.png", lang="pt")):
+        story.append(Image(get_chart_path("chart_crash_scenarios_probabilities.png", lang="pt"), width=6.8*inch, height=2.4*inch))
         story.append(Spacer(1, 5))
 
     scenarios_table_data = [

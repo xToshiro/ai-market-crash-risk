@@ -4,11 +4,12 @@
 validate_models.py
 ------------------
 Validation suite for the AI Market Crash Risk repository.
-Verifies PDF integrity, page counts, documentation parity, and chart assets.
+Verifies PDF integrity, page counts, documentation parity, bilingual charts, and page previews.
 """
 
 import os
 import sys
+import glob
 
 # UTF-8 stdout encoding for Windows console
 if sys.platform == "win32":
@@ -58,15 +59,6 @@ DOSSIERS = [
     "KBRA_Data_Center_ABS_Rating_Methodology_Dossier",
 ]
 
-KEY_CHARTS = [
-    "chart_crash_composition.png",
-    "chart_vendor_financing_loop.png",
-    "chart_gpu_depreciation_vs_debt.png",
-    "chart_tranche_structure.png",
-    "chart_map_vulnerability.png",
-    "chart_leverage_pyramid.png",
-]
-
 def main():
     print("=" * 70)
     print("  AI MARKET CRASH RISK — MODEL & REPOSITORY VALIDATION SUITE")
@@ -74,7 +66,7 @@ def main():
     errors = 0
 
     # 1. Check PDFs
-    print("\n[1/4] Checking Executive PDF Reports...")
+    print("\n[1/5] Checking Executive PDF Reports (reports/pt & reports/en)...")
     total_pages = 0
     for fname, expected_pages in REPORTS:
         folder = "en" if fname.endswith("_EN.pdf") else "pt"
@@ -101,7 +93,7 @@ def main():
     print(f"  -> Total compiled pages verified: {total_pages} / 70 expected")
 
     # 2. Check Markdown Dossiers
-    print("\n[2/4] Checking Analytical Markdown Dossiers...")
+    print("\n[2/5] Checking Analytical Markdown Dossiers (docs/pt & docs/en)...")
     for base in DOSSIERS:
         pt_path = os.path.join(ROOT_DIR, "docs", "pt", f"{base}.md")
         en_path = os.path.join(ROOT_DIR, "docs", "en", f"{base}_EN.md")
@@ -117,18 +109,26 @@ def main():
                 print(f"  ❌ MISSING: docs/en/{base}_EN.md")
                 errors += 1
 
-    # 3. Check Charts
-    print("\n[3/4] Checking Key Visual Assets in assets/charts/...")
-    for chart in KEY_CHARTS:
-        cpath = os.path.join(ROOT_DIR, "assets", "charts", chart)
-        if os.path.exists(cpath):
-            print(f"  ✅ OK: assets/charts/{chart}")
-        else:
-            print(f"  ❌ MISSING: assets/charts/{chart}")
-            errors += 1
+    # 3. Check Bilingual Charts
+    print("\n[3/5] Checking Bilingual Visual Charts (assets/charts/pt & assets/charts/en)...")
+    pt_charts = glob.glob(os.path.join(ROOT_DIR, "assets", "charts", "pt", "*.png"))
+    en_charts = glob.glob(os.path.join(ROOT_DIR, "assets", "charts", "en", "*.png"))
+    print(f"  ✅ Portuguese Charts: {len(pt_charts)} / 31 found in assets/charts/pt/")
+    print(f"  ✅ English Charts:    {len(en_charts)} / 31 found in assets/charts/en/")
+    if len(pt_charts) < 30 or len(en_charts) < 30:
+        errors += 1
 
-    # 4. Check GeoJSON
-    print("\n[4/4] Checking Geospatial Data...")
+    # 4. Check Page Previews
+    print("\n[4/5] Checking Page Previews (assets/previews/pt & assets/previews/en)...")
+    pt_prevs = glob.glob(os.path.join(ROOT_DIR, "assets", "previews", "pt", "*.png"))
+    en_prevs = glob.glob(os.path.join(ROOT_DIR, "assets", "previews", "en", "*.png"))
+    print(f"  ✅ Portuguese Page Previews: {len(pt_prevs)} / 35 found in assets/previews/pt/")
+    print(f"  ✅ English Page Previews:    {len(en_prevs)} / 35 found in assets/previews/en/")
+    if len(pt_prevs) < 35 or len(en_prevs) < 35:
+        print("  ⚠️ Page previews count is lower than expected. Run scripts/generate_page_previews.py")
+
+    # 5. Check GeoJSON
+    print("\n[5/5] Checking Geospatial Data...")
     geopath = os.path.join(ROOT_DIR, "assets", "geo", "world_countries_110m.geojson")
     if os.path.exists(geopath):
         print(f"  ✅ OK: assets/geo/world_countries_110m.geojson ({os.path.getsize(geopath)/1024:.0f} KB)")
@@ -138,7 +138,7 @@ def main():
 
     print("\n" + "=" * 70)
     if errors == 0:
-        print("  🎉 VALIDATION PASSED: All repository assets, PDFs, and docs are intact!")
+        print("  🎉 VALIDATION PASSED: All repository assets, bilingual charts, PDFs, and previews are intact!")
     else:
         print(f"  ❌ VALIDATION FAILED: {errors} issues detected.")
     print("=" * 70)
