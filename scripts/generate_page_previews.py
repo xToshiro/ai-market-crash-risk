@@ -48,8 +48,10 @@ REPORT_SLUGS = {
     "Relatorio_Data_Center_ABS_Tranches_Oficiais_EN.pdf": "data_center_abs",
     "Relatorio_Forense_Subprime_IA_Repacotamento_AAA.pdf": "forensic_subprime",
     "Relatorio_Forense_Subprime_IA_Repacotamento_AAA_EN.pdf": "forensic_subprime",
-    "Relatorio_Alavancagem_e_Vendor_Financing_IA.pdf": "leverage_multiplier",
+    ("Relatorio_Alavancagem_e_Vendor_Financing_IA.pdf"): "leverage_multiplier",
     "Relatorio_Alavancagem_e_Vendor_Financing_IA_EN.pdf": "leverage_multiplier",
+    "Relatorio_Status_Financeiro_Acoes_Previsao_Empresas_IA.pdf": "company_financial_forecast",
+    "Relatorio_Status_Financeiro_Acoes_Previsao_Empresas_IA_EN.pdf": "company_financial_forecast",
 }
 
 def render_pdf_pages(pdf_path, output_dir, slug, lang_code, dpi=130):

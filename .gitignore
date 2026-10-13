@@ -6,5 +6,6 @@ __pycache__/
 Thumbs.db
 test_imports.py
 
-# Ignore loose screenshots at repository root
+# Ignore loose screenshots at repository root and scripts directory
 /*.png
+/scripts/*.png

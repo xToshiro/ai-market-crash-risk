@@ -47,6 +47,8 @@ REPORTS = [
     ("Relatorio_Forense_Subprime_IA_Repacotamento_AAA_EN.pdf", 4),
     ("Relatorio_Alavancagem_e_Vendor_Financing_IA.pdf", 4),
     ("Relatorio_Alavancagem_e_Vendor_Financing_IA_EN.pdf", 4),
+    ("Relatorio_Status_Financeiro_Acoes_Previsao_Empresas_IA.pdf", 6),
+    ("Relatorio_Status_Financeiro_Acoes_Previsao_Empresas_IA_EN.pdf", 6),
 ]
 
 DOSSIERS = [
@@ -56,6 +58,7 @@ DOSSIERS = [
     "Dossie_Cenarios_Quebra_Mercado_Acoes_e_Credito",
     "Dossie_Forense_Subprime_IA_Repacotamento_AAA",
     "Dossie_Macro_Geopolitica_Quebra_Mercado_2026_2028",
+    "Dossie_Status_Financeiro_Acoes_Previsao_Empresas_IA",
     "KBRA_Data_Center_ABS_Rating_Methodology_Dossier",
 ]
 
@@ -90,7 +93,7 @@ def main():
         else:
             print(f"  ✅ FOUND: reports/{folder}/{fname} ({size_kb:.0f} KB)")
 
-    print(f"  -> Total compiled pages verified: {total_pages} / 70 expected")
+    print(f"  -> Total compiled pages verified: {total_pages} / 82 expected")
 
     # 2. Check Markdown Dossiers
     print("\n[2/5] Checking Analytical Markdown Dossiers (docs/pt & docs/en)...")
@@ -113,19 +116,20 @@ def main():
     print("\n[3/5] Checking Bilingual Visual Charts (assets/charts/pt & assets/charts/en)...")
     pt_charts = glob.glob(os.path.join(ROOT_DIR, "assets", "charts", "pt", "*.png"))
     en_charts = glob.glob(os.path.join(ROOT_DIR, "assets", "charts", "en", "*.png"))
-    print(f"  ✅ Portuguese Charts: {len(pt_charts)} / 31 found in assets/charts/pt/")
-    print(f"  ✅ English Charts:    {len(en_charts)} / 31 found in assets/charts/en/")
-    if len(pt_charts) < 30 or len(en_charts) < 30:
+    print(f"  ✅ Portuguese Charts: {len(pt_charts)} found in assets/charts/pt/")
+    print(f"  ✅ English Charts:    {len(en_charts)} found in assets/charts/en/")
+    if len(pt_charts) < 35 or len(en_charts) < 35:
         errors += 1
 
     # 4. Check Page Previews
     print("\n[4/5] Checking Page Previews (assets/previews/pt & assets/previews/en)...")
     pt_prevs = glob.glob(os.path.join(ROOT_DIR, "assets", "previews", "pt", "*.png"))
     en_prevs = glob.glob(os.path.join(ROOT_DIR, "assets", "previews", "en", "*.png"))
-    print(f"  ✅ Portuguese Page Previews: {len(pt_prevs)} / 35 found in assets/previews/pt/")
-    print(f"  ✅ English Page Previews:    {len(en_prevs)} / 35 found in assets/previews/en/")
-    if len(pt_prevs) < 35 or len(en_prevs) < 35:
+    print(f"  ✅ Portuguese Page Previews: {len(pt_prevs)} / 41 found in assets/previews/pt/")
+    print(f"  ✅ English Page Previews:    {len(en_prevs)} / 41 found in assets/previews/en/")
+    if len(pt_prevs) < 41 or len(en_prevs) < 41:
         print("  ⚠️ Page previews count is lower than expected. Run scripts/generate_page_previews.py")
+        errors += 1
 
     # 5. Check GeoJSON
     print("\n[5/5] Checking Geospatial Data...")

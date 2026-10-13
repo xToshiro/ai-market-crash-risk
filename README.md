@@ -12,8 +12,8 @@
   <img src="https://img.shields.io/badge/Asset_Classes-ABS_%7C_Private_Credit_%7C_Equities_%7C_Sovereign_Bonds-0A192F?style=for-the-badge" alt="Asset Classes"/>
   <img src="https://img.shields.io/badge/Coverage_Horizon-2026_--_2029-C53030?style=for-the-badge" alt="Coverage Horizon"/>
   <img src="https://img.shields.io/badge/Methodology-KBRA_ABS_%2B_Basel_III_%2B_Monte_Carlo-1B365D?style=for-the-badge" alt="Methodology"/>
-  <img src="https://img.shields.io/badge/Reports-12_Executive_PDFs_(70_Pages)-2E7D32?style=for-the-badge" alt="Reports"/>
-  <img src="https://img.shields.io/badge/Bilingual_Charts-31_EN_%7C_31_PT-D97706?style=for-the-badge" alt="Bilingual Charts"/>
+  <img src="https://img.shields.io/badge/Reports-14_Executive_PDFs_(82_Pages)-2E7D32?style=for-the-badge" alt="Reports"/>
+  <img src="https://img.shields.io/badge/Bilingual_Charts-35_EN_%7C_35_PT-D97706?style=for-the-badge" alt="Bilingual Charts"/>
   <img src="https://img.shields.io/badge/Skills-Antigravity_Forecast_Updater-6B21A8?style=for-the-badge" alt="Skills"/>
 </p>
 
@@ -130,29 +130,30 @@ ai-market-crash-risk/
 ├── .gitignore                                  # Git exclusion rules
 │
 ├── reports/                                    # Executive PDF Reports (ReportLab Platypus)
-│   ├── en/                                     # 6 English Institutional PDFs (35 pages)
-│   └── pt/                                     # 6 Portuguese Institutional PDFs (35 pages)
+│   ├── en/                                     # 7 English Institutional PDFs (41 pages)
+│   └── pt/                                     # 7 Portuguese Institutional PDFs (41 pages)
 │
 ├── docs/                                       # In-depth Analytical Markdown Dossiers
-│   ├── en/                                     # 7 English technical research dossiers
-│   └── pt/                                     # 7 Portuguese technical research dossiers
+│   ├── en/                                     # 8 English technical research dossiers
+│   └── pt/                                     # 8 Portuguese technical research dossiers
 │
 ├── scripts/                                    # Python orchestration & generation scripts
 │   ├── build_all_reports.py                    # Master pipeline runner
 │   ├── generate_charts_en.py                   # Dedicated English charts compiler
+│   ├── generate_company_charts.py              # Bilingual company forecast charts
 │   ├── generate_page_previews.py               # High-res PDF page preview generator
 │   ├── utils_paths.py                          # Path resolution utility
-│   ├── generate_macro_geopolitical_crash_report.py
-│   ├── generate_macro_geopolitical_crash_report_en.py
-│   └── ...                                     # 10 other modular report generators
+│   ├── generate_company_financial_forecast_report.py
+│   ├── generate_company_financial_forecast_report_en.py
+│   └── ...                                     # 12 other modular report generators
 │
 ├── assets/
-│   ├── charts/                                 # 62 Bilingual financial & risk charts
-│   │   ├── en/                                 # 31 English charts (chart_*.png)
-│   │   └── pt/                                 # 31 Portuguese charts (chart_*.png)
-│   ├── previews/                               # 70 High-resolution report page previews
-│   │   ├── en/                                 # 35 English report page preview PNGs
-│   │   └── pt/                                 # 35 Portuguese report page preview PNGs
+│   ├── charts/                                 # 70 Bilingual financial & risk charts
+│   │   ├── en/                                 # 35 English charts (chart_*.png)
+│   │   └── pt/                                 # 35 Portuguese charts (chart_*.png)
+│   ├── previews/                               # 82 High-resolution report page previews
+│   │   ├── en/                                 # 41 English report page preview PNGs
+│   │   └── pt/                                 # 41 Portuguese report page preview PNGs
 │   └── geo/                                    # world_countries_110m.geojson spatial database
 │
 └── .agents/skills/
@@ -166,7 +167,7 @@ ai-market-crash-risk/
 
 ## 5. Deliverables Index: Reports & Dossiers
 
-All executive reports are available in full institutional-grade PDF format (70 pages compiled) and detailed technical Markdown dossiers:
+All executive reports are available in full institutional-grade PDF format (82 pages compiled) and detailed technical Markdown dossiers:
 
 ### 📑 Executive PDF Reports (Institutional Format)
 
@@ -176,6 +177,8 @@ All executive reports are available in full institutional-grade PDF format (70 p
 | **Macro Geopolítica Quebra de Mercado (2026–2028)** | 🇧🇷 Português | 10 | [Download PDF](reports/pt/Relatorio_Macro_Geopolitica_Quebra_Mercado_2026_2028.pdf) | [Ver Prévias](assets/previews/pt/) |
 | **US Financial Market & AI Bubble Architecture** | 🇺🇸 English | 8 | [Download PDF](reports/en/Relatorio_Mercado_Financeiro_Americano_EN.pdf) | [View Previews](assets/previews/en/) |
 | **Mercado Financeiro Americano e Bolha de IA** | 🇧🇷 Português | 8 | [Download PDF](reports/pt/Relatorio_Mercado_Financeiro_Americano.pdf) | [Ver Prévias](assets/previews/pt/) |
+| **Company Financial Status, Stocks & 2027 Forecasts** | 🇺🇸 English | 6 | [Download PDF](reports/en/Relatorio_Status_Financeiro_Acoes_Previsao_Empresas_IA_EN.pdf) | [View Previews](assets/previews/en/) |
+| **Status Financeiro, Ações e Previsões (2027)** | 🇧🇷 Português | 6 | [Download PDF](reports/pt/Relatorio_Status_Financeiro_Acoes_Previsao_Empresas_IA.pdf) | [Ver Prévias](assets/previews/pt/) |
 | **AI Infrastructure Crash Scenarios (2026–2029)** | 🇺🇸 English | 5 | [Download PDF](reports/en/Relatorio_Cenarios_Quebra_Mercado_IA_2026_2029_EN.pdf) | [View Previews](assets/previews/en/) |
 | **Cenários de Quebra do Mercado de IA (2026–2029)** | 🇧🇷 Português | 5 | [Download PDF](reports/pt/Relatorio_Cenarios_Quebra_Mercado_IA_2026_2029.pdf) | [Ver Prévias](assets/previews/pt/) |
 | **Data Center ABS Official Tranches & KBRA** | 🇺🇸 English | 4 | [Download PDF](reports/en/Relatorio_Data_Center_ABS_Tranches_Oficiais_EN.pdf) | [View Previews](assets/previews/en/) |
@@ -191,6 +194,7 @@ All executive reports are available in full institutional-grade PDF format (70 p
 
 | Technical Dossier (English) | Dossier Técnico (Português) | Primary Research Subject |
 |:---|:---|:---|
+| [AI Leaders Financial Audit & 2027 Forecasts](docs/en/Dossie_Status_Financeiro_Acoes_Previsao_Empresas_IA_EN.md) | [Dossiê Status Financeiro das Líderes e Previsões](docs/pt/Dossie_Status_Financeiro_Acoes_Previsao_Empresas_IA.md) | Corporate balance sheets, 2-year returns & semiannual predictive target price matrix. |
 | [Macro Geopolitics & Market Crash Dossier](docs/en/Dossie_Macro_Geopolitica_Quebra_Mercado_2026_2028_EN.md) | [Dossiê Macro Geopolítica e Quebra de Mercado](docs/pt/Dossie_Macro_Geopolitica_Quebra_Mercado_2026_2028.md) | US fiscal debt, Taiwan Strait, oil choke points & regional ranking. |
 | [AI Market Crash Scenarios (2026–2029)](docs/en/Dossie_Cenarios_Quebra_Mercado_Acoes_e_Credito_EN.md) | [Dossiê Cenários de Quebra de Mercado](docs/pt/Dossie_Cenarios_Quebra_Mercado_Acoes_e_Credito.md) | Multi-year cascade simulation, loss severity and recovery rates. |
 | [Data Center ABS Structuring Report](docs/en/Data_Center_ABS_Relatorio_EN.md) | [Relatório Data Center ABS](docs/pt/Data_Center_ABS_Relatorio.md) | Master Service Agreements, PPA contracts and SPV waterfalls. |
@@ -227,7 +231,7 @@ cd ai-market-crash-risk
 # Install required dependencies
 pip install reportlab matplotlib numpy pandas geopandas shapely pymupdf
 
-# Reproduce all 31 charts (EN & PT), compile all 12 PDF reports, and generate 70 page previews:
+# Reproduce all 35 charts (EN & PT), compile all 14 PDF reports (82 pages), and generate 82 page previews:
 python scripts/build_all_reports.py
 
 # Validate full repository integrity:
