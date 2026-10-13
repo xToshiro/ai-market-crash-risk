@@ -3,7 +3,7 @@
 """
 generate_company_financial_forecast_report.py
 ---------------------------------------------
-Generates a 6-page institutional PDF executive report in Portuguese:
+Generates an 8-page institutional PDF executive report in Portuguese:
 "Relatório Executivo: Status Financeiro das Líderes de IA, Histórico de Ações (2 Anos) e Previsões Semestrais (2027)"
 
 Output: reports/pt/Relatorio_Status_Financeiro_Acoes_Previsao_Empresas_IA.pdf
@@ -576,9 +576,273 @@ def build_pdf_report(output_filename="Relatorio_Status_Financeiro_Acoes_Previsao
     story.append(PageBreak())
 
     # =========================================================
-    # PÁGINA 4: CAPITAL PRIVADO, HISTÓRICO DE 2 ANOS + GRÁFICO 3
+    # PÁGINA 4: A TEIA DE INVESTIMENTOS CRUZADOS & VENDOR FINANCING
     # =========================================================
-    story.append(Paragraph("4. O Perímetro de Capital Privado &amp; Variação Histórica das Ações (2 Anos)", style_h1))
+    story.append(Paragraph("4. A Teia de Investimentos Cruzados &amp; Financiamento Circular (Vendor Financing)", style_h1))
+    story.append(Paragraph(
+        "Diferente de um ciclo maduro sustentado por demanda final corporativa independente, a indústria de Inteligência Artificial estruturou uma complexa rede de <b>participações societárias cruzadas e financiamento circular (round-tripping de receitas)</b>. Operadoras de nuvem e fabricantes de chips financiam diretamente as startups que, por sua vez, são obrigadas a devolver o capital na forma de consumo de nuvem e compra compulsória de hardware:",
+        style_body
+    ))
+    story.append(Spacer(1, 4))
+
+    # Box Resumo dos Circuitos Circulares
+    circ_summary_data = [
+        [
+            Paragraph("<b>Circuito A: Nvidia ⟷ Neoclouds &amp; Labs</b><br/><font size=6.6 color='#334155'>Nvidia aporta capital societário (equity) na CoreWeave/OpenAI. As empresas tomam dívida privada colateralizada em GPUs e repassam 100% dos recursos à vista para comprar chips Nvidia a 75% de margem bruta.</font>", style_table_cell),
+            Paragraph("<b>Circuito B: Microsoft ⟷ OpenAI &amp; CoreWeave</b><br/><font size=6.6 color='#334155'>Microsoft investiu US$ 13B+ na OpenAI em troca de 49% dos lucros e exclusividade de nuvem (&gt;70% da receita da OpenAI volta para a Azure). Para descarregar capacidade, Microsoft aluga clusters da CoreWeave.</font>", style_table_cell),
+        ],
+        [
+            Paragraph("<b>Circuito C: Amazon &amp; Google ⟷ Anthropic</b><br/><font size=6.6 color='#334155'>Amazon (US$ 4B) e Google (US$ 2B) aportam capital condicionado ao uso prioritário de chips AWS Trainium2 e contratos plurianuais de nuvem (US$ 3B no Google Cloud), garantindo demanda artificial.</font>", style_table_cell),
+            Paragraph("<b>Diagnóstico de Risco Sistêmico (Round-Tripping)</b><br/><font size=6.6 color='#DC2626'><b>Mecanismo de Alavancagem Oculta:</b> Cada US$ 1,00 investido em equity gera até US$ 3,50 em receita contábil reportada na cadeia, criando a ilusão de crescimento orgânico independente.</font>", style_table_cell),
+        ]
+    ]
+    t_circ = Table(circ_summary_data, colWidths=[250, 254])
+    t_circ.setStyle(TableStyle([
+        ('BACKGROUND', (0,0), (-1,-1), colors.HexColor('#F8FAFC')),
+        ('BOX', (0,0), (-1,-1), 1, colors.HexColor('#CBD5E1')),
+        ('INNERGRID', (0,0), (-1,-1), 0.5, colors.HexColor('#E2E8F0')),
+        ('TOPPADDING', (0,0), (-1,-1), 4),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 4),
+        ('LEFTPADDING', (0,0), (-1,-1), 5),
+        ('RIGHTPADDING', (0,0), (-1,-1), 5),
+    ]))
+    story.append(t_circ)
+    story.append(Spacer(1, 6))
+
+    story.append(Paragraph("Mapeamento dos Acordos Bilaterais de Financiamento Circular:", style_body_bold))
+    story.append(Spacer(1, 2))
+
+    # Tabela de Acordos Cruzados
+    cross_table_data = [
+        [
+            Paragraph("<b>Investidor Primário</b>", style_table_header),
+            Paragraph("<b>Entidade Investida</b>", style_table_header),
+            Paragraph("<b>Aporte / Modalidade</b>", style_table_header),
+            Paragraph("<b>Contrapartida Comercial / Amortização</b>", style_table_header),
+            Paragraph("<b>Impacto Sistêmico no Balanço</b>", style_table_header),
+        ],
+        [
+            Paragraph("<b>Microsoft (MSFT)</b>", style_table_cell),
+            Paragraph("<b>OpenAI</b>", style_table_cell),
+            Paragraph("US$ 13,0+ B (Equity)", style_table_cell_center),
+            Paragraph("Consumo compulsório de infraestrutura Azure; direito a 49% dos lucros da subsidiária comercial.", style_table_cell),
+            Paragraph("Infla receita de nuvem Azure; amortece investimentos via créditos de servidores.", style_table_cell),
+        ],
+        [
+            Paragraph("<b>Microsoft (MSFT)</b>", style_table_cell),
+            Paragraph("<b>CoreWeave</b>", style_table_cell),
+            Paragraph("Contratos &gt; US$ 10 B", style_table_cell_center),
+            Paragraph("Locação externa plurianual de clusters de H100 para absorver picos de demanda da OpenAI.", style_table_cell),
+            Paragraph("Desloca CapEx físico pesado para fora do balanço operacional da Microsoft.", style_table_cell),
+        ],
+        [
+            Paragraph("<b>Nvidia (NVDA)</b>", style_table_cell),
+            Paragraph("<b>CoreWeave</b>", style_table_cell),
+            Paragraph("Equity Anchor (~$500M)", style_table_cell_center),
+            Paragraph("Prioridade em alocação de GPUs; 100% da dívida privada da CoreWeave compra hardware NVDA.", style_table_cell),
+            Paragraph("Converte investimento societário direto em faturamento com 75% de margem bruta.", style_table_cell),
+        ],
+        [
+            Paragraph("<b>Nvidia (NVDA)</b>", style_table_cell),
+            Paragraph("<b>OpenAI</b>", style_table_cell),
+            Paragraph("Equity (~US$ 100M)", style_table_cell_center),
+            Paragraph("Garantia de que os algoritmos de fronteira permaneçam nativamente otimizados em CUDA.", style_table_cell),
+            Paragraph("Bloqueia competidores (AMD / ASICs customizados) de nós de computação de ponta.", style_table_cell),
+        ],
+        [
+            Paragraph("<b>Amazon (AMZN)</b>", style_table_cell),
+            Paragraph("<b>Anthropic</b>", style_table_cell),
+            Paragraph("US$ 4,0 B (Notas/Equity)", style_table_cell_center),
+            Paragraph("Compromisso mandatório de uso de chips AWS Trainium2 e distribuição via Amazon Bedrock.", style_table_cell),
+            Paragraph("Valida comercialmente o silício proprietário da AWS frente ao monopólio da Nvidia.", style_table_cell),
+        ],
+        [
+            Paragraph("<b>Alphabet (GOOGL)</b>", style_table_cell),
+            Paragraph("<b>Anthropic</b>", style_table_cell),
+            Paragraph("US$ 2,0 B (Equity/Debt)", style_table_cell_center),
+            Paragraph("Contrato de consumo de infraestrutura de US$ 3,0B no ecossistema Google Cloud.", style_table_cell),
+            Paragraph("Preenche capacidade ociosa de subestações e clusters TPU do Google Cloud.", style_table_cell),
+        ],
+    ]
+    t_cross = Table(cross_table_data, colWidths=[80, 68, 80, 150, 126])
+    t_cross.setStyle(TableStyle([
+        ('BACKGROUND', (0,0), (-1,0), colors.HexColor('#7C3AED')),
+        ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 2.5),
+        ('TOPPADDING', (0,0), (-1,-1), 2.5),
+        ('GRID', (0,0), (-1,-1), 0.5, colors.HexColor('#CBD5E1')),
+        ('ROWBACKGROUNDS', (0,1), (-1,-1), [colors.white, colors.HexColor('#F8FAFC')]),
+    ]))
+    story.append(t_cross)
+    story.append(Spacer(1, 6))
+
+    callout_p4 = [
+        [
+            Paragraph(
+                "<b>Alerta de Vulnerabilidade:</b> A circularidade dos fluxos cria uma interdependência simbiótica perigosa. Se a receita final de clientes corporativos (ROI em software) estagnar, a cadeia não sofre uma desaceleração gradual, mas sim uma interrupção em cascata: a quebra de uma neocloud elimina instantaneamente compras na Nvidia e satura a capacidade dos hiperscalers.",
+                style_callout
+            )
+        ]
+    ]
+    t_callout4 = Table(callout_p4, colWidths=[504])
+    t_callout4.setStyle(TableStyle([
+        ('BACKGROUND', (0,0), (-1,-1), colors.HexColor('#FEF2F2')),
+        ('BOX', (0,0), (-1,-1), 1, colors.HexColor('#EF4444')),
+        ('LEFTPADDING', (0,0), (-1,-1), 8),
+        ('RIGHTPADDING', (0,0), (-1,-1), 8),
+        ('TOPPADDING', (0,0), (-1,-1), 4),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 4),
+    ]))
+    story.append(t_callout4)
+
+    story.append(PageBreak())
+
+    # =========================================================
+    # PÁGINA 5: EXPOSIÇÃO DO VALOR DE MERCADO A IA & CORRELAÇÃO 1.0
+    # =========================================================
+    story.append(Paragraph("5. Decomposição do Prêmio de IA: Quanto do Valor Está Comprometido com IA?", style_h1))
+    story.append(Paragraph(
+        "Ao comparar as capitalizações bursáteis atuais com a referência pré-ChatGPT (Outubro de 2022) e isolar o crescimento orgânico dos negócios tradicionais, quantificamos a <b>fatia exata do valor de cada empresa sustentada exclusivamente pela tese de IA</b>:",
+        style_body
+    ))
+    story.append(Spacer(1, 3))
+
+    # Gráfico 5: chart_company_ai_exposure.png
+    chart5_path = get_chart_path("chart_company_ai_exposure.png", "pt")
+    if os.path.exists(chart5_path):
+        story.append(Image(chart5_path, width=504, height=190))
+        story.append(Spacer(1, 5))
+
+    # Tabela de Exposição do Market Cap
+    exposure_table_data = [
+        [
+            Paragraph("<b>Empresa / Ticker</b>", style_table_header),
+            Paragraph("<b>Market Cap Atual</b>", style_table_header),
+            Paragraph("<b>Cap Pré-IA (2022)</b>", style_table_header),
+            Paragraph("<b>Ganho 4 Anos</b>", style_table_header),
+            Paragraph("<b>Valor Atrib. a IA</b>", style_table_header),
+            Paragraph("<b>% Comprometido c/ IA</b>", style_table_header),
+            Paragraph("<b>Diagnóstico de Risco / Dependência</b>", style_table_header),
+        ],
+        [
+            Paragraph("<b>Nvidia (NVDA)</b>", style_table_cell),
+            Paragraph("US$ 3.580 B", style_table_cell_center),
+            Paragraph("~US$ 360 B", style_table_cell_center),
+            Paragraph("+US$ 3.220 B", style_table_cell_center),
+            Paragraph("US$ 3.150 B", style_table_cell_center),
+            Paragraph("<font color='#DC2626'><b>88% a 90%</b></font>", style_table_cell_center),
+            Paragraph("Crítica: Sem data centers de IA, negócios legados justificam &lt; US$ 400B.", style_table_cell),
+        ],
+        [
+            Paragraph("<b>TSMC (TSM)</b>", style_table_cell),
+            Paragraph("US$ 985 B", style_table_cell_center),
+            Paragraph("~US$ 380 B", style_table_cell_center),
+            Paragraph("+US$ 605 B", style_table_cell_center),
+            Paragraph("US$ 540 B", style_table_cell_center),
+            Paragraph("<font color='#DC2626'><b>54% a 57%</b></font>", style_table_cell_center),
+            Paragraph("Severa: HPC e nós avançados (&lt;3nm/CoWoS) geram mais de 55% da receita.", style_table_cell),
+        ],
+        [
+            Paragraph("<b>Broadcom (AVGO)</b>", style_table_cell),
+            Paragraph("US$ 860 B", style_table_cell_center),
+            Paragraph("~US$ 200 B", style_table_cell_center),
+            Paragraph("+US$ 660 B", style_table_cell_center),
+            Paragraph("US$ 450 B", style_table_cell_center),
+            Paragraph("<font color='#DC2626'><b>52% a 55%</b></font>", style_table_cell_center),
+            Paragraph("Severa: Switches Tomahawk 5 e ASICs customizados sustentam valuation premium.", style_table_cell),
+        ],
+        [
+            Paragraph("<b>Oracle (ORCL)</b>", style_table_cell),
+            Paragraph("US$ 392 B", style_table_cell_center),
+            Paragraph("~US$ 180 B", style_table_cell_center),
+            Paragraph("+US$ 212 B", style_table_cell_center),
+            Paragraph("US$ 190 B", style_table_cell_center),
+            Paragraph("<font color='#DC2626'><b>48% a 50%</b></font>", style_table_cell_center),
+            Paragraph("Severa: Tese depende de contratos de nuvem OCI sob dívida bruta de US$ 88B.", style_table_cell),
+        ],
+        [
+            Paragraph("<b>Microsoft (MSFT)</b>", style_table_cell),
+            Paragraph("US$ 3.980 B", style_table_cell_center),
+            Paragraph("~US$ 1.780 B", style_table_cell_center),
+            Paragraph("+US$ 2.200 B", style_table_cell_center),
+            Paragraph("US$ 1.650 B", style_table_cell_center),
+            Paragraph("<font color='#D97706'><b>41% a 43%</b></font>", style_table_cell_center),
+            Paragraph("Moderada/Alta: Múltiplo P/E de 32x embute expectativa trilionária em Copilot/Azure.", style_table_cell),
+        ],
+        [
+            Paragraph("<b>Amazon (AMZN)</b>", style_table_cell),
+            Paragraph("US$ 2.750 B", style_table_cell_center),
+            Paragraph("~US$ 900 B", style_table_cell_center),
+            Paragraph("+US$ 1.850 B", style_table_cell_center),
+            Paragraph("US$ 1.050 B", style_table_cell_center),
+            Paragraph("<font color='#D97706'><b>38% a 40%</b></font>", style_table_cell_center),
+            Paragraph("Moderada: AWS dita o múltiplo, embora e-commerce e ads amorteçam perdas.", style_table_cell),
+        ],
+        [
+            Paragraph("<b>Alphabet (GOOGL)</b>", style_table_cell),
+            Paragraph("US$ 4.320 B", style_table_cell_center),
+            Paragraph("~US$ 1.200 B", style_table_cell_center),
+            Paragraph("+US$ 3.120 B", style_table_cell_center),
+            Paragraph("US$ 1.600 B", style_table_cell_center),
+            Paragraph("<font color='#D97706'><b>37% a 39%</b></font>", style_table_cell_center),
+            Paragraph("Moderada: Receita de busca é defensiva; Gemini e TPU definem expansão de margem.", style_table_cell),
+        ],
+        [
+            Paragraph("<b>Meta Platforms (META)</b>", style_table_cell),
+            Paragraph("US$ 1.820 B", style_table_cell_center),
+            Paragraph("~US$ 260 B", style_table_cell_center),
+            Paragraph("+US$ 1.560 B", style_table_cell_center),
+            Paragraph("US$ 650 B", style_table_cell_center),
+            Paragraph("<font color='#0284C7'><b>35% a 37%</b></font>", style_table_cell_center),
+            Paragraph("Moderada: CapEx de US$ 55B é compensado por otimização algorítmica de ads.", style_table_cell),
+        ],
+        [
+            Paragraph("<b>Labs &amp; Neoclouds</b>", style_table_cell),
+            Paragraph("US$ 198 B (Tot)", style_table_cell_center),
+            Paragraph("&lt; US$ 22 B", style_table_cell_center),
+            Paragraph("+US$ 176 B", style_table_cell_center),
+            Paragraph("US$ 198 B", style_table_cell_center),
+            Paragraph("<font color='#DC2626'><b>100%</b></font>", style_table_cell_center),
+            Paragraph("Binária: Sem negócios legados; valor evapora se os influxos de capital secarem.", style_table_cell),
+        ],
+    ]
+    t_exp = Table(exposure_table_data, colWidths=[80, 56, 56, 56, 54, 58, 144])
+    t_exp.setStyle(TableStyle([
+        ('BACKGROUND', (0,0), (-1,0), colors.HexColor('#DC2626')),
+        ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 2.2),
+        ('TOPPADDING', (0,0), (-1,-1), 2.2),
+        ('GRID', (0,0), (-1,-1), 0.5, colors.HexColor('#CBD5E1')),
+        ('ROWBACKGROUNDS', (0,1), (-1,-1), [colors.white, colors.HexColor('#F8FAFC')]),
+    ]))
+    story.append(t_exp)
+    story.append(Spacer(1, 5))
+
+    callout_p5 = [
+        [
+            Paragraph(
+                "<b>A 'Correlação 1.0' em Cenários de Estresse:</b> A diversificação setorial aparente é uma ilusão técnica. Mais de <b>US$ 9,0 Trilhões</b> do valor combinado dessas companhias depende unicamente da perpetuidade do ciclo de IA. Uma desaceleração no ROI corporativo fará com que a correlação entre as ações convirja para 1,0, eliminando os benefícios da dispersão de portfólio.",
+                style_callout
+            )
+        ]
+    ]
+    t_callout5 = Table(callout_p5, colWidths=[504])
+    t_callout5.setStyle(TableStyle([
+        ('BACKGROUND', (0,0), (-1,-1), colors.HexColor('#FEF3C7')),
+        ('BOX', (0,0), (-1,-1), 1, colors.HexColor('#F59E0B')),
+        ('LEFTPADDING', (0,0), (-1,-1), 8),
+        ('RIGHTPADDING', (0,0), (-1,-1), 8),
+        ('TOPPADDING', (0,0), (-1,-1), 4),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 4),
+    ]))
+    story.append(t_callout5)
+
+    story.append(PageBreak())
+
+    # =========================================================
+    # PÁGINA 6: CAPITAL PRIVADO, HISTÓRICO DE 2 ANOS + GRÁFICO 3
+    # =========================================================
+    story.append(Paragraph("6. O Perímetro de Capital Privado &amp; Variação Histórica das Ações (2 Anos)", style_h1))
     story.append(Paragraph(
         "A sustentabilidade das Big Techs está intimamente conectada à saúde do ecossistema não listado (startups de modelos e neoclouds). Abaixo examinamos a trajetória de preços de 24 meses das ações cotadas em bolsa confrontada com a fragilidade de caixa das líderes privadas:",
         style_body
@@ -698,9 +962,9 @@ def build_pdf_report(output_filename="Relatorio_Status_Financeiro_Acoes_Previsao
     story.append(PageBreak())
 
     # =========================================================
-    # PÁGINA 5: PREVISÕES PARA OS PRÓXIMOS 2 SEMESTRES + GRÁFICO 4
+    # PÁGINA 7: PREVISÕES PARA OS PRÓXIMOS 2 SEMESTRES + GRÁFICO 4
     # =========================================================
-    story.append(Paragraph("5. Previsão para os Próximos 2 Semestres (H1-2027 e H2-2027)", style_h1))
+    story.append(Paragraph("7. Previsão para os Próximos 2 Semestres (H1-2027 e H2-2027)", style_h1))
     story.append(Paragraph(
         "A modelagem econométrica do repositório projeta o comportamento das companhias para o 1º Semestre de 2027 (H1-27) e 2º Semestre de 2027 (H2-27), testando a sensibilidade das receitas, lucros e valuations a 3 cenários macrofinanceiros:",
         style_body
@@ -772,9 +1036,9 @@ def build_pdf_report(output_filename="Relatorio_Status_Financeiro_Acoes_Previsao
     story.append(PageBreak())
 
     # =========================================================
-    # PÁGINA 6: MATRIZES PREDITIVAS COMPLETAS & DIRETRIZES
+    # PÁGINA 8: MATRIZES PREDITIVAS COMPLETAS & DIRETRIZES
     # =========================================================
-    story.append(Paragraph("6. Matriz Preditiva de Preços-Alvo &amp; Recomendações de Portfólio", style_h1))
+    story.append(Paragraph("8. Matriz Preditiva de Preços-Alvo &amp; Recomendações de Portfólio", style_h1))
     story.append(Paragraph(
         "Apresentamos a projeção econométrica completa de preços-alvo (USD) e variações percentuais para cada ação no horizonte de 6 meses (H1-2027) e 12 meses acumulados (H2-2027), acompanhada das diretrizes de gestão de risco:",
         style_body

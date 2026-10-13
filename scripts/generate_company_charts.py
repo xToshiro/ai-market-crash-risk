@@ -279,6 +279,77 @@ def generate_chart_4_forecast_semesters():
         plt.close()
         print(f"[{lang.upper()}] Generated: {out_path}")
 
+def generate_chart_5_ai_exposure():
+    """Chart 5: Share of Market Capitalization Tied to AI Narrative vs Pre-AI Baseline (USD Trillions & %)."""
+    setup_style()
+    companies = ['Nvidia', 'TSMC', 'Broadcom', 'Oracle', 'Microsoft', 'Amazon', 'Alphabet', 'Meta']
+    
+    # % of market cap tied to AI
+    ai_pct = [89.0, 55.0, 53.0, 49.0, 42.0, 39.0, 38.0, 36.0]
+    
+    # Pre-AI Market Cap vs Current Market Cap (USD Trillions)
+    pre_ai_cap = [0.36, 0.38, 0.20, 0.18, 1.78, 0.90, 1.20, 0.26]
+    ai_value   = [3.15, 0.54, 0.45, 0.19, 1.65, 1.05, 1.60, 0.65]
+    curr_cap   = [3.58, 0.985, 0.86, 0.392, 3.98, 2.75, 4.32, 1.82]
+
+    for lang in ['pt', 'en']:
+        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(9.2, 3.6), dpi=220)
+        fig.patch.set_facecolor('#FFFFFF')
+        ax1.set_facecolor('#FAFAFA')
+        ax2.set_facecolor('#FAFAFA')
+
+        # Subplot 1: % of Valuation Tied to AI
+        colors_pct = ['#DC2626' if p >= 50 else ('#D97706' if p >= 40 else '#0284C7') for p in ai_pct]
+        y = np.arange(len(companies))
+        bars1 = ax1.barh(y, ai_pct, color=colors_pct, height=0.55, edgecolor='#1E293B', linewidth=0.5)
+
+        for i, bar in enumerate(bars1):
+            w_val = bar.get_width()
+            ax1.annotate(f"{w_val:.0f}%",
+                         xy=(w_val + 1.5, y[i]),
+                         ha='left', va='center', fontsize=7.2, fontweight='bold', color=colors_pct[i])
+
+        t1 = "% do Valor de Mercado Comprometido com IA" if lang == 'pt' else "% of Market Cap Tied to AI Narrative"
+        ax1.set_title(t1, fontsize=9.2, fontweight='bold', color='#0F172A')
+        ax1.set_yticks(y)
+        ax1.set_yticklabels(companies, fontsize=7.2, color='#1E293B')
+        ax1.set_xlabel("% do Valuation Total" if lang == 'pt' else "% of Total Valuation", fontsize=7.8, color='#475569')
+        ax1.set_xlim(0, 105)
+        ax1.grid(True, axis='x')
+
+        # Subplot 2: Stacked Bar: Pre-AI Valuation vs AI Value Added (Trillions)
+        x = np.arange(len(companies))
+        w = 0.52
+        lbl_pre = 'Valor Pré-IA (2022)' if lang == 'pt' else 'Pre-AI Value (2022)'
+        lbl_ai  = 'Valor Adicionado por IA' if lang == 'pt' else 'AI Value Added'
+
+        ax2.bar(x, pre_ai_cap, w, label=lbl_pre, color='#64748B', edgecolor='#334155')
+        ax2.bar(x, ai_value,   w, bottom=pre_ai_cap, label=lbl_ai, color='#10B981', edgecolor='#047857')
+
+        for i in range(len(companies)):
+            total = pre_ai_cap[i] + ai_value[i]
+            ax2.annotate(f"${total:.1f}T",
+                         xy=(x[i], total),
+                         xytext=(0, 2),
+                         textcoords="offset points",
+                         ha='center', va='bottom', fontsize=6.8, fontweight='bold', color='#0F172A')
+
+        t2 = "Decomposição do Market Cap (US$ Trilhões)" if lang == 'pt' else "Market Cap Decomposition ($ Trillions)"
+        ax2.set_title(t2, fontsize=9.2, fontweight='bold', color='#0F172A')
+        ax2.set_xticks(x)
+        ax2.set_xticklabels(companies, fontsize=6.8, color='#1E293B', rotation=25)
+        ax2.set_ylabel("US$ Trilhões" if lang == 'pt' else "USD Trillions", fontsize=7.8, color='#475569')
+        ax2.set_ylim(0, 5.0)
+        ax2.legend(loc='upper left', frameon=True, facecolor='#FFFFFF', edgecolor='#CBD5E1', fontsize=6.8)
+        ax2.grid(True, axis='y')
+
+        plt.tight_layout()
+        out_dir = CHARTS_PT_DIR if lang == 'pt' else CHARTS_EN_DIR
+        out_path = os.path.join(out_dir, "chart_company_ai_exposure.png")
+        plt.savefig(out_path, dpi=220, bbox_inches='tight')
+        plt.close()
+        print(f"[{lang.upper()}] Generated: {out_path}")
+
 def main():
     print("=" * 65)
     print(" GENERATING BILINGUAL CHARTS FOR COMPANY FINANCIAL FORECAST REPORT")
@@ -287,6 +358,7 @@ def main():
     generate_chart_2_financial_matrix()
     generate_chart_3_capex_intensity_fcf_pressure()
     generate_chart_4_forecast_semesters()
+    generate_chart_5_ai_exposure()
     print("All charts generated successfully!")
 
 if __name__ == '__main__':

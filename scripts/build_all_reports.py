@@ -38,8 +38,8 @@ REPORT_SCRIPTS = [
     ("generate_forensic_ai_subprime_report_en.py", "Forensic AI Subprime (EN, 4 Pages)"),
     ("generate_leverage_multiplier_report.py", "Alavancagem & Vendor Financing (PT, 4 Págs)"),
     ("generate_leverage_multiplier_report_en.py", "Leverage & Vendor Financing (EN, 4 Pages)"),
-    ("generate_company_financial_forecast_report.py", "Status Empresas & Previsões (PT, 6 Págs)"),
-    ("generate_company_financial_forecast_report_en.py", "Company Status & Forecasts (EN, 6 Pages)"),
+    ("generate_company_financial_forecast_report.py", "Status Empresas & Previsões (PT, 8 Págs)"),
+    ("generate_company_financial_forecast_report_en.py", "Company Status & Forecasts (EN, 8 Pages)"),
 ]
 
 def run_step(cmd, desc):
@@ -68,7 +68,7 @@ def main():
     ok_charts_co = run_step([sys.executable, "generate_company_charts.py"], "Step 1/4 (cont): Generating Bilingual Company Charts (assets/charts/)")
 
     # Step 2: Build all 14 PDFs
-    print("\n>>> Step 2/4: Compiling 14 Institutional PDF Reports (82 Pages)...")
+    print("\n>>> Step 2/4: Compiling 14 Institutional PDF Reports (86 Pages)...")
     success_count = 0
     fail_count = 0
     for idx, (script_name, label) in enumerate(REPORT_SCRIPTS, 1):
@@ -85,7 +85,7 @@ def main():
             fail_count += 1
 
     # Step 3: Render Page Previews
-    ok_previews = run_step([sys.executable, "generate_page_previews.py"], "Step 3/4: Rendering 82 Page Previews (assets/previews/)")
+    ok_previews = run_step([sys.executable, "generate_page_previews.py"], "Step 3/4: Rendering 86 Page Previews (assets/previews/)")
 
     # Step 4: Run Validation Suite
     val_path = os.path.join(ROOT_DIR, ".agents", "skills", "ai-market-risk-updater", "scripts", "validate_models.py")

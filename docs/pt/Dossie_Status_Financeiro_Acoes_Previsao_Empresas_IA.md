@@ -2,7 +2,7 @@
 
 **Auditoria Financeira Completa, Decomposição de Lucros e CapEx, Variação de Mercado (2024–2026) e Matriz Preditiva de Preços e Múltiplos para os Próximos 2 Semestres (H1-2027 e H2-2027)**
 
-> 📑 **Relatório Executivo Completo em PDF (6 Páginas):** [Baixar Relatorio_Status_Financeiro_Acoes_Previsao_Empresas_IA.pdf](../../reports/pt/Relatorio_Status_Financeiro_Acoes_Previsao_Empresas_IA.pdf)
+> 📑 **Relatório Executivo Completo em PDF (8 Páginas):** [Baixar Relatorio_Status_Financeiro_Acoes_Previsao_Empresas_IA.pdf](../../reports/pt/Relatorio_Status_Financeiro_Acoes_Previsao_Empresas_IA.pdf)
 
 ---
 
@@ -104,7 +104,78 @@ No mercado privado de crédito e venture capital, as empresas não contam com a 
 
 ---
 
-## 4. A Dinâmica da Intensidade de CapEx e o "Aperto de FCF"
+## 4. A Teia de Investimentos Cruzados & Financiamento Circular (*Vendor Financing Loops*)
+
+Diferente de um mercado maduro impulsionado por receitas externas puras, a indústria de IA desenvolveu uma rede intrincada de **interdependência societária e financiamento circular**:
+
+```
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                     A TEIA CIRCULAR DE INVESTIMENTOS CRUZADOS DE IA                    │
+└────────────────────────────────────────────────────────────────────────────────────────┘
+
+        [ NVIDIA ] (US$ 3,58T) ◄──────────────────┐
+           │        │                             │
+   Investe │        │ Investe                     │ 100% da dívida
+   Equity  │        │ Equity                      │ vira compra de GPUs
+           ▼        ▼                             │
+    [ OPENAI ]   [ NEOCLOUDS ] (CoreWeave /       │
+    (US$ 157B)   (Lambda Labs / Crusoe) ──────────┘
+       ▲   │        ▲
+       │   │        │ Microsoft aluga capacidade
+       │   │        │ da CoreWeave p/ descarregar OpenAI
+       │   │ Paga   │
+       │   │ Nuvem  └──────────────┐
+       │   ▼                       │
+    [ MICROSOFT ] (US$ 3,98T) ─────┘
+       • Investiu US$ 13B+ na OpenAI
+       • Direito a 49% dos lucros da subsidiária comercial
+       • Fornecedora exclusiva de infraestrutura Azure
+```
+
+### Detalhamento dos Principais Acordos de Capital Cruzado:
+1. **Microsoft ⟷ OpenAI:** A Microsoft aportou mais de **US$ 13 Bilhões** em troca de exclusividade de computação em nuvem (Azure) e direito a 49% dos lucros da subsidiária comercial. Estima-se que mais de **70% da receita da OpenAI seja devolvida diretamente à Microsoft** em consumo de servidores.
+2. **NVIDIA ⟷ Neoclouds (CoreWeave, Lambda Labs) & OpenAI:** A Nvidia aporta capital societário (*equity anchor*) nas rodadas da CoreWeave e OpenAI. Com o selo de parceiro de elite, as Neoclouds tomam bilhões em dívida privada e **repassam 100% dos recursos à vista para comprar GPUs Nvidia**. Com margem bruta de 75%, a Nvidia converte cada US$ 1,00 bilhão levantado pelas Neoclouds em US$ 750 milhões de lucro bruto direto em seu balanço.
+3. **Microsoft ⟷ CoreWeave:** Para atender à explosão de demanda da OpenAI sem saturar seus próprios campi, a Microsoft firmou contratos multibilionários para alugar clusters de GPUs da CoreWeave — uma empresa que a própria Microsoft e a Nvidia ajudaram a capitalizar.
+4. **Amazon & Alphabet ⟷ Anthropic:** A Amazon comprometeu **US$ 4,0 Bilhões** com a exigência de uso prioritário do silício customizado AWS Trainium e distribuição no Bedrock. Paralelamente, o Google aportou mais de **US$ 2,0 Bilhões**, atrelados a um contrato de infraestrutura de US$ 3,0B no Google Cloud.
+
+| Investidor Primário | Empresa Investida | Modalidade / Valor Aportado | Contrapartida Comercial / Amortização | Efeito Sistêmico no Balanço |
+| :--- | :--- | :---: | :--- | :--- |
+| **Microsoft (MSFT)** | **OpenAI** | US$ 13,0+ Bilhões (Equity) | Consumo compulsório de nuvem Azure; 49% dos lucros da subsidiária comercial. | Infla receita de nuvem Azure; amortece via créditos. |
+| **Microsoft (MSFT)** | **CoreWeave** | Contratos de locação > US$ 10B | Locação de capacidade externa de GPUs H100 para descarregar a OpenAI. | Desloca CapEx físico para fora do balanço operacional. |
+| **NVIDIA (NVDA)** | **CoreWeave** | Equity Anchor (~US$ 500M) | Alocação prioritária de silício; 100% da dívida da CoreWeave vai para comprar chips NVDA. | Converte investimento societário em receita com 75% de margem. |
+| **NVIDIA (NVDA)** | **OpenAI** | Rodada de Equity (~US$ 100M) | Garantia de que arquiteturas de modelos permaneçam otimizadas na biblioteca CUDA. | Bloqueia concorrentes (AMD / ASICs) de nós de ponta. |
+| **Amazon (AMZN)** | **Anthropic** | US$ 4,0 Bilhões (Notas / Equity) | Compromisso de uso de chips AWS Trainium2 e distribuição via Amazon Bedrock. | Valida o silício proprietário da AWS frente à Nvidia. |
+| **Alphabet (GOOGL)** | **Anthropic** | US$ 2,0 Bilhões (Equity/Debt) | Contrato de infraestrutura plurianual de US$ 3,0B no Google Cloud. | Preenche capacidade ociosa de subestações do Google. |
+
+---
+
+## 5. Decomposição do "Prêmio de IA": Quanto do Valor de Cada Empresa Está Comprometido com IA?
+
+![Exposição do Market Cap a IA](file:///c:/Users/jairo/OneDrive/Desktop/Projetos/avalia%C3%A7%C3%A3o%20de%20mercado/assets/charts/pt/chart_company_ai_exposure.png)
+
+Ao confrontar o valor de mercado atual com o período anterior ao lançamento do ChatGPT (Outubro de 2022) e isolar o crescimento orgânico dos negócios legados, quantificamos a **fatia exata de capitalização bursátil sustentada unicamente pela tese de IA**:
+
+| Empresa / Ticker | Market Cap Atual (Out/2026) | Market Cap Pré-IA (Out/2022) | Expansão de Valor em 4 Anos | Valor Atribuível à I.A. | **% do Market Cap Comprometido c/ IA** | Diagnóstico de Exposição |
+| :--- | :---: | :---: | :---: | :---: | :---: | :--- |
+| **Nvidia (NVDA)** | **US$ 3.580 Bilhões** | ~US$ 360 Bilhões | +US$ 3.220 Bilhões | **~US$ 3.150 Bilhões** | <font color="#DC2626"><b>88% a 90%</b></font> | **Crítica:** Sem data centers de IA, negócios legados justificam < US$ 400B. |
+| **TSMC (TSM)** | **US$ 985 Bilhões** | ~US$ 380 Bilhões | +US$ 605 Bilhões | **~US$ 540 Bilhões** | <font color="#DC2626"><b>54% a 57%</b></font> | **Severa:** HPC e nós avançados (<3nm/CoWoS) respondem por mais de 55% da receita. |
+| **Broadcom (AVGO)** | **US$ 860 Bilhões** | ~US$ 200 Bilhões | +US$ 660 Bilhões | **~US$ 450 Bilhões** | <font color="#DC2626"><b>52% a 55%</b></font> | **Severa:** Switches Tomahawk 5 e ASICs customizados sustentam valuation premium. |
+| **Oracle (ORCL)** | **US$ 392 Bilhões** | ~US$ 180 Bilhões | +US$ 212 Bilhões | **~US$ 190 Bilhões** | <font color="#DC2626"><b>48% a 50%</b></font> | **Severa:** Toda a tese de crescimento depende de contratos OCI com xAI e OpenAI. |
+| **Microsoft (MSFT)** | **US$ 3.980 Bilhões** | ~US$ 1.780 Bilhões | +US$ 2.200 Bilhões | **~US$ 1.650 Bilhões** | <font color="#D97706"><b>41% a 43%</b></font> | **Moderada/Alta:** Múltiplo P/E de 32x embute expectativa trilionária sobre Copilot/Azure. |
+| **Amazon (AMZN)** | **US$ 2.750 Bilhões** | ~US$ 900 Bilhões | +US$ 1.850 Bilhões | **~US$ 1.050 Bilhões** | <font color="#D97706"><b>38% a 40%</b></font> | **Moderada:** AWS é o motor de lucro operacional; desaceleração impacta múltiplos. |
+| **Alphabet (GOOGL)** | **US$ 4.320 Bilhões** | ~US$ 1.200 Bilhões | +US$ 3.120 Bilhões | **~US$ 1.600 Bilhões** | <font color="#D97706"><b>37% a 39%</b></font> | **Moderada:** Negócio core de anúncios é defensivo, mas Gemini dita precificação. |
+| **Meta (META)** | **US$ 1.820 Bilhões** | ~US$ 260 Bilhões | +US$ 1.560 Bilhões | **~US$ 650 Bilhões** | <font color="#0284C7"><b>35% a 37%</b></font> | **Moderada:** Gasto em CapEx de US$ 55B é justificado por otimização algorítmica de ads. |
+| **CoreWeave** (Privada) | **US$ 21 Bilhões** | ~US$ 500 Milhões | +US$ 20,5 Bilhões | **US$ 21,0 Bilhões** | <font color="#DC2626"><b>100%</b></font> | **Binária:** Inexistência de receitas fora de GPU-Backed Debt e locação de clusters. |
+| **OpenAI** (Privada) | **US$ 157 Bilhões** | ~US$ 20 Bilhões | +US$ 137 Bilhões | **US$ 157,0 Bilhões** | <font color="#DC2626"><b>100%</b></font> | **Binária:** Queima de US$ 6B+/ano exige expansão ininterrupta de capital. |
+| **Anthropic** (Privada) | **US$ 20 Bilhões** | ~US$ 1 Bilhão | +US$ 19 Bilhões | **US$ 20,0 Bilhões** | <font color="#DC2626"><b>100%</b></font> | **Binária:** Sobrevivência atrelada a cheques contínuos de Amazon e Google. |
+
+### O Mecanismo de Risco Sistêmico: A Ilusão da Diversificação e a "Correlação 1.0"
+A implicação mais crítica para a estabilidade financeira é que **essas empresas não são independentes**. Se a receita final de software pago por empresas corporativas decepcionar, o corte de investimento de um único elo reverbera em cadeia:
+$$\text{Corte de CapEx da Microsoft/Meta} \longrightarrow \text{Queda de 60\% na Nvidia} \longrightarrow \text{Inadimplência de Neoclouds} \longrightarrow \text{Congelamento do Crédito Privado}$$
+
+---
+
+## 6. A Dinâmica da Intensidade de CapEx e o "Aperto de FCF"
 
 ![CapEx vs Margem FCF](file:///c:/Users/jairo/OneDrive/Desktop/Projetos/avalia%C3%A7%C3%A3o%20de%20mercado/assets/charts/pt/chart_company_capex_vs_fcf.png)
 
@@ -115,7 +186,7 @@ A divergência entre o investimento em ativos fixos e a rentabilidade livre em d
 
 ---
 
-## 5. Previsão para os Próximos 2 Semestres (1º Semestre 2027 e 2º Semestre 2027)
+## 7. Previsão para os Próximos 2 Semestres (1º Semestre 2027 e 2º Semestre 2027)
 
 ![Previsão Semestral nos 3 Cenários](file:///c:/Users/jairo/OneDrive/Desktop/Projetos/avalia%C3%A7%C3%A3o%20de%20mercado/assets/charts/pt/chart_company_forecast_2semesters.png)
 
@@ -169,7 +240,7 @@ A modelagem estocástica do repositório decompõe o comportamento esperado das 
 
 ---
 
-## 6. Diretrizes de Alocação e Conclusões para Gestão de Risco
+## 8. Diretrizes de Alocação e Conclusões para Gestão de Risco
 
 1. **Assimetria das Ações de Hardware (NVDA, TSM, AVGO)**:
    * No Cenário Base e Bullish, são os ativos de maior potencial de retorno (+15% a +34% acumulado em 12 meses), refletindo poder de precificação e escassez.

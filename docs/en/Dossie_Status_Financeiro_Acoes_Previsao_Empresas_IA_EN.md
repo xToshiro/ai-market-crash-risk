@@ -2,7 +2,7 @@
 
 **Institutional Financial Audit, Earnings & CapEx Decomposition, 2-Year Market Performance (2024–2026), and Predictive Price/Multiple Matrix for the Next 2 Semesters (H1-2027 and H2-2027)**
 
-> 📑 **Full Executive Report in PDF (6 Pages):** [Download Relatorio_Status_Financeiro_Acoes_Previsao_Empresas_IA_EN.pdf](../../reports/en/Relatorio_Status_Financeiro_Acoes_Previsao_Empresas_IA_EN.pdf)
+> 📑 **Full Executive Report in PDF (8 Pages):** [Download Relatorio_Status_Financeiro_Acoes_Previsao_Empresas_IA_EN.pdf](../../reports/en/Relatorio_Status_Financeiro_Acoes_Previsao_Empresas_IA_EN.pdf)
 
 ---
 
@@ -104,7 +104,78 @@ Unlisted frontier AI labs and specialized GPU cloud operators operate with signi
 
 ---
 
-## 4. CapEx Intensity vs Free Cash Flow Squeeze
+## 4. The Cross-Investment Web & Vendor Financing Loops
+
+Unlike a mature tech cycle driven by independent corporate end-user revenue, the AI industry has erected an intricate web of **inter-corporate equity stakes and circular vendor financing**:
+
+```
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                     THE CIRCULAR AI CROSS-INVESTMENT & FINANCING WEB                   │
+└────────────────────────────────────────────────────────────────────────────────────────┘
+
+        [ NVIDIA ] ($3.58T) ◄─────────────────────┐
+           │        │                             │
+    Equity │        │ Equity                      │ 100% of debt
+    Anchor │        │ Anchor                      │ funds NVDA GPU
+           ▼        ▼                             │ procurement
+     [ OPENAI ]   [ NEOCLOUDS ] (CoreWeave /      │
+     ($157B)      (Lambda Labs / Crusoe) ─────────┘
+        ▲   │        ▲
+        │   │        │ Microsoft leases offload
+        │   │        │ capacity from CoreWeave for OpenAI
+        │   │ Pays   │
+        │   │ Cloud  └─────────────┐
+        │   ▼                      │
+     [ MICROSOFT ] ($3.98T) ───────┘
+        • Invested $13B+ into OpenAI
+        • 49% commercial profit participation right
+        • Exclusive Azure infrastructure provider
+```
+
+### Detailed Breakdown of Bilateral Capital Arrangements:
+1. **Microsoft ⟷ OpenAI:** Microsoft has deployed over **$13 Billion** in capital in exchange for exclusive cloud infrastructure provisioning (Azure) and a 49% profit participation right in OpenAI's commercial arm. It is estimated that **over 70% of OpenAI's gross revenue is returned directly to Microsoft** in cloud compute consumption.
+2. **NVIDIA ⟷ Neoclouds (CoreWeave, Lambda Labs) & OpenAI:** Nvidia injects anchor equity capital into private rounds for CoreWeave and OpenAI. Armed with elite partner status, neoclouds raise billions in asset-backed private debt and **funnel 100% of the proceeds into upfront cash purchases of Nvidia GPUs**. Operating at 75% gross margin, Nvidia converts every $1.00 billion raised by neoclouds into $750 million in gross accounting profits on its own income statement.
+3. **Microsoft ⟷ CoreWeave:** To absorb OpenAI's compute demand spikes without bottlenecking its own data centers, Microsoft executed multi-billion dollar long-term compute offload contracts with CoreWeave — a neocloud entity that both Microsoft and Nvidia capitalized.
+4. **Amazon & Alphabet ⟷ Anthropic:** Amazon committed **$4.0 Billion** with strict covenants prioritizing custom AWS Trainium2 silicon and distribution through Bedrock. In parallel, Google injected over **$2.0 Billion**, tied to a multi-year $3.0B cloud consumption commitment on Google Cloud.
+
+| Primary Investor | Investee Entity | Capital Vehicle / Amount | Commercial Quid Pro Quo / Amortization | Systemic Balance Sheet Impact |
+| :--- | :--- | :---: | :--- | :--- |
+| **Microsoft (MSFT)** | **OpenAI** | $13.0+ Billion (Equity) | Compulsory Azure cloud compute usage; 49% profit share. | Inflates Azure cloud revenue; amortized via credits. |
+| **Microsoft (MSFT)** | **CoreWeave** | Compute Lease Contracts > $10B | Offloads H100 cluster demand to preserve internal Azure capacity. | Moves physical CapEx off Microsoft's balance sheet. |
+| **NVIDIA (NVDA)** | **CoreWeave** | Anchor Equity (~$500M) | Priority GPU allocations; 100% of CoreWeave's debt buys NVDA chips. | Converts corporate equity checks into 75%-margin revenue. |
+| **NVIDIA (NVDA)** | **OpenAI** | Strategic Equity (~$100M) | Guarantees foundational model architectures remain optimized on CUDA. | Locks out competitor silicon (AMD / custom ASICs) from frontier runs. |
+| **Amazon (AMZN)** | **Anthropic** | $4.0 Billion (Notes / Equity) | Mandatory adoption of AWS Trainium2 and distribution via Bedrock. | Validates proprietary AWS silicon against Nvidia. |
+| **Alphabet (GOOGL)** | **Anthropic** | $2.0 Billion (Equity / Debt) | Multi-year $3.0B Google Cloud infrastructure agreement. | Utilizes spare substation and TPU cluster capacity. |
+
+---
+
+## 5. Decomposing the "AI Premium": How Much of Each Company's Market Cap is Tied to AI?
+
+![AI Market Cap Exposure](file:///c:/Users/jairo/OneDrive/Desktop/Projetos/avalia%C3%A7%C3%A3o%20de%20mercado/assets/charts/en/chart_company_ai_exposure.png)
+
+By comparing current market capitalization against pre-ChatGPT launch baselines (October 2022) and isolating legacy organic run-rates, we quantify the **exact portion of enterprise value supported exclusively by the AI growth narrative**:
+
+| Company / Ticker | Current Market Cap (Oct/2026) | Pre-AI Market Cap (Oct/2022) | 4-Year Cap Expansion | Value Attributable to AI | **% of Market Cap Tied to AI** | Exposure Assessment |
+| :--- | :---: | :---: | :---: | :---: | :---: | :--- |
+| **Nvidia (NVDA)** | **$3,580 Billion** | ~$360 Billion | +$3,220 Billion | **~$3,150 Billion** | <font color="#DC2626"><b>88% to 90%</b></font> | **Critical:** Stripped of AI data centers, legacy gaming/workstation justifies < $400B. |
+| **TSMC (TSM)** | **$985 Billion** | ~$380 Billion | +$605 Billion | **~$540 Billion** | <font color="#DC2626"><b>54% to 57%</b></font> | **Severe:** HPC and advanced nodes (<3nm & CoWoS) now generate > 55% of revenue. |
+| **Broadcom (AVGO)** | **$860 Billion** | ~$200 Billion | +$660 Billion | **~$450 Billion** | <font color="#DC2626"><b>52% to 55%</b></font> | **Severe:** Tomahawk 5 switches and custom ASICs sustain its premium multiple. |
+| **Oracle (ORCL)** | **$392 Billion** | ~$180 Billion | +$212 Billion | **~$190 Billion** | <font color="#DC2626"><b>48% to 50%</b></font> | **Severe:** Growth narrative hinges almost entirely on OCI GPU clusters for xAI/OpenAI. |
+| **Microsoft (MSFT)** | **$3,980 Billion** | ~$1,780 Billion | +$2,200 Billion | **~$1,650 Billion** | <font color="#D97706"><b>41% to 43%</b></font> | **Moderate/High:** 32x P/E multiple prices in trillions in future Copilot & Azure ARR. |
+| **Amazon (AMZN)** | **$2,750 Billion** | ~$900 Billion | +$1,850 Billion | **~$1,050 Billion** | <font color="#D97706"><b>38% to 40%</b></font> | **Moderate:** AWS drives core operating income; deceleration compresses multiples. |
+| **Alphabet (GOOGL)** | **$4,320 Billion** | ~$1,200 Billion | +$3,120 Billion | **~$1,600 Billion** | <font color="#D97706"><b>37% to 39%</b></font> | **Moderate:** Search ad cash cows provide a moat, but Gemini dictates marginal multiple. |
+| **Meta (META)** | **$1,820 Billion** | ~$260 Billion | +$1,560 Billion | **~$650 Billion** | <font color="#0284C7"><b>35% to 37%</b></font> | **Moderate:** $55B annual CapEx is justified by algorithmic ad optimization on Reels. |
+| **CoreWeave** (Private) | **$21 Billion** | ~$500 Million | +$20.5 Billion | **$21.0 Billion** | <font color="#DC2626"><b>100%</b></font> | **Binary:** Zero diversified cash flows outside of GPU-backed debt and compute leasing. |
+| **OpenAI** (Private) | **$157 Billion** | ~$20 Billion | +$137 Billion | **$157.0 Billion** | <font color="#DC2626"><b>100%</b></font> | **Binary:** $6B+/yr operational burn rate requires uninterrupted external equity inflows. |
+| **Anthropic** (Private) | **$20 Billion** | ~$1 Billion | +$19 Billion | **$20.0 Billion** | <font color="#DC2626"><b>100%</b></font> | **Binary:** Long-term survival depends on continuous balance sheet support from Big Tech. |
+
+### The Systemic Contagion Channel: Illusion of Diversification & "Correlation 1.0"
+The most acute implication for financial stability is that **these firms do not represent uncorrelated exposures**. If enterprise end-user software monetization stalls, capex cuts at a single hyperscaler cascade through the entire chain:
+$$\text{CapEx Cuts at Microsoft/Meta} \longrightarrow \text{60\% Revenue Drop at Nvidia} \longrightarrow \text{Neocloud Debt Defaults} \longrightarrow \text{Private Credit Freeze}$$
+
+---
+
+## 6. CapEx Intensity vs Free Cash Flow Squeeze
 
 ![CapEx vs FCF Margin](file:///c:/Users/jairo/OneDrive/Desktop/Projetos/avalia%C3%A7%C3%A3o%20de%20mercado/assets/charts/en/chart_company_capex_vs_fcf.png)
 
@@ -115,7 +186,7 @@ The divergence between capital spending and net cash conversion highlights struc
 
 ---
 
-## 5. Forecast for the Next 2 Semesters (H1-2027 and H2-2027)
+## 7. Forecast for the Next 2 Semesters (H1-2027 and H2-2027)
 
 ![Semiannual Forecast across 3 Scenarios](file:///c:/Users/jairo/OneDrive/Desktop/Projetos/avalia%C3%A7%C3%A3o%20de%20mercado/assets/charts/en/chart_company_forecast_2semesters.png)
 
@@ -169,7 +240,7 @@ Our multi-factor quantitative engine simulates equity price paths across 3 macro
 
 ---
 
-## 6. Portfolio Allocation Guidelines & Risk Management Takeaways
+## 8. Portfolio Allocation Guidelines & Risk Management Takeaways
 
 1. **Hardware Stock Convexity (NVDA, TSM, AVGO)**:
    * In Base and Bull regimes, hardware leaders offer the highest upside potential (+15% to +34% cumulative 12-month return) due to pricing power.
