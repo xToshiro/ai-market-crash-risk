@@ -71,14 +71,14 @@ def generate_evolution_chart():
             xlabel1 = 'Estimated Probability (%)'
 
         v1_probs = [70.0, 35.0, 20.0, 15.0, 30.0]
-        v2_probs = [25.0, 40.0, 45.0, 30.0, 75.0]
+        v2_probs = [52.0, 38.0, 34.0, 18.0, 48.0]
 
         y = np.arange(len(categories))
         h = 0.36
 
         # Colors: Highlight overall risk differently
         colors_v1 = ['#94A3B8', '#94A3B8', '#94A3B8', '#94A3B8', '#64748B']
-        colors_v2 = ['#10B981', '#F59E0B', '#EF4444', '#DC2626', '#B91C1C']
+        colors_v2 = ['#10B981', '#F59E0B', '#EF4444', '#DC2626', '#334155']
 
         # Plot bars
         ax1.barh(y - h/2, v1_probs, h, label=l_prev, color='#CBD5E1', edgecolor='#94A3B8')
@@ -89,8 +89,8 @@ def generate_evolution_chart():
             ax1.annotate(f"{v1_probs[i]:.0f}%", xy=(v1_probs[i] + 1.2, y[i] - h/2),
                          ha='left', va='center', fontsize=7.5, color='#64748B', fontweight='bold')
             delta = v2_probs[i] - v1_probs[i]
-            delta_str = f" ({delta:+.0f} pp)" if i != 0 else f" ({delta:+.0f} pp)"
-            color_txt = '#B91C1C' if delta > 0 else '#047857'
+            delta_str = f" ({delta:+.0f} pp)"
+            color_txt = '#B91C1C' if delta > 0 and i == len(categories) - 1 else ('#047857' if i == 0 else '#B91C1C')
             ax1.annotate(f"{v2_probs[i]:.0f}%{delta_str}", xy=(v2_probs[i] + 1.2, y[i] + h/2),
                          ha='left', va='center', fontsize=7.8, color=color_txt, fontweight='bold')
 
@@ -103,7 +103,7 @@ def generate_evolution_chart():
         ax1.grid(True, axis='x')
 
         # -------------------------------------------------------------
-        # PANEL 2: Waterfall / Attribution of the Jump (30% -> 75%)
+        # PANEL 2: Waterfall / Attribution of the Shift (30% -> 48%)
         # -------------------------------------------------------------
         if lang == 'pt':
             steps = [
@@ -112,28 +112,28 @@ def generate_evolution_chart():
                 '+ Desconto Anthropic (-60%)',
                 '+ CapEx $700B & Crédito Privado',
                 '+ Juros Altos (10Y > 5,10%)',
-                '= Calibração Atual (75%)'
+                '= Calibração Atual (48%)'
             ]
-            title2 = 'Decomposição do Aumento de Risco (+45 pp)'
+            title2 = 'Decomposição do Ajuste de Risco (+18 pp)'
             xlabel2 = 'Impacto Cumulativo na Probabilidade (%)'
         else:
             steps = [
                 '1. Initial Baseline',
-                '+ Grid Transmission Wall (Essex)',
-                '+ Anthropic Haircut (-60%)',
+                '+ Grid Transmission Friction (Essex)',
+                '+ Anthropic Valuation Repricing',
                 '+ $700B CapEx & Shadow Credit',
                 '+ Higher-for-Longer (10Y > 5.1%)',
-                '= Current Calibration (75%)'
+                '= Current Calibration (48%)'
             ]
-            title2 = 'Attribution of the Risk Gauge Surge (+45 pp)'
+            title2 = 'Attribution of the Risk Calibration Shift (+18 pp)'
             xlabel2 = 'Cumulative Probability Impact (%)'
 
-        step_values = [30.0, 15.0, 12.0, 10.0, 8.0, 75.0]
-        cumulative  = [30.0, 45.0, 57.0, 67.0, 75.0, 75.0]
-        starts      = [0.0,  30.0, 45.0, 57.0, 67.0, 0.0]
+        step_values = [30.0, 6.0,  5.0,  4.0,  3.0,  48.0]
+        cumulative  = [30.0, 36.0, 41.0, 45.0, 48.0, 48.0]
+        starts      = [0.0,  30.0, 36.0, 41.0, 45.0, 0.0]
 
         y2 = np.arange(len(steps))
-        step_colors = ['#64748B', '#F59E0B', '#EF4444', '#DC2626', '#B91C1C', '#7F1D1D']
+        step_colors = ['#64748B', '#F59E0B', '#EF4444', '#DC2626', '#B91C1C', '#1E293B']
 
         # Waterfall horizontal bars
         for i in range(len(steps)):
@@ -146,7 +146,7 @@ def generate_evolution_chart():
                 ax2.annotate(f"30%", xy=(width/2, y2[i]), ha='center', va='center',
                              fontsize=7.8, fontweight='bold', color='#FFFFFF')
             elif i == len(steps) - 1:
-                ax2.annotate(f"75%", xy=(width/2, y2[i]), ha='center', va='center',
+                ax2.annotate(f"48%", xy=(width/2, y2[i]), ha='center', va='center',
                              fontsize=7.8, fontweight='bold', color='#FFFFFF')
             else:
                 ax2.annotate(f"+{width:.0f} pp (-> {cumulative[i]:.0f}%)", xy=(left + width + 1.2, y2[i]),

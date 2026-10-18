@@ -12,10 +12,10 @@
 ---
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Crash_Scenario_Probability-75%25_(Oct--2026)-1E293B?style=for-the-badge" alt="Crash Scenario Probability 75%"/>
-  <img src="https://img.shields.io/badge/Soft_Landing_Probability-25%25_(Oct--2026)-475569?style=for-the-badge" alt="Soft Landing Probability 25%"/>
+  <img src="https://img.shields.io/badge/Crash_Scenario_Probability-48%25_(Oct--2026)-1E293B?style=for-the-badge" alt="Crash Scenario Probability 48%"/>
+  <img src="https://img.shields.io/badge/Soft_Landing_Probability-52%25_(Oct--2026)-475569?style=for-the-badge" alt="Soft Landing Probability 52%"/>
   <img src="https://img.shields.io/badge/Baseline_Model-30%25_(Q3--2026)-64748B?style=for-the-badge" alt="Baseline Model 30%"/>
-  <img src="https://img.shields.io/badge/Model_Variance-%2B45_pp_(Oct--2026)-334155?style=for-the-badge" alt="+45 pp Model Variance"/>
+  <img src="https://img.shields.io/badge/Model_Variance-%2B18_pp_(Oct--2026)-334155?style=for-the-badge" alt="+18 pp Model Variance"/>
   <img src="https://img.shields.io/badge/Asset_Classes-ABS_%7C_Private_Credit_%7C_Equities_%7C_Sovereign_Bonds-0A192F?style=for-the-badge" alt="Asset Classes"/>
   <img src="https://img.shields.io/badge/Coverage_Horizon-2026_--_2029-475569?style=for-the-badge" alt="Coverage Horizon"/>
   <img src="https://img.shields.io/badge/Reports-16_Executive_PDFs_(102_Pages)-2E7D32?style=for-the-badge" alt="Reports"/>
@@ -28,7 +28,7 @@
 <!-- LIVE CRASH RISK PROBABILITY GAUGE -->
 <div align="center">
 
-## 📊 AI Market Stress & Crash Scenario Probability: **75%**
+## 📊 AI Market Stress & Crash Scenario Probability: **48%**
 > ### *Empirical Risk Modeling • Calibrated Probability of Severe Market Correction & Credit Dislocation (2026–2029)*
 > *Modelagem Empírica de Risco • Calibração Probabilística de Correção de Mercado e Deslocamento de Crédito (2026–2029)*
 
@@ -37,16 +37,16 @@
 <p align="center">
   <img src="assets/charts/en/chart_crash_probability_evolution.png" width="920" alt="Historical Evolution of the AI Market Crash Risk Gauge (2026)"/>
   <br>
-  <em><b>Figure 0: AI Market Crash Risk Gauge Progression (2026)</b> — Version 1 (Initial Q3-2026 Baseline: 30%) vs. Version 2 (Current October 2026 Calibration: 75%). Attribution of the +45 pp shift based on physical power transmission queue freezes (Essex cancellation), Anthropic ~60% valuation haircut, $700B hyperscaler CapEx shadow credit exposure, and 5.10% US 10Y yields.</em>
+  <em><b>Figure 0: AI Market Crash Risk Gauge Progression (2026)</b> — Version 1 (Initial Q3-2026 Baseline: 30%) vs. Version 2 (Current October 2026 Calibration: 48%). Attribution of the +18 pp shift based on regional utility interconnection frictions (Essex cancellation), Anthropic growth normalization, $700B hyperscaler CapEx shadow credit exposure, and 5.10% US 10Y yields.</em>
 </p>
 
 | Risk Dimension / Scenario | Version 1: Initial Baseline (Q3-2026) | Version 2: Current Calibration (Oct-2026) | Trajectory Delta | Probability Regime & Transmission Channel |
 |:---|:---:|:---:|:---:|:---|
-| **Cumulative Stress / Crash Scenario Probability** | **30.0%** | **75.0%** | **+45.0 pp** | Dominant Distribution Regime (S1 + S2 + S3) |
-| **Scenario 1: Orderly Multiple Compression** | 35.0% | 40.0% | +5.0 pp | Enterprise ROI Normalization & Multiple Re-rating |
-| **Scenario 2: Credit & Grid Dislocation** | 20.0% | 45.0% | +25.0 pp | Stranded Infrastructure Assets & ABS Illiquidity |
-| **Scenario 3: Systemic Global Contagion** | 15.0% | 30.0% | +15.0 pp | Sovereign Yield Spillover & Semiconductor Chokepoint |
-| **Benign Soft Landing (No Dislocation)** | **70.0%** | **25.0%** | **-45.0 pp** | Subordinate Probability Regime |
+| **Cumulative Stress / Crash Scenario Probability** | **30.0%** | **48.0%** | **+18.0 pp** | Elevated Dislocation Regime (S1 + S2 + S3) |
+| **Scenario 1: Orderly Multiple Compression** | 35.0% | 38.0% | +3.0 pp | Enterprise ROI Normalization & Multiple Re-rating |
+| **Scenario 2: Credit & Grid Dislocation** | 20.0% | 34.0% | +14.0 pp | Infrastructure Delivery Delays & ABS Friction |
+| **Scenario 3: Systemic Global Contagion** | 15.0% | 18.0% | +3.0 pp | Sovereign Yield Pressure & Semiconductor Chokepoint |
+| **Benign Soft Landing (Productive Absorption)** | **70.0%** | **52.0%** | **-18.0 pp** | Primary Plausible Outcome (Diminished Margin of Safety) |
 
 *📌 Note: This probability distribution is empirically calibrated via `scripts/fetch_market_pipeline.py` and visualized via `scripts/generate_crash_gauge_evolution_chart.py` based on observed infrastructure and credit data.*
 
@@ -86,7 +86,7 @@ The October 2026 intelligence update incorporates critical developments in physi
 | **Frontier AI Lab Valuations** | Exponential ARR scaling (>300% YoY); private secondary markets pricing frontier labs (OpenAI, Anthropic) near **$1.5 Trillion** pre-IPO. | **Valuation Haircut & Deceleration**: Anthropic private valuation marked down by **~60% to $600B–$700B**; annual growth decelerated to **~85% YoY** amid enterprise inference cost pressure and open-weight model commoditization. | Impairs equity collateral value; stalls pre-IPO liquidity timelines; triggers multiple compression across public AI software peers. |
 | **Hyperscaler CapEx & Credit Leverage** | Annual CapEx assumed to plateau at ~$350B–$400B, fully funded by organic free cash flow from core advertising and enterprise software. | **$700B Hyper-CapEx & Shadow Debt**: Annual CapEx pace reached **$700 Billion run-rate**, increasingly funded via **off-balance-sheet SPVs and private credit** (Blackstone, Ares, Apollo) rather than cash flow alone. | Shifts credit risk into shadow banking; Debt Service Coverage Ratios (DSCR) breach default covenants ($<1.10x$) if tenant deployments lag. |
 | **Macro Interest Rates & Refinancing** | Projected rapid Federal Reserve rate cuts down to ~3.0%; benign debt rollover for tech issuers. | **Higher-for-Longer & $36.85T Debt**: US 10-Year Treasury yield holding firmly at **5.10%**; US national debt interest outlays surpass **$1.16 Trillion/year**; corporate debt refinancing costs remain elevated. | Widens high-yield credit spreads (`HYG/LQD` ratio compressed to 0.7433); raises hurdle rates for long-duration infrastructure investments. |
-| **Cumulative Crash Probabilities** | Soft-landing / Benign continuation estimated at **70%**; Systemic contagion treated as remote tail-risk (**<15%**). | **Recalibrated Risk Matrix (2026–2029)**:<br>• **Orderly Deflation (S1)**: **40%**<br>• **Credit Dislocation (S2)**: **45%**<br>• **Systemic Contagion (S3)**: **30%**<br>• *Benign Continuation*: Reduced to **25%**. | Subprime AI mechanics transition from theoretical vulnerability to empirical distress triggers. |
+| **Cumulative Crash Probabilities** | Soft-landing / Benign continuation estimated at **70%**; Systemic contagion treated as remote tail-risk (**<15%**). | **Recalibrated Risk Matrix (2026–2029)**:<br>• **Orderly Deflation (S1)**: **38%**<br>• **Credit Dislocation (S2)**: **34%**<br>• **Systemic Contagion (S3)**: **18%**<br>• *Benign Continuation*: Calibrated at **52%** (Cumulative Stress: **48%**). | Subprime AI mechanics transition from theoretical vulnerability to empirical distress triggers. |
 
 <p align="center">
   <img src="assets/charts/en/chart_grid_bottleneck_delays.png" width="440" alt="Grid Bottleneck Delays (EN)"/>
@@ -357,7 +357,7 @@ A atualização de inteligência de outubro de 2026 incorpora desdobramentos cru
 | **Valuations dos Laboratórios de IA** | Escala exponencial de receita ARR (>300% ao ano); transações privadas avaliando laboratórios de ponta (Anthropic, OpenAI) em até **US$ 1,5 Trilhão** pré-IPO. | **Desconto de Valuation e Desaceleração**: Valuation privado da Anthropic reajustado com **corte de ~60% para a faixa de US$ 600B–US$ 700B**; crescimento anual desacelerou para **~85% ao ano** diante do custo de inferência e comoditização por modelos abertos. | Redução drástica no valor de garantias societárias; adiamento de liquidez de IPOs; compressão de múltiplos em todas as empresas de software listadas. |
 | **CapEx dos Hiperscalers e Alavancagem** | Despesas de capital projetadas em patamar de ~US$ 350B–US$ 400B ao ano, 100% bancadas pelo fluxo de caixa operacional das Big Techs sem risco de crédito. | **Hiper-CapEx de US$ 700B e Dívida Sombra**: Ritmo anual de CapEx atingiu **US$ 700 Bilhões**, cada vez mais dependente de **SPEs fora do balanço e crédito privado** (Blackstone, Ares, Apollo) em vez de caixa puro. | Migração do risco para o setor bancário sombra; índices de cobertura da dívida (ICSD) caem abaixo de $1,10x$ caso as locações sofram atrasos operacionais. |
 | **Taxas de Juros Macro e Dívida Soberana** | Expectativa de corte rápido de juros pelo Federal Reserve para ~3,0%; refinanciamento tranquilo de dívidas corporativas de tecnologia. | **Juros Altos por Mais Tempo e Dívida de US$ 36,85T**: Yield dos Treasuries de 10 anos firme em **5,10%**; despesa anual com juros da dívida americana supera **US$ 1,16 Trilhão/ano**; custo de refinanciamento corporativo segue elevado. | Abertura de spreads de crédito corporativo (razão `HYG/LQD` em 0,7433); aumento na taxa de desconto de projetos de infraestrutura de longo prazo. |
-| **Probabilidades de Quebra Acumuladas** | Cenário benigno / "pouso suave" estimado em **70%**; contágio sistêmico considerado risco de cauda desprezível (**<15%**). | **Matriz de Risco Recalibrada (2026–2029)**:<br>• **Deflação Ordenada (S1)**: **40%**<br>• **Deslocamento de Crédito (S2)**: **45%**<br>• **Contágio Sistêmico Global (S3)**: **30%**<br>• *Continuação Benigna*: Reduzida a **25%**. | A mecânica do subprime de IA deixa de ser uma vulnerabilidade teórica e passa a apresentar gatilhos empíricos de inadimplência. |
+| **Probabilidades de Quebra Acumuladas** | Cenário benigno / "pouso suave" estimado em **70%**; contágio sistêmico considerado risco de cauda desprezível (**<15%**). | **Matriz de Risco Recalibrada (2026–2029)**:<br>• **Deflação Ordenada (S1)**: **38%**<br>• **Deslocamento de Crédito (S2)**: **34%**<br>• **Contágio Sistêmico Global (S3)**: **18%**<br>• *Continuação Benigna*: Calibrada em **52%** (Estresse Acumulado: **48%**). | A mecânica do subprime de IA deixa de ser uma vulnerabilidade teórica e passa a apresentar gatilhos empíricos de inadimplência. |
 
 <p align="center">
   <img src="assets/charts/pt/chart_grid_bottleneck_delays.png" width="440" alt="Gargalos da Rede Elétrica (PT)"/>
@@ -376,7 +376,7 @@ A atualização de inteligência de outubro de 2026 incorpora desdobramentos cru
 <p align="center">
   <img src="assets/charts/pt/chart_crash_probability_evolution.png" width="920" alt="Evolução do Barômetro de Risco de Quebra (PT)"/>
   <br>
-  <em><b>Figura 4: Evolução do Barômetro de Risco de Quebra do Mercado de IA (2026)</b> — Versão 1 (Baseline Inicial Q3-2026: 30%) vs. Versão 2 (Calibração Atual Outubro-2026: 75%). Decomposição da escalada de +45 pp no risco de deslocamento severo de crédito e quebra sistêmica impulsionada por gargalos na rede, cortes de valuation e alavancagem em crédito privado.</em>
+  <em><b>Figura 4: Evolução do Barômetro de Risco de Quebra do Mercado de IA (2026)</b> — Versão 1 (Baseline Inicial Q3-2026: 30%) vs. Versão 2 (Calibração Atual Outubro-2026: 48%). Decomposição do avanço de +18 pp no risco de deslocamento de crédito e estresse de mercado impulsionado por gargalos regionais na rede, reprecificação de múltiplos e alavancagem em crédito privado.</em>
 </p>
 
 ---
