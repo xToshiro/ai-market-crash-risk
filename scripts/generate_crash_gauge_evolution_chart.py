@@ -112,7 +112,7 @@ def generate_evolution_chart():
                 '+ Desconto Anthropic (-60%)',
                 '+ CapEx $700B & Crédito Privado',
                 '+ Juros Altos (10Y > 5,10%)',
-                '= Probabilidade Atual'
+                '= Calibração Atual (75%)'
             ]
             title2 = 'Decomposição do Aumento de Risco (+45 pp)'
             xlabel2 = 'Impacto Cumulativo na Probabilidade (%)'
@@ -123,7 +123,7 @@ def generate_evolution_chart():
                 '+ Anthropic Haircut (-60%)',
                 '+ $700B CapEx & Shadow Credit',
                 '+ Higher-for-Longer (10Y > 5.1%)',
-                '= Current Risk Gauge'
+                '= Current Calibration (75%)'
             ]
             title2 = 'Attribution of the Risk Gauge Surge (+45 pp)'
             xlabel2 = 'Cumulative Probability Impact (%)'
@@ -146,8 +146,7 @@ def generate_evolution_chart():
                 ax2.annotate(f"30%", xy=(width/2, y2[i]), ha='center', va='center',
                              fontsize=7.8, fontweight='bold', color='#FFFFFF')
             elif i == len(steps) - 1:
-                lbl_v2 = "75% (Out/2026)" if lang == 'pt' else "75% (Oct-2026)"
-                ax2.annotate(lbl_v2, xy=(width/2, y2[i]), ha='center', va='center',
+                ax2.annotate(f"75%", xy=(width/2, y2[i]), ha='center', va='center',
                              fontsize=7.8, fontweight='bold', color='#FFFFFF')
             else:
                 ax2.annotate(f"+{width:.0f} pp (-> {cumulative[i]:.0f}%)", xy=(left + width + 1.2, y2[i]),
