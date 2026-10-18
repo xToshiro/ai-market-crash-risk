@@ -124,7 +124,7 @@ def main():
     en_charts = glob.glob(os.path.join(ROOT_DIR, "assets", "charts", "en", "*.png"))
     print(f"  ✅ Portuguese Charts: {len(pt_charts)} found in assets/charts/pt/")
     print(f"  ✅ English Charts:    {len(en_charts)} found in assets/charts/en/")
-    if len(pt_charts) < 40 or len(en_charts) < 40:
+    if len(pt_charts) < 41 or len(en_charts) < 41:
         errors += 1
 
     # 4. Check Page Previews

@@ -69,6 +69,7 @@ def main():
     ok_charts_en = run_step([sys.executable, "generate_charts_en.py"], "Step 1/4: Generating 31 English Charts (assets/charts/en/)")
     ok_charts_co = run_step([sys.executable, "generate_company_charts.py"], "Step 1/4 (cont): Generating Bilingual Company Charts (assets/charts/)")
     ok_charts_up = run_step([sys.executable, "generate_recent_market_update_charts.py"], "Step 1/4 (cont): Generating Recent Market Update Charts (assets/charts/)")
+    ok_charts_ev = run_step([sys.executable, "generate_crash_gauge_evolution_chart.py"], "Step 1/4 (cont): Generating Crash Risk Gauge Evolution Charts (assets/charts/)")
 
     # Step 2: Build all 16 PDFs
     print("\n>>> Step 2/4: Compiling 16 Institutional PDF Reports (102 Pages)...")

@@ -12,13 +12,44 @@
 ---
 
 <p align="center">
+  <img src="https://img.shields.io/badge/Crash_Risk_Gauge-75%25_(CRITICAL_ALERT)-DC2626?style=for-the-badge" alt="Crash Risk Gauge 75%"/>
+  <img src="https://img.shields.io/badge/Baseline_Risk-30%25_(Q3--2026)-64748B?style=for-the-badge" alt="Baseline Risk 30%"/>
+  <img src="https://img.shields.io/badge/Risk_Surge-%2B45_pp_Deterioration-B91C1C?style=for-the-badge" alt="+45 pp Surge"/>
   <img src="https://img.shields.io/badge/Asset_Classes-ABS_%7C_Private_Credit_%7C_Equities_%7C_Sovereign_Bonds-0A192F?style=for-the-badge" alt="Asset Classes"/>
   <img src="https://img.shields.io/badge/Coverage_Horizon-2026_--_2029-C53030?style=for-the-badge" alt="Coverage Horizon"/>
-  <img src="https://img.shields.io/badge/Methodology-KBRA_ABS_%2B_Basel_III_%2B_Monte_Carlo-1B365D?style=for-the-badge" alt="Methodology"/>
   <img src="https://img.shields.io/badge/Reports-16_Executive_PDFs_(102_Pages)-2E7D32?style=for-the-badge" alt="Reports"/>
-  <img src="https://img.shields.io/badge/Bilingual_Charts-40_EN_%7C_40_PT-D97706?style=for-the-badge" alt="Bilingual Charts"/>
+  <img src="https://img.shields.io/badge/Bilingual_Charts-41_EN_%7C_41_PT-D97706?style=for-the-badge" alt="Bilingual Charts"/>
   <img src="https://img.shields.io/badge/Skills-Antigravity_Forecast_Updater-6B21A8?style=for-the-badge" alt="Skills"/>
 </p>
+
+---
+
+<!-- LIVE CRASH RISK PROBABILITY GAUGE -->
+<div align="center">
+
+## 🚨 CURRENT AI MARKET CRASH PROBABILITY GAUGE: **75%** (HIGH ALERT)
+> ### *Official Systemic Risk Barometer • Probability of Severe Credit Dislocation or Market Crash (2026–2029)*
+> *Barômetro Oficial de Risco Sistêmico • Probabilidade de Deslocamento de Crédito ou Quebra de Mercado (2026–2029)*
+
+<br>
+
+<p align="center">
+  <img src="assets/charts/en/chart_crash_probability_evolution.png" width="920" alt="Historical Evolution of the AI Market Crash Risk Gauge (2026)"/>
+  <br>
+  <em><b>Figure 0: AI Market Crash Risk Gauge Progression (2026)</b> — Version 1 (Initial Q3-2026 Baseline: 30%) vs. Version 2 (Current October 2026 Calibration: 75%). Attribution of the +45 pp surge driven by physical power transmission queue freezes (Essex cancellation), Anthropic ~60% valuation haircut, $700B hyperscaler CapEx shadow credit exposure, and 5.10% US 10Y yields.</em>
+</p>
+
+| Risk Dimension / Scenario | Version 1: Initial Baseline (Q3-2026) | Version 2: Current Calibration (Oct-2026) | Trajectory Delta | Current Systemic Threat Level |
+|:---|:---:|:---:|:---:|:---:|
+| **OVERALL CRASH / SEVERE DISLOCATION RISK** | **30%** | **75%** | **+45 pp** 🔺 | 🔴 **CRITICAL ALERT (HIGH CONTAGION RISK)** |
+| **Scenario 1: Orderly Deflation** | 35% | 40% | +5 pp 🔺 | 🟡 Elevated (CapEx Slowdown & Multiple Compression) |
+| **Scenario 2: Credit & Grid Dislocation** | 20% | 45% | +25 pp 🔺 | 🔴 Severe Vulnerability (Stranded Assets & ABS Friction) |
+| **Scenario 3: Systemic Global Contagion** | 15% | 30% | +15 pp 🔺 | 🔴 High Tail Risk (US $40T Debt Cliff + Taiwan Supply Shock) |
+| **Benign Soft Landing (No Crash)** | **70%** | **25%** | **-45 pp** 🔻 | ⚠️ Collapsed Margin of Safety |
+
+*📌 Note: This live gauge is continuously calibrated via `scripts/fetch_market_pipeline.py` and regenerated via `scripts/generate_crash_gauge_evolution_chart.py` whenever market fundamentals or forensic reports are updated.*
+
+</div>
 
 ---
 
@@ -341,6 +372,12 @@ A atualização de inteligência de outubro de 2026 incorpora desdobramentos cru
   <em>Figura 3: Ritmo de CapEx de US$ 700B financiado por crédito privado vs. probabilidades estressadas de quebra (2026–2029).</em>
 </p>
 
+<p align="center">
+  <img src="assets/charts/pt/chart_crash_probability_evolution.png" width="920" alt="Evolução do Barômetro de Risco de Quebra (PT)"/>
+  <br>
+  <em><b>Figura 4: Evolução do Barômetro de Risco de Quebra do Mercado de IA (2026)</b> — Versão 1 (Baseline Inicial Q3-2026: 30%) vs. Versão 2 (Calibração Atual Outubro-2026: 75%). Decomposição da escalada de +45 pp no risco de deslocamento severo de crédito e quebra sistêmica impulsionada por gargalos na rede, cortes de valuation e alavancagem em crédito privado.</em>
+</p>
+
 ---
 
 ## 3. Pilares Forenses da Investigação
@@ -351,7 +388,7 @@ Fabricantes líderes de tecnologia fornecem capital de investimento a startups d
 <p align="center">
   <img src="assets/charts/pt/chart_vendor_financing_loop.png" width="800" alt="Ciclo Fechado de Vendor Financing (PT)"/>
   <br>
-  <em>Figura 4: O ciclo fechado de vendor financing entre provedores de hardware, neoclouds e hiperscalers.</em>
+  <em>Figura 5: O ciclo fechado de vendor financing entre provedores de hardware, neoclouds e hiperscalers.</em>
 </p>
 
 ### Pilar 2: Descasamento de Depreciação de Hardware e Dívida
@@ -360,7 +397,7 @@ Uma GPU de data center tem vida útil econômica de ponta restrita a 2 ou 3 anos
 <p align="center">
   <img src="assets/charts/pt/chart_gpu_depreciation_vs_debt.png" width="800" alt="Depreciação de GPUs vs Amortização de Dívida (PT)"/>
   <br>
-  <em>Figura 5: Divergência entre curvas de depreciação física/econômica de GPUs e cronogramas de amortização de dívida.</em>
+  <em>Figura 6: Divergência entre curvas de depreciação física/econômica de GPUs e cronogramas de amortização de dívida.</em>
 </p>
 
 ### Pilar 3: O "Subprime de IA" e o Repacotamento AAA
@@ -369,7 +406,7 @@ Data centers são empacotados em estruturas de securitização (Data Center ABS)
 <p align="center">
   <img src="assets/charts/pt/chart_tranche_structure.png" width="800" alt="Estrutura de Tranches de Data Center ABS (PT)"/>
   <br>
-  <em>Figura 6: Estrutura de capital de Data Center ABS (Notas Classe A Sênior, Classe B Mezanino e Equity Residual).</em>
+  <em>Figura 7: Estrutura de capital de Data Center ABS (Notas Classe A Sênior, Classe B Mezanino e Equity Residual).</em>
 </p>
 
 ### Pilar 4: Transmissão Geopolítica e Risco Soberano
@@ -378,13 +415,13 @@ O custo do capital global subiu estruturalmente. Com as taxas de juros americana
 <p align="center">
   <img src="assets/charts/pt/chart_map_vulnerability.png" width="900" alt="Mapa Global de Vulnerabilidade Geopolítica (PT)"/>
   <br>
-  <em>Figura 7: Índice de Vulnerabilidade Sistêmica nos epicentros financeiros e tecnológicos mundiais (2026–2028).</em>
+  <em>Figura 8: Índice de Vulnerabilidade Sistêmica nos epicentros financeiros e tecnológicos mundiais (2026–2028).</em>
 </p>
 
 <p align="center">
   <img src="assets/charts/pt/chart_leverage_pyramid.png" width="800" alt="Pirâmide de Alavancagem de Crédito de IA (PT)"/>
   <br>
-  <em>Figura 8: A Pirâmide de Alavancagem do Crédito de IA — Dos ativos físicos de silício aos derivativos sintéticos.</em>
+  <em>Figura 9: A Pirâmide de Alavancagem do Crédito de IA — Dos ativos físicos de silício aos derivativos sintéticos.</em>
 </p>
 
 ---
