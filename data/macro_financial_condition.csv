@@ -1,0 +1,19 @@
+Symbol,Indicator,Category,Value,Unit,Change_1D_Pct,Change_1M_Pct,Change_6M_Pct,Change_1Y_Pct,Change_2Y_Pct,High_52W,Low_52W,Last_Updated
+^TNX,US 10-Year Treasury Yield,Treasury Yields,5.1,%,0.18,3.05,20.07,26.0,26.94,5.31,3.95,2026-10-18 13:06:55
+^TYX,US 30-Year Treasury Bond Yield,Treasury Yields,5.44,%,0.13,2.64,11.28,17.18,26.45,5.66,4.54,2026-10-18 13:06:55
+^IRX,US 13-Week Treasury Bill Yield,Treasury Yields,4.07,%,-0.44,2.65,13.06,5.5,-9.62,4.09,3.51,2026-10-18 13:06:55
+^GSPC,S&P 500 Index,Equity Benchmark,7659.44,pts,-1.09,0.28,7.48,14.82,31.12,7818.93,6343.72,2026-10-18 13:06:55
+^IXIC,Nasdaq Composite Index,Equity Benchmark,26140.03,pts,-2.15,-1.05,6.83,15.31,42.27,27599.79,20794.64,2026-10-18 13:06:55
+^NDX,Nasdaq 100 Index,Equity Benchmark,29187.55,pts,-2.5,-0.88,9.43,17.95,44.56,31224.47,22953.38,2026-10-18 13:06:55
+^DJI,Dow Jones Industrial Average,Equity Benchmark,52002.41,pts,-0.34,0.43,5.17,12.43,20.27,54349.12,45166.64,2026-10-18 13:06:55
+^VIX,CBOE Volatility Index,Market Volatility,19.99,pts,21.45,29.47,2.51,-3.8,2.09,31.05,13.47,2026-10-18 13:06:55
+UUP,Invesco DB US Dollar Index (DXY Proxy),Currency & FX,28.92,USD,-0.28,1.9,5.7,7.47,7.38,29.13,26.47,2026-10-18 13:06:55
+GC=F,Gold Futures (USD/troy oz),Monetary Hedge,4181.1,USD,0.26,-4.97,-14.31,-0.49,53.15,5318.4,3960.5,2026-10-18 13:06:55
+CL=F,WTI Crude Oil Futures (USD/bbl),Energy Inflation,99.02,USD,1.07,-2.84,18.09,69.93,43.05,112.95,55.27,2026-10-18 13:06:55
+CALC,US National Debt USD Trillion,US Fiscal Baseline,36.85,USD_B/T,0.0,,,,,36.85,36.85,2026-10-18 13:06:55
+CALC,US Debt to GDP Percent,US Fiscal Baseline,124.6,USD_T / % / GW,0.0,,,,,124.6,124.6,2026-10-18 13:06:55
+CALC,US Federal Deficit FY26 USD Trillion,US Fiscal Baseline,1.95,USD_B/T,0.0,,,,,1.95,1.95,2026-10-18 13:06:55
+CALC,US Net Interest Annual Pace USD Trillion,US Fiscal Baseline,1.16,USD_B/T,0.0,,,,,1.16,1.16,2026-10-18 13:06:55
+CALC,Foreign Holdings US Debt Percent,US Fiscal Baseline,22.4,USD_T / % / GW,0.0,,,,,22.4,22.4,2026-10-18 13:06:55
+CALC,Estimated Data Center Power Demand 2028 GW,US Fiscal Baseline,44.5,USD_T / % / GW,0.0,,,,,44.5,44.5,2026-10-18 13:06:55
+CALC,Hyperscaler Annual CapEx RunRate USD Billion,US Fiscal Baseline,700.0,USD_B/T,0.0,,,,,700.0,700.0,2026-10-18 13:06:55

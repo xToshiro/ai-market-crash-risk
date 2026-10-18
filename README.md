@@ -358,15 +358,29 @@ Todos os relatórios executivos estão disponíveis em formato PDF institucional
 
 ---
 
-## 5. Atualização Futura com Skills do Antigravity
+## 5. Pipeline Automatizado de Dados e Atualização Futura
 
-Para atualizar as previsões no futuro de forma 100% automatizada e documentada, o repositório disponibiliza a skill em:
-`[.agents/skills/ai-market-risk-updater/](.agents/skills/ai-market-risk-updater/)`
+Para atualizar o observatório de mercado no futuro de forma rápida, reprodutível e orientada a dados, o repositório disponibiliza um pipeline numérico em Python integrado à skill do Antigravity:
 
-Basta solicitar:
-> *"Atualize as projeções de quebra com os dados mais recentes do Tesouro dos EUA e recompile todos os relatórios."*
+### 🚀 Executando o Pipeline de Coleta de Mercado (Numérico)
+Execute o script em linha de comando única:
+```bash
+py scripts/fetch_market_pipeline.py
+```
 
-O agente carregará as fontes oficiais (`sources_and_apis.md`), as fórmulas de depreciação e ICSD (`quantitative_methodologies.md`), executará o script mestre `build_all_reports.py` e verificará a integridade com `validate_models.py`.
+O pipeline consulta 45+ ativos financeiros em tempo real e consolida múltiplos arquivos CSV estruturados na pasta [`data/`](data/):
+- **[`data/latest_market_metrics.csv`](data/latest_market_metrics.csv)**: Dataset consolidado mestre com todas as classes de ativos, preços, variações (1D, 1M, 6M, 1Y, 2Y) e múltiplos de avaliação.
+- **[`data/companies_valuation_metrics.csv`](data/companies_valuation_metrics.csv)**: Ações líderes de IA (NVDA, MSFT, GOOGL, META, AAPL, TSM, ASML, AVGO), infraestrutura elétrica (VST, CEG, NEE, TLN), neoclouds (PLTR, CRWD) e crédito privado (BX, ARES, APO, BIZD).
+- **[`data/macro_financial_condition.csv`](data/macro_financial_condition.csv)**: Curva de Treasuries (10Y, 30Y, 13W), Dólar (DXY), Ouro, Petróleo WTI, VIX e baseline da dívida soberana dos EUA ($36,8T+).
+- **[`data/investment_flows_credit.csv`](data/investment_flows_credit.csv)**: Fluxos de ETFs temáticos (QQQ, SMH, XLU, PAVE) e apetite a risco de crédito corporativo (proporção `HYG / LQD`).
+- **[`data/ai_agent_research_brief.md`](data/ai_agent_research_brief.md)**: Dossiê analítico gerado dinamicamente para orientar o agente de IA com anomalias estatísticas e queries de pesquisa direcionadas.
+
+### 🤖 Protocolo para o Agente de IA (Síntese Numérica + Pesquisa Web)
+Ao solicitar uma nova atualização de relatório:
+1. O agente executa `py scripts/fetch_market_pipeline.py` para renovar todos os dados numéricos em CSV.
+2. O agente lê [`data/ai_agent_research_brief.md`](data/ai_agent_research_brief.md) e [`data/latest_market_metrics.csv`](data/latest_market_metrics.csv).
+3. O agente executa buscas na internet em sites institucionais confiáveis (*Financial Times, Bloomberg, Reuters, SEC EDGAR, KBRA, EIA, operadoras de rede PJM/National Grid*) para identificar os catalisadores qualitativos das mudanças observadas.
+4. O agente calibra os dicionários de premissas (`FACTS`, `SCENARIOS`, `TRANCHES`) e roda `py scripts/build_all_reports.py` para gerar os novos relatórios PDF e dossiês.
 
 ---
 

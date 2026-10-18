@@ -1,10 +1,29 @@
 # Update Workflow & Script Guide
 
-This document describes how to update parameters in code, re-generate charts, and compile reports.
+This document describes how to execute the automated market intelligence pipeline, update parameters in code, re-generate charts, and compile reports.
 
 ---
 
-## 1. Parameter Locations in Python Scripts
+## 1. Automated Market Intelligence Pipeline (Data Ingestion)
+
+Before editing code parameters, run the automated pipeline to refresh live financial metrics across 45+ tickers, US sovereign yields, and credit spreads:
+
+```bash
+# Execute pipeline from repository root
+py scripts/fetch_market_pipeline.py
+```
+
+### Generated CSV Deliverables in `data/`:
+1. `data/latest_market_metrics.csv`: Consolidated snapshot of all equities, macro indicators, and flows.
+2. `data/companies_valuation_metrics.csv`: Detailed valuation multiples (P/E, EV/EBITDA, P/S), market cap, and 2-year trajectory.
+3. `data/macro_financial_condition.csv`: 10Y/30Y/13W yields, dollar index, commodities, and US fiscal debt run-rate.
+4. `data/investment_flows_credit.csv`: Thematic ETF flows (SMH, XLU, PAVE) and credit appetite ratio (`HYG / LQD`).
+5. `data/snapshots/snapshot_YYYYMMDD_HHMM.csv`: Time-stamped archival history.
+6. `data/ai_agent_research_brief.md`: Curated brief with suggested web search queries for the AI Agent.
+
+---
+
+## 2. Parameter Locations in Python Scripts
 
 | File | Target Dictionary / Array | Variables to Update |
 |:---|:---|:---|
@@ -15,6 +34,7 @@ This document describes how to update parameters in code, re-generate charts, an
 | `scripts/generate_market_crash_scenarios_report.py` | `DATA_VALUATION`, `SCENARIO_PROBS` | P/E multiples, private tech valuations, default rates. |
 | `scripts/generate_data_center_abs_tranches_report.py` | `TRANCHES` | KBRA Class A / Class B tranche spreads, LTV, and credit enhancement. |
 | `scripts/generate_leverage_multiplier_report.py` | `DEBT_FACILITIES` | CoreWeave, Lambda Labs loan amounts, interest rates, and GPU collateral counts. |
+| `scripts/generate_recent_market_update_report.py` | `UPDATE_METRICS`, `GRID_STATUS` | Nscale Essex status, Anthropic valuation haircut, PJM queue. |
 
 ---
 

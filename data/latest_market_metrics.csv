@@ -1,0 +1,54 @@
+Asset_Class,Identifier,Title,Category,Latest_Value,Unit,Change_1D_Pct,Change_1M_Pct,Change_6M_Pct,Change_1Y_Pct,Change_2Y_Pct,Market_Cap_B,Valuation_PE,Last_Updated
+Equity,NVDA,NVIDIA Corporation,AI Hyperscaler,214.13,USD,-1.43,-2.38,6.42,19.36,56.8,5170.6,27.07,2026-10-18 13:06:55
+Equity,MSFT,Microsoft Corporation,AI Hyperscaler,529.05,USD,-1.93,6.29,25.64,3.89,28.96,3928.49,29.47,2026-10-18 13:06:55
+Equity,GOOGL,Alphabet Inc.,AI Hyperscaler,340.59,USD,-2.47,-1.94,-0.2,36.03,110.51,4165.39,17.09,2026-10-18 13:06:55
+Equity,AMZN,Amazon.com Inc.,AI Hyperscaler,250.0,USD,-1.87,-0.47,-0.22,15.97,33.31,2696.58,20.11,2026-10-18 13:06:55
+Equity,META,Meta Platforms Inc.,AI Hyperscaler,709.33,USD,-3.72,4.04,3.19,-0.81,23.75,1807.01,26.73,2026-10-18 13:06:55
+Equity,AAPL,Apple Inc.,AI Hyperscaler,343.46,USD,0.43,1.92,27.33,38.26,49.19,5012.52,39.39,2026-10-18 13:06:55
+Equity,ORCL,Oracle Corporation,AI Hyperscaler,128.23,USD,-4.64,-14.53,-26.22,-57.2,-25.3,388.73,20.1,2026-10-18 13:06:55
+Equity,TSM,Taiwan Semiconductor Mfg Co,Semiconductors,412.61,USD,-2.28,-4.1,11.93,36.84,105.4,2139.99,26.74,2026-10-18 13:06:55
+Equity,ASML,ASML Holding N.V.,Semiconductors,1641.52,USD,-0.96,0.73,12.84,63.63,138.23,632.67,40.39,2026-10-18 13:06:55
+Equity,AVGO,Broadcom Inc.,Semiconductors,328.75,USD,-4.52,-5.17,-18.86,-5.73,84.24,1569.33,41.99,2026-10-18 13:06:55
+Equity,AMD,Advanced Micro Devices,Semiconductors,528.75,USD,-5.95,-3.0,89.93,121.61,238.4,863.17,134.89,2026-10-18 13:06:55
+Equity,QCOM,Qualcomm Inc.,Semiconductors,172.11,USD,-3.53,-8.8,27.52,7.81,5.0,183.79,19.92,2026-10-18 13:06:55
+Equity,VST,Vistra Corp,Power & Data Centers,152.02,USD,-1.39,6.07,-6.72,-27.48,20.83,51.02,25.64,2026-10-18 13:06:55
+Equity,CEG,Constellation Energy,Power & Data Centers,271.37,USD,-1.32,3.26,-8.1,-32.45,1.23,96.15,26.53,2026-10-18 13:06:55
+Equity,NEE,NextEra Energy,Power & Data Centers,79.8,USD,1.06,-1.82,-11.95,-4.31,1.04,166.46,17.93,2026-10-18 13:06:55
+Equity,TLN,Talen Energy,Power & Data Centers,354.81,USD,0.34,20.97,-2.88,-14.67,106.67,16.78,,2026-10-18 13:06:55
+Equity,EQIX,Equinix Inc.,Power & Data Centers,985.98,USD,-1.03,-3.89,-8.55,22.48,15.75,97.29,63.45,2026-10-18 13:06:55
+Equity,DLR,Digital Realty Trust,Power & Data Centers,175.97,USD,0.86,-4.5,-12.41,3.32,13.83,66.46,85.42,2026-10-18 13:06:55
+Equity,PLTR,Palantir Technologies,Software & Security,186.03,USD,-7.22,5.55,27.08,3.57,342.93,447.04,160.37,2026-10-18 13:06:55
+Equity,CRWD,CrowdStrike Holdings,Software & Security,227.39,USD,-7.02,-7.45,114.54,86.0,193.09,232.83,3789.83,2026-10-18 13:06:55
+Equity,SNOW,Snowflake Inc.,Software & Security,306.84,USD,-8.43,-9.32,113.11,27.39,157.78,108.25,,2026-10-18 13:06:55
+Equity,DDOG,Datadog Inc.,Software & Security,247.11,USD,-7.19,4.71,95.17,54.42,95.78,88.73,494.22,2026-10-18 13:06:55
+Equity,BX,Blackstone Inc.,Private Credit & Finance,106.61,USD,-2.37,-14.99,-15.79,-32.32,-32.87,127.43,23.85,2026-10-18 13:06:55
+Equity,ARES,Ares Management,Private Credit & Finance,112.27,USD,-1.54,-10.41,-2.7,-22.62,-28.89,37.25,51.74,2026-10-18 13:06:55
+Equity,APO,Apollo Global Management,Private Credit & Finance,110.78,USD,-0.97,-12.08,-10.35,-11.81,-21.43,65.42,39.71,2026-10-18 13:06:55
+Equity,KKR,KKR & Co. Inc.,Private Credit & Finance,86.21,USD,-1.62,-12.2,-16.46,-30.23,-36.66,79.62,27.54,2026-10-18 13:06:55
+Equity,BIZD,VanEck BDC Income ETF,Private Credit & Finance,12.01,USD,-1.8,-6.6,-4.01,-4.71,-8.44,,12.29,2026-10-18 13:06:55
+Macro/Sovereign,^TNX,US 10-Year Treasury Yield,Treasury Yields,5.1,%,0.18,3.05,20.07,26.0,26.94,,,2026-10-18 13:06:55
+Macro/Sovereign,^TYX,US 30-Year Treasury Bond Yield,Treasury Yields,5.44,%,0.13,2.64,11.28,17.18,26.45,,,2026-10-18 13:06:55
+Macro/Sovereign,^IRX,US 13-Week Treasury Bill Yield,Treasury Yields,4.07,%,-0.44,2.65,13.06,5.5,-9.62,,,2026-10-18 13:06:55
+Macro/Sovereign,^GSPC,S&P 500 Index,Equity Benchmark,7659.44,pts,-1.09,0.28,7.48,14.82,31.12,,,2026-10-18 13:06:55
+Macro/Sovereign,^IXIC,Nasdaq Composite Index,Equity Benchmark,26140.03,pts,-2.15,-1.05,6.83,15.31,42.27,,,2026-10-18 13:06:55
+Macro/Sovereign,^NDX,Nasdaq 100 Index,Equity Benchmark,29187.55,pts,-2.5,-0.88,9.43,17.95,44.56,,,2026-10-18 13:06:55
+Macro/Sovereign,^DJI,Dow Jones Industrial Average,Equity Benchmark,52002.41,pts,-0.34,0.43,5.17,12.43,20.27,,,2026-10-18 13:06:55
+Macro/Sovereign,^VIX,CBOE Volatility Index,Market Volatility,19.99,pts,21.45,29.47,2.51,-3.8,2.09,,,2026-10-18 13:06:55
+Macro/Sovereign,UUP,Invesco DB US Dollar Index (DXY Proxy),Currency & FX,28.92,USD,-0.28,1.9,5.7,7.47,7.38,,,2026-10-18 13:06:55
+Macro/Sovereign,GC=F,Gold Futures (USD/troy oz),Monetary Hedge,4181.1,USD,0.26,-4.97,-14.31,-0.49,53.15,,,2026-10-18 13:06:55
+Macro/Sovereign,CL=F,WTI Crude Oil Futures (USD/bbl),Energy Inflation,99.02,USD,1.07,-2.84,18.09,69.93,43.05,,,2026-10-18 13:06:55
+Macro/Sovereign,CALC,US National Debt USD Trillion,US Fiscal Baseline,36.85,USD_B/T,0.0,,,,,,,2026-10-18 13:06:55
+Macro/Sovereign,CALC,US Debt to GDP Percent,US Fiscal Baseline,124.6,USD_T / % / GW,0.0,,,,,,,2026-10-18 13:06:55
+Macro/Sovereign,CALC,US Federal Deficit FY26 USD Trillion,US Fiscal Baseline,1.95,USD_B/T,0.0,,,,,,,2026-10-18 13:06:55
+Macro/Sovereign,CALC,US Net Interest Annual Pace USD Trillion,US Fiscal Baseline,1.16,USD_B/T,0.0,,,,,,,2026-10-18 13:06:55
+Macro/Sovereign,CALC,Foreign Holdings US Debt Percent,US Fiscal Baseline,22.4,USD_T / % / GW,0.0,,,,,,,2026-10-18 13:06:55
+Macro/Sovereign,CALC,Estimated Data Center Power Demand 2028 GW,US Fiscal Baseline,44.5,USD_T / % / GW,0.0,,,,,,,2026-10-18 13:06:55
+Macro/Sovereign,CALC,Hyperscaler Annual CapEx RunRate USD Billion,US Fiscal Baseline,700.0,USD_B/T,0.0,,,,,,,2026-10-18 13:06:55
+Flow/Credit,QQQ,Invesco QQQ (Nasdaq 100 ETF),Thematic ETF,709.8,USD / Ratio,-2.5,-0.89,9.63,18.42,45.95,,,2026-10-18 13:06:55
+Flow/Credit,SMH,VanEck Semiconductor ETF,Thematic ETF,539.79,USD / Ratio,-3.41,-3.71,16.29,58.43,116.18,,,2026-10-18 13:06:55
+Flow/Credit,IGV,iShares Expanded Tech-Software ETF,Thematic ETF,104.34,USD / Ratio,-4.8,-1.36,22.66,-7.88,13.35,,,2026-10-18 13:06:55
+Flow/Credit,XLU,Utilities Select Sector SPDR ETF,Thematic ETF,42.21,USD / Ratio,1.34,1.99,-7.3,-6.54,9.69,,,2026-10-18 13:06:55
+Flow/Credit,PAVE,Global X US Infrastructure Dev ETF,Thematic ETF,52.78,USD / Ratio,-0.32,-0.25,-3.97,11.4,26.35,,,2026-10-18 13:06:55
+Flow/Credit,HYG,iShares iBoxx $ High Yield Corporate Bond ETF,Credit Risk,76.86,USD / Ratio,-0.35,-1.93,-1.83,0.89,8.49,,,2026-10-18 13:06:55
+Flow/Credit,LQD,iShares iBoxx $ Investment Grade Corporate Bond ETF,Credit Risk,103.4,USD / Ratio,-0.1,-1.25,-3.75,-3.37,2.13,,,2026-10-18 13:06:55
+Flow/Credit,HYG/LQD,Credit Risk Appetite Ratio (HYG / LQD),Credit Spread Proxy,0.7433,USD / Ratio,,,,,,,,2026-10-18 13:06:55

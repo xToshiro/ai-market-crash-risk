@@ -23,28 +23,50 @@ This skill defines the end-to-end institutional workflow for ingesting new econo
 
 ## Standard Update Workflow
 
-### Step 1: Ingest Data & Review Benchmarks
-1. Consult [sources_and_apis.md](./references/sources_and_apis.md) for verified data feed locations (FRED, TreasuryDirect, SEC EDGAR, KBRA, TSMC monthly releases).
-2. Record newly observed metrics in a structured draft dictionary matching the schema in `scripts/generate_macro_geopolitical_crash_report.py` (`FACTS`).
+### Step 1: Run Automated Market Intelligence Pipeline (Numeric Ingestion)
+Execute the single-command automated pipeline to fetch updated prices, multiples, yields, and investment flows:
+```bash
+py scripts/fetch_market_pipeline.py
+```
+This updates structured CSV files in `data/`:
+- `data/latest_market_metrics.csv`: Unified dataset of all 45+ assets and macro indicators.
+- `data/companies_valuation_metrics.csv`: AI Hyperscalers, Semis, Power/Grid utilities, Neoclouds, and Private Credit.
+- `data/macro_financial_condition.csv`: 10Y/30Y/13W Treasury yields, US national debt ($36.8T+), S&P 500, Nasdaq, VIX, Oil, Gold.
+- `data/investment_flows_credit.csv`: Sector ETFs (QQQ, SMH, XLU, PAVE) and credit spread proxies (HYG, LQD, HYG/LQD ratio).
+- `data/ai_agent_research_brief.md`: Automated brief highlighting statistical anomalies and targeted search queries.
 
-### Step 2: Recalibrate Mathematical Models
+### Step 2: Targeted Web Research on Trusted Sources (Qualitative Synthesis)
+The AI Agent **MUST** review `data/ai_agent_research_brief.md` and conduct targeted web searches to uncover the qualitative catalysts behind the numbers.
+
+**Trusted Media Whitelist**:
+- Financial Press: *Financial Times* (`site:ft.com`), *Bloomberg* (`site:bloomberg.com`), *Wall Street Journal* (`site:wsj.com`), *Reuters* (`site:reuters.com`).
+- Regulatory & Official Filings: SEC EDGAR (`site:sec.gov` for 10-K, 10-Q, 8-K), Federal Reserve (`federalreserve.gov`), TreasuryDirect (`treasurydirect.gov`).
+- Credit & Energy Authorities: KBRA (`kbra.com`), EIA (`eia.gov`), Regional Grid Operators (PJM, National Grid UK).
+
+**Targeted Research Themes**:
+1. *Data Center Grid Bottlenecks*: Power interconnect cancellations, utility backlog queues (7-10 years), PPA contract revisions.
+2. *AI Frontier & Valuation*: Pre-IPO funding rounds, valuation discounts, compute cost vs. software revenue realization.
+3. *Sovereign Fiscal Stress*: Treasury refunding announcements, foreign debt liquidation (Japan, China), interest burden ($1.16T+ run-rate).
+4. *Private Credit & Vendor Financing*: GPU-backed term loans, neocloud circularity, ABS tranche structuring.
+
+### Step 3: Recalibrate Mathematical Models
 1. Consult [quantitative_methodologies.md](./references/quantitative_methodologies.md) to apply stress test formulas:
    - **GPU Depreciation vs. Amortization**: Recalculate half-life decay constants $\lambda$ and Loan-to-Value (LTV) ratios.
    - **DSCR Covenant Breaches**: Check if rental spot rates drive Debt Service Coverage below $1.10x$.
    - **Geopolitical Vulnerability Index (GVI)**: Update scores across the 6 weighted channels ($E, F, X, T, M, G$) and regional overlays.
    - **Scenario Probability Buildup**: Ensure probabilities for S1 (Orderly Deflation), S2 (Credit Dislocation), and S3 (Systemic Contagion) sum to exactly 100%.
 
-### Step 3: Run Model Validation
-Execute the verification script to ensure mathematical consistency before building documents:
+### Step 4: Run Model Validation
+Execute the verification script to ensure mathematical and file integrity before building documents:
 ```bash
 py .agents/skills/ai-market-risk-updater/scripts/validate_models.py
 ```
-Ensure all assertions pass (zero NaNs, probability sums equal 100%, LTV ranges within [0, 1]).
+Ensure all assertions pass (zero NaNs, probability sums equal 100%, LTV ranges within [0, 1], all 16 PDFs verified).
 
-### Step 4: Recompile Visual Assets & PDF Reports
+### Step 5: Recompile Visual Assets & PDF Reports
 Refer to [update_workflow.md](./references/update_workflow.md) for execution commands:
 ```bash
-# Rebuild all 12 executive PDF reports (EN & PT) and chart assets
+# Rebuild all 16 executive PDF reports (EN & PT) and high-res chart assets
 py scripts/build_all_reports.py
 ```
 

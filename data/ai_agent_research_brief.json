@@ -1,0 +1,31 @@
+{
+  "pipeline_timestamp": "2026-10-18 13:06:55",
+  "key_benchmarks": {
+    "SP500_Level": "7659.44",
+    "US_10Y_Treasury_Yield": "5.10%",
+    "CBOE_VIX": "19.99",
+    "US_National_Debt_Trillion": 36.85,
+    "US_Net_Interest_Annual_Trillion": 1.16,
+    "Hyperscaler_CapEx_Pace_Billion": 700.0
+  },
+  "suggested_news_search_queries": [
+    "site:ft.com OR site:bloomberg.com Microsoft data center cancellations power grid constraints",
+    "site:reuters.com Anthropic valuation revenue growth deceleration pre-IPO",
+    "site:wsj.com US 10-year Treasury yield federal deficit interest outlays",
+    "site:sec.gov CoreWeave NVIDIA GPU-backed debt collateral filings",
+    "site:bloomberg.com private credit data center ABS Blackstone Ares Apollo",
+    "site:kbra.com data center ABS rating methodology class A tranches",
+    "PJM interconnection queue delays data centers energy bottlenecks 2026"
+  ],
+  "trusted_domains": [
+    "bloomberg.com",
+    "ft.com (Financial Times)",
+    "wsj.com (Wall Street Journal)",
+    "reuters.com",
+    "sec.gov (EDGAR 10-K/10-Q/8-K)",
+    "kbra.com (Kroll Bond Rating Agency)",
+    "eia.gov (US Energy Information Administration)",
+    "federalreserve.gov",
+    "nationalgrid.com / pjm.com"
+  ]
+}
