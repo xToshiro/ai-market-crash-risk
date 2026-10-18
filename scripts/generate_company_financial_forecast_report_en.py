@@ -6,7 +6,7 @@ generate_company_financial_forecast_report_en.py
 Generates an 8-page institutional PDF executive report in English:
 "Executive Report: Financial Status of AI Leaders, 2-Year Stock Trajectory, and Semiannual Forecasts (2027)"
 
-Output: reports/en/Relatorio_Status_Financeiro_Acoes_Previsao_Empresas_IA_EN.pdf
+Output: reports/en/Report_AI_Leaders_Financial_Status_2027_Forecasts.pdf
 """
 
 import os
@@ -49,12 +49,12 @@ class NumberedCanvas(canvas.Canvas):
         
         # Header on pages 2..N
         if self._pageNumber > 1:
-            self.setFont("Helvetica-Bold", 7.8)
+            self.setFont("Helvetica-Bold", 7.5)
             self.setFillColor(colors.HexColor("#0F172A"))
-            self.drawString(54, 750, "INSTITUTIONAL RESEARCH • AI FINANCIAL AUDIT & FORECASTS (2026–2027)")
-            self.setFont("Helvetica", 7.8)
+            self.drawString(54, 750, "INSTITUTIONAL RESEARCH • AI FINANCIAL AUDIT (2026–2027)")
+            self.setFont("Helvetica", 7.4)
             self.setFillColor(colors.HexColor("#64748B"))
-            self.drawRightString(612 - 54, 750, "CORPORATE STATUS, STOCK TRAJECTORY & SCENARIOS")
+            self.drawRightString(612 - 54, 750, "CORPORATE STATUS, STOCKS & SCENARIOS")
             
             self.setStrokeColor(colors.HexColor("#CBD5E1"))
             self.setLineWidth(0.7)
@@ -73,7 +73,7 @@ class NumberedCanvas(canvas.Canvas):
         
         self.restoreState()
 
-def build_pdf_report(output_filename="Relatorio_Status_Financeiro_Acoes_Previsao_Empresas_IA_EN.pdf"):
+def build_pdf_report(output_filename="Report_AI_Leaders_Financial_Status_2027_Forecasts.pdf"):
     out_path = get_report_en_path(output_filename)
     doc = SimpleDocTemplate(
         out_path,

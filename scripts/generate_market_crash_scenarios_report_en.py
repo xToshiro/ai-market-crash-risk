@@ -5,7 +5,7 @@ from utils_paths import get_chart_path, get_report_en_path
 generate_market_crash_scenarios_report_en.py
 --------------------------------------------
 Generates the Institutional English Executive Report (5 pages):
-'Relatorio_Cenarios_Quebra_Mercado_IA_2026_2029_EN.pdf'
+'Report_AI_Market_Crash_Scenarios_2026_2029.pdf'
 Strategic Modeling of 3 Market Crash Scenarios, Historical Tech Equities, and Private Valuations.
 """
 
@@ -65,7 +65,7 @@ class NumberedCanvas(canvas.Canvas):
         
         self.restoreState()
 
-def build_pdf_report(market_data=None, output_filename="Relatorio_Cenarios_Quebra_Mercado_IA_2026_2029_EN.pdf"):
+def build_pdf_report(market_data=None, output_filename="Report_AI_Market_Crash_Scenarios_2026_2029.pdf"):
     if market_data is None:
         market_data = {
             'NVDA': {'current_price': 229.28},
@@ -560,7 +560,7 @@ def build_pdf_report(market_data=None, output_filename="Relatorio_Cenarios_Quebr
     print(f"Market Crash Scenarios Report successfully compiled: {output_filename}", flush=True)
 
 def main():
-    pdf_filename = "Relatorio_Cenarios_Quebra_Mercado_IA_2026_2029_EN.pdf"
+    pdf_filename = "Report_AI_Market_Crash_Scenarios_2026_2029.pdf"
     build_pdf_report(None, pdf_filename)
     print(f"Generated: {os.path.abspath(pdf_filename)}", flush=True)
 

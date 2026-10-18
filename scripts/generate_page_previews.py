@@ -38,20 +38,35 @@ os.makedirs(PREVIEWS_PT_DIR, exist_ok=True)
 os.makedirs(PREVIEWS_EN_DIR, exist_ok=True)
 
 REPORT_SLUGS = {
+    # Portuguese reports
     "Relatorio_Macro_Geopolitica_Quebra_Mercado_2026_2028.pdf": "macro_geopolitics",
-    "Relatorio_Macro_Geopolitica_Quebra_Mercado_2026_2028_EN.pdf": "macro_geopolitics",
     "Relatorio_Mercado_Financeiro_Americano.pdf": "us_market",
-    "Relatorio_Mercado_Financeiro_Americano_EN.pdf": "us_market",
     "Relatorio_Cenarios_Quebra_Mercado_IA_2026_2029.pdf": "crash_scenarios",
-    "Relatorio_Cenarios_Quebra_Mercado_IA_2026_2029_EN.pdf": "crash_scenarios",
     "Relatorio_Data_Center_ABS_Tranches_Oficiais.pdf": "data_center_abs",
-    "Relatorio_Data_Center_ABS_Tranches_Oficiais_EN.pdf": "data_center_abs",
     "Relatorio_Forense_Subprime_IA_Repacotamento_AAA.pdf": "forensic_subprime",
-    "Relatorio_Forense_Subprime_IA_Repacotamento_AAA_EN.pdf": "forensic_subprime",
-    ("Relatorio_Alavancagem_e_Vendor_Financing_IA.pdf"): "leverage_multiplier",
-    "Relatorio_Alavancagem_e_Vendor_Financing_IA_EN.pdf": "leverage_multiplier",
+    "Relatorio_Alavancagem_e_Vendor_Financing_IA.pdf": "leverage_multiplier",
     "Relatorio_Status_Financeiro_Acoes_Previsao_Empresas_IA.pdf": "company_financial_forecast",
+    "Relatorio_Atualizacao_Mercado_Outubro_2026_Nscale_Anthropic_Grid.pdf": "market_update_oct2026",
+
+    # English reports
+    "Report_Macro_Geopolitics_Market_Crash_2026_2028.pdf": "macro_geopolitics",
+    "Report_US_Financial_Market_AI_Bubble.pdf": "us_market",
+    "Report_AI_Market_Crash_Scenarios_2026_2029.pdf": "crash_scenarios",
+    "Report_Data_Center_ABS_Official_Tranches.pdf": "data_center_abs",
+    "Report_Forensic_AI_Subprime_AAA_Repackaging.pdf": "forensic_subprime",
+    "Report_AI_Leverage_and_Vendor_Financing.pdf": "leverage_multiplier",
+    "Report_AI_Leaders_Financial_Status_2027_Forecasts.pdf": "company_financial_forecast",
+    "Report_Market_Update_Oct2026_Grid_Anthropic.pdf": "market_update_oct2026",
+
+    # Legacy English filenames
+    "Relatorio_Macro_Geopolitica_Quebra_Mercado_2026_2028_EN.pdf": "macro_geopolitics",
+    "Relatorio_Mercado_Financeiro_Americano_EN.pdf": "us_market",
+    "Relatorio_Cenarios_Quebra_Mercado_IA_2026_2029_EN.pdf": "crash_scenarios",
+    "Relatorio_Data_Center_ABS_Tranches_Oficiais_EN.pdf": "data_center_abs",
+    "Relatorio_Forense_Subprime_IA_Repacotamento_AAA_EN.pdf": "forensic_subprime",
+    "Relatorio_Alavancagem_e_Vendor_Financing_IA_EN.pdf": "leverage_multiplier",
     "Relatorio_Status_Financeiro_Acoes_Previsao_Empresas_IA_EN.pdf": "company_financial_forecast",
+    "Relatorio_Atualizacao_Mercado_Outubro_2026_Nscale_Anthropic_Grid_EN.pdf": "market_update_oct2026",
 }
 
 def render_pdf_pages(pdf_path, output_dir, slug, lang_code, dpi=130):

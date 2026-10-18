@@ -53,3 +53,14 @@ This document catalogs the institutional data sources, APIs, and periodic filing
 |:---|:---|:---|
 | **RunPod / Vast.ai / TensorDock** | Hourly spot pricing for 8x H100 SXM5 / B200 nodes. | Sustained spot rate $< \$1.50$/GPU-hour indicates negative equity for debt-financed clusters. |
 | **Silicon Resale Brokers** | Secondary refurbished hardware transaction values. | Resale price $< 40\%$ of initial purchase price within 24 months. |
+
+---
+
+## 6. Power Grid Interconnection Queues & Pre-IPO Intelligence
+
+| Sector / Domain | Primary Feeds & Sources | Monitored Indicators | Code / Model Integration |
+|:---|:---|:---|:---|
+| **Power Grid & Utility Queues** | PJM Interconnection, National Grid UK, FERC, IEA | Interconnection queue delays (e.g. Loughton 2030s cliff), capacity clearing prices ($/MW-day), transformer lead times (3–5 yrs). | Data center energization rates, delay/cancellation rates (30–50%). |
+| **Pre-IPO & Frontier AI Valuations** | Investor Day disclosures, Euronext, Business Insider, Financial Times | Sequential revenue growth (e.g. Anthropic Q3 +45% QoQ vs Q2 +146%), target IPO valuation haircuts ($2.0T -> $1.5T). | Neocloud & AI lab valuation models, multiple compression factors. |
+| **Repository Source Dossiers** | `docs/pt/Fontes_Noticias_Recentes_Outubro_2026.md` & `docs/en/Recent_News_Sources_October_2026.md` | Verified press, regulatory filings, and corporate releases for October 2026. | Grounding for updated forecast reports. |
+

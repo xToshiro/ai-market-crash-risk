@@ -12,8 +12,8 @@
   <img src="https://img.shields.io/badge/Asset_Classes-ABS_%7C_Private_Credit_%7C_Equities_%7C_Sovereign_Bonds-0A192F?style=for-the-badge" alt="Asset Classes"/>
   <img src="https://img.shields.io/badge/Coverage_Horizon-2026_--_2029-C53030?style=for-the-badge" alt="Coverage Horizon"/>
   <img src="https://img.shields.io/badge/Methodology-KBRA_ABS_%2B_Basel_III_%2B_Monte_Carlo-1B365D?style=for-the-badge" alt="Methodology"/>
-  <img src="https://img.shields.io/badge/Reports-14_Executive_PDFs_(86_Pages)-2E7D32?style=for-the-badge" alt="Reports"/>
-  <img src="https://img.shields.io/badge/Bilingual_Charts-36_EN_%7C_36_PT-D97706?style=for-the-badge" alt="Bilingual Charts"/>
+  <img src="https://img.shields.io/badge/Reports-16_Executive_PDFs_(102_Pages)-2E7D32?style=for-the-badge" alt="Reports"/>
+  <img src="https://img.shields.io/badge/Bilingual_Charts-40_EN_%7C_40_PT-D97706?style=for-the-badge" alt="Bilingual Charts"/>
   <img src="https://img.shields.io/badge/Skills-Antigravity_Forecast_Updater-6B21A8?style=for-the-badge" alt="Skills"/>
 </p>
 
@@ -130,30 +130,30 @@ ai-market-crash-risk/
 ├── .gitignore                                  # Git exclusion rules
 │
 ├── reports/                                    # Executive PDF Reports (ReportLab Platypus)
-│   ├── en/                                     # 7 English Institutional PDFs (43 pages)
-│   └── pt/                                     # 7 Portuguese Institutional PDFs (43 pages)
+│   ├── en/                                     # 8 English Institutional PDFs (51 pages)
+│   └── pt/                                     # 8 Portuguese Institutional PDFs (51 pages)
 │
 ├── docs/                                       # In-depth Analytical Markdown Dossiers
-│   ├── en/                                     # 8 English technical research dossiers
-│   └── pt/                                     # 8 Portuguese technical research dossiers
+│   ├── en/                                     # 10 English technical research dossiers
+│   └── pt/                                     # 10 Portuguese technical research dossiers
 │
 ├── scripts/                                    # Python orchestration & generation scripts
 │   ├── build_all_reports.py                    # Master pipeline runner
 │   ├── generate_charts_en.py                   # Dedicated English charts compiler
 │   ├── generate_company_charts.py              # Bilingual company forecast charts
-│   ├── generate_page_previews.py               # High-res PDF page preview generator
+│   ├── generate_recent_market_update_charts.py # Grid bottlenecks & Anthropic valuation charts
+│   ├── generate_page_previews.py               # High-res PDF page preview generator (102 images)
 │   ├── utils_paths.py                          # Path resolution utility
-│   ├── generate_company_financial_forecast_report.py
-│   ├── generate_company_financial_forecast_report_en.py
-│   └── ...                                     # 12 other modular report generators
+│   ├── generate_recent_market_update_report.py # October 2026 special update report
+│   └── ...                                     # 14 other modular report generators
 │
 ├── assets/
-│   ├── charts/                                 # 72 Bilingual financial & risk charts
-│   │   ├── en/                                 # 36 English charts (chart_*.png)
-│   │   └── pt/                                 # 36 Portuguese charts (chart_*.png)
-│   ├── previews/                               # 86 High-resolution report page previews
-│   │   ├── en/                                 # 43 English report page preview PNGs
-│   │   └── pt/                                 # 43 Portuguese report page preview PNGs
+│   ├── charts/                                 # 80 Bilingual financial & risk charts
+│   │   ├── en/                                 # 40 English charts (chart_*.png)
+│   │   └── pt/                                 # 40 Portuguese charts (chart_*.png)
+│   ├── previews/                               # 102 High-resolution report page previews
+│   │   ├── en/                                 # 51 English report page preview PNGs
+│   │   └── pt/                                 # 51 Portuguese report page preview PNGs
 │   └── geo/                                    # world_countries_110m.geojson spatial database
 │
 └── .agents/skills/
@@ -167,25 +167,27 @@ ai-market-crash-risk/
 
 ## 5. Deliverables Index: Reports & Dossiers
 
-All executive reports are available in full institutional-grade PDF format (86 pages compiled) and detailed technical Markdown dossiers:
+All executive reports are available in full institutional-grade PDF format (102 pages compiled) and detailed technical Markdown dossiers:
 
 ### 📑 Executive PDF Reports (Institutional Format)
 
 | Document Title | Language | Pages | Download / Access | Page Previews |
 |:---|:---:|:---:|:---:|:---:|
-| **Macro Geopolitical Market Crash (2026–2028)** | 🇺🇸 English | 10 | [Download PDF](reports/en/Relatorio_Macro_Geopolitica_Quebra_Mercado_2026_2028_EN.pdf) | [View Previews](assets/previews/en/) |
+| **Market Update: Grid Choke Point & Anthropic Haircut (2026–2029)** | 🇺🇸 English | 8 | [Download PDF](reports/en/Report_Market_Update_Oct2026_Grid_Anthropic.pdf) | [View Previews](assets/previews/en/) |
+| **Atualização: Gargalo da Rede Elétrica e Desconto Anthropic (2026–2029)** | 🇧🇷 Português | 8 | [Download PDF](reports/pt/Relatorio_Atualizacao_Mercado_Outubro_2026_Nscale_Anthropic_Grid.pdf) | [Ver Prévias](assets/previews/pt/) |
+| **Macro Geopolitical Market Crash (2026–2028)** | 🇺🇸 English | 10 | [Download PDF](reports/en/Report_Macro_Geopolitics_Market_Crash_2026_2028.pdf) | [View Previews](assets/previews/en/) |
 | **Macro Geopolítica Quebra de Mercado (2026–2028)** | 🇧🇷 Português | 10 | [Download PDF](reports/pt/Relatorio_Macro_Geopolitica_Quebra_Mercado_2026_2028.pdf) | [Ver Prévias](assets/previews/pt/) |
-| **US Financial Market & AI Bubble Architecture** | 🇺🇸 English | 8 | [Download PDF](reports/en/Relatorio_Mercado_Financeiro_Americano_EN.pdf) | [View Previews](assets/previews/en/) |
+| **US Financial Market & AI Bubble Architecture** | 🇺🇸 English | 8 | [Download PDF](reports/en/Report_US_Financial_Market_AI_Bubble.pdf) | [View Previews](assets/previews/en/) |
 | **Mercado Financeiro Americano e Bolha de IA** | 🇧🇷 Português | 8 | [Download PDF](reports/pt/Relatorio_Mercado_Financeiro_Americano.pdf) | [Ver Prévias](assets/previews/pt/) |
-| **Company Financial Status, Stocks & 2027 Forecasts** | 🇺🇸 English | 8 | [Download PDF](reports/en/Relatorio_Status_Financeiro_Acoes_Previsao_Empresas_IA_EN.pdf) | [View Previews](assets/previews/en/) |
+| **Company Financial Status, Stocks & 2027 Forecasts** | 🇺🇸 English | 8 | [Download PDF](reports/en/Report_AI_Leaders_Financial_Status_2027_Forecasts.pdf) | [View Previews](assets/previews/en/) |
 | **Status Financeiro, Ações e Previsões (2027)** | 🇧🇷 Português | 8 | [Download PDF](reports/pt/Relatorio_Status_Financeiro_Acoes_Previsao_Empresas_IA.pdf) | [Ver Prévias](assets/previews/pt/) |
-| **AI Infrastructure Crash Scenarios (2026–2029)** | 🇺🇸 English | 5 | [Download PDF](reports/en/Relatorio_Cenarios_Quebra_Mercado_IA_2026_2029_EN.pdf) | [View Previews](assets/previews/en/) |
+| **AI Infrastructure Crash Scenarios (2026–2029)** | 🇺🇸 English | 5 | [Download PDF](reports/en/Report_AI_Market_Crash_Scenarios_2026_2029.pdf) | [View Previews](assets/previews/en/) |
 | **Cenários de Quebra do Mercado de IA (2026–2029)** | 🇧🇷 Português | 5 | [Download PDF](reports/pt/Relatorio_Cenarios_Quebra_Mercado_IA_2026_2029.pdf) | [Ver Prévias](assets/previews/pt/) |
-| **Data Center ABS Official Tranches & KBRA** | 🇺🇸 English | 4 | [Download PDF](reports/en/Relatorio_Data_Center_ABS_Tranches_Oficiais_EN.pdf) | [View Previews](assets/previews/en/) |
+| **Data Center ABS Official Tranches & KBRA** | 🇺🇸 English | 4 | [Download PDF](reports/en/Report_Data_Center_ABS_Official_Tranches.pdf) | [View Previews](assets/previews/en/) |
 | **Data Center ABS Tranches Oficiais e KBRA** | 🇧🇷 Português | 4 | [Download PDF](reports/pt/Relatorio_Data_Center_ABS_Tranches_Oficiais.pdf) | [Ver Prévias](assets/previews/pt/) |
-| **Forensic AI Subprime & AAA Repackaging** | 🇺🇸 English | 4 | [Download PDF](reports/en/Relatorio_Forense_Subprime_IA_Repacotamento_AAA_EN.pdf) | [View Previews](assets/previews/en/) |
+| **Forensic AI Subprime & AAA Repackaging** | 🇺🇸 English | 4 | [Download PDF](reports/en/Report_Forensic_AI_Subprime_AAA_Repackaging.pdf) | [View Previews](assets/previews/en/) |
 | **Dossiê Forense Subprime de IA e Repacotamento AAA**| 🇧🇷 Português | 4 | [Download PDF](reports/pt/Relatorio_Forense_Subprime_IA_Repacotamento_AAA.pdf) | [Ver Prévias](assets/previews/pt/) |
-| **Leverage Multiplier & Vendor Financing** | 🇺🇸 English | 4 | [Download PDF](reports/en/Relatorio_Alavancagem_e_Vendor_Financing_IA_EN.pdf) | [View Previews](assets/previews/en/) |
+| **Leverage Multiplier & Vendor Financing** | 🇺🇸 English | 4 | [Download PDF](reports/en/Report_AI_Leverage_and_Vendor_Financing.pdf) | [View Previews](assets/previews/en/) |
 | **Alavancagem e Vendor Financing de IA** | 🇧🇷 Português | 4 | [Download PDF](reports/pt/Relatorio_Alavancagem_e_Vendor_Financing_IA.pdf) | [Ver Prévias](assets/previews/pt/) |
 
 ---
@@ -194,6 +196,8 @@ All executive reports are available in full institutional-grade PDF format (86 p
 
 | Technical Dossier (English) | Dossier Técnico (Português) | Primary Research Subject |
 |:---|:---|:---|
+| [Market Update: Grid & Anthropic](docs/en/Dossie_Market_Update_October_2026_Nscale_Anthropic_Grid_EN.md) | [Dossiê Atualização: Grid & Anthropic](docs/pt/Dossie_Atualizacao_Mercado_Outubro_2026_Nscale_Anthropic_Grid.md) | Microsoft-Nscale Essex cancellation, Anthropic $1.5T valuation cut, utility queue freezes & recalibrated risk matrix. |
+| [October 2026 News Intelligence Sources](docs/en/Recent_News_Sources_October_2026.md) | [Fontes e Notícias Recentes Outubro 2026](docs/pt/Fontes_Noticias_Recentes_Outubro_2026.md) | Verified audit trail of press reports (FT, Euronext, Business Insider), SEC filings, National Grid UK notices. |
 | [AI Leaders Financial Audit & 2027 Forecasts](docs/en/Dossie_Status_Financeiro_Acoes_Previsao_Empresas_IA_EN.md) | [Dossiê Status Financeiro das Líderes e Previsões](docs/pt/Dossie_Status_Financeiro_Acoes_Previsao_Empresas_IA.md) | Corporate balance sheets, 2-year returns & semiannual predictive target price matrix. |
 | [Macro Geopolitics & Market Crash Dossier](docs/en/Dossie_Macro_Geopolitica_Quebra_Mercado_2026_2028_EN.md) | [Dossiê Macro Geopolítica e Quebra de Mercado](docs/pt/Dossie_Macro_Geopolitica_Quebra_Mercado_2026_2028.md) | US fiscal debt, Taiwan Strait, oil choke points & regional ranking. |
 | [AI Market Crash Scenarios (2026–2029)](docs/en/Dossie_Cenarios_Quebra_Mercado_Acoes_e_Credito_EN.md) | [Dossiê Cenários de Quebra de Mercado](docs/pt/Dossie_Cenarios_Quebra_Mercado_Acoes_e_Credito.md) | Multi-year cascade simulation, loss severity and recovery rates. |
@@ -317,7 +321,44 @@ O custo do capital global subiu estruturalmente. Com as taxas de juros americana
 
 ---
 
-## 4. Atualização Futura com Skills do Antigravity
+## 4. Índice de Entregáveis: Relatórios Executivos e Dossiês
+
+Todos os relatórios executivos estão disponíveis em formato PDF institucional (102 páginas compiladas) e dossiês técnicos em Markdown:
+
+### 📑 Relatórios Executivos em PDF (Formato Institucional)
+
+| Título do Documento | Idioma | Páginas | Download / Acesso | Prévias em Imagem |
+|:---|:---:|:---:|:---:|:---:|
+| **Atualização: Gargalo da Rede Elétrica e Desconto Anthropic (2026–2029)** | 🇧🇷 Português | 8 | [Baixar PDF](reports/pt/Relatorio_Atualizacao_Mercado_Outubro_2026_Nscale_Anthropic_Grid.pdf) | [Ver Prévias](assets/previews/pt/) |
+| **Market Update: Grid Choke Point & Anthropic Haircut (2026–2029)** | 🇺🇸 English | 8 | [Download PDF](reports/en/Report_Market_Update_Oct2026_Grid_Anthropic.pdf) | [View Previews](assets/previews/en/) |
+| **Macro Geopolítica Quebra de Mercado (2026–2028)** | 🇧🇷 Português | 10 | [Baixar PDF](reports/pt/Relatorio_Macro_Geopolitica_Quebra_Mercado_2026_2028.pdf) | [Ver Prévias](assets/previews/pt/) |
+| **Mercado Financeiro Americano e Bolha de IA** | 🇧🇷 Português | 8 | [Baixar PDF](reports/pt/Relatorio_Mercado_Financeiro_Americano.pdf) | [Ver Prévias](assets/previews/pt/) |
+| **Status Financeiro, Ações e Previsões (2027)** | 🇧🇷 Português | 8 | [Baixar PDF](reports/pt/Relatorio_Status_Financeiro_Acoes_Previsao_Empresas_IA.pdf) | [Ver Prévias](assets/previews/pt/) |
+| **Cenários de Quebra do Mercado de IA (2026–2029)** | 🇧🇷 Português | 5 | [Baixar PDF](reports/pt/Relatorio_Cenarios_Quebra_Mercado_IA_2026_2029.pdf) | [Ver Prévias](assets/previews/pt/) |
+| **Data Center ABS Tranches Oficiais e KBRA** | 🇧🇷 Português | 4 | [Baixar PDF](reports/pt/Relatorio_Data_Center_ABS_Tranches_Oficiais.pdf) | [Ver Prévias](assets/previews/pt/) |
+| **Dossiê Forense Subprime de IA e Repacotamento AAA**| 🇧🇷 Português | 4 | [Baixar PDF](reports/pt/Relatorio_Forense_Subprime_IA_Repacotamento_AAA.pdf) | [Ver Prévias](assets/previews/pt/) |
+| **Alavancagem e Vendor Financing de IA** | 🇧🇷 Português | 4 | [Baixar PDF](reports/pt/Relatorio_Alavancagem_e_Vendor_Financing_IA.pdf) | [Ver Prévias](assets/previews/pt/) |
+
+---
+
+### 📂 Dossiês Técnicos em Markdown
+
+| Dossiê Técnico (Português) | Technical Dossier (English) | Tema Central de Pesquisa |
+|:---|:---|:---|
+| [Dossiê Atualização: Grid & Anthropic](docs/pt/Dossie_Atualizacao_Mercado_Outubro_2026_Nscale_Anthropic_Grid.md) | [Market Update: Grid & Anthropic](docs/en/Dossie_Market_Update_October_2026_Nscale_Anthropic_Grid_EN.md) | Cancelamento Essex da Microsoft-Nscale, corte de valuation de $1,5T da Anthropic e gargalo elétrico. |
+| [Fontes e Notícias Recentes Outubro 2026](docs/pt/Fontes_Noticias_Recentes_Outubro_2026.md) | [October 2026 News Intelligence Sources](docs/en/Recent_News_Sources_October_2026.md) | Pistas de auditoria da cobertura de imprensa (FT, Euronext, Business Insider), filings SEC e National Grid UK. |
+| [Dossiê Status Financeiro das Líderes e Previsões](docs/pt/Dossie_Status_Financeiro_Acoes_Previsao_Empresas_IA.md) | [AI Leaders Financial Audit & 2027 Forecasts](docs/en/Dossie_Status_Financeiro_Acoes_Previsao_Empresas_IA_EN.md) | Balanços corporativos, retornos de 2 anos e matriz preditiva de preços semestrais. |
+| [Dossiê Macro Geopolítica e Quebra de Mercado](docs/pt/Dossie_Macro_Geopolitica_Quebra_Mercado_2026_2028.md) | [Macro Geopolitics & Market Crash Dossier](docs/en/Dossie_Macro_Geopolitica_Quebra_Mercado_2026_2028_EN.md) | Dívida fiscal dos EUA, Estreito de Taiwan, gargalos de petróleo e ranking regional de vulnerabilidade. |
+| [Dossiê Cenários de Quebra de Mercado](docs/pt/Dossie_Cenarios_Quebra_Mercado_Acoes_e_Credito.md) | [AI Market Crash Scenarios (2026–2029)](docs/en/Dossie_Cenarios_Quebra_Mercado_Acoes_e_Credito_EN.md) | Simulação estocástica em cascata, severidade de perda e taxas de recuperação. |
+| [Relatório Data Center ABS](docs/pt/Data_Center_ABS_Relatorio.md) | [Data Center ABS Structuring Report](docs/en/Data_Center_ABS_Relatorio_EN.md) | Contratos de locação triplo-neto, contratos de energia PPA e cascata de pagamentos de SPVs. |
+| [Dossiê Forense Subprime IA Repacotamento](docs/pt/Dossie_Forense_Subprime_IA_Repacotamento_AAA.md) | [Forensic Subprime AI & AAA Alchemy](docs/en/Dossie_Forense_Subprime_IA_Repacotamento_AAA_EN.md) | Securitização sintética, arbitragem de rating e paralelos com a crise dos CDOs de 2008. |
+| [Dossiê Alavancagem e Vendor Financing](docs/pt/Dossie_Alavancagem_Vendor_Financing_IA.md) | [AI Credit Leverage & Vendor Financing](docs/en/Dossie_Alavancagem_Vendor_Financing_IA_EN.md) | Ciclos de circularidade de capital entre fabricantes de chips, hiperscalers e neoclouds. |
+| [Análise da Dívida GPU CoreWeave](docs/pt/CoreWeave_GPU_Debt_and_Vendor_Financing_Analysis.md) | [CoreWeave GPU Debt & Financing Analysis](docs/en/CoreWeave_GPU_Debt_and_Vendor_Financing_Analysis_EN.md) | Auditoria forense de balanço patrimonial, depreciação acelerada de GPUs vs covenants de dívida. |
+| [Metodologia de Rating KBRA Data Center](docs/pt/KBRA_Data_Center_ABS_Rating_Methodology_Dossier.md) | [KBRA Data Center ABS Rating Methodology](docs/en/KBRA_Data_Center_ABS_Rating_Methodology_Dossier_EN.md) | Critérios oficiais de agências de rating de crédito e reservas de liquidez estrutural. |
+
+---
+
+## 5. Atualização Futura com Skills do Antigravity
 
 Para atualizar as previsões no futuro de forma 100% automatizada e documentada, o repositório disponibiliza a skill em:
 `[.agents/skills/ai-market-risk-updater/](.agents/skills/ai-market-risk-updater/)`
@@ -329,7 +370,7 @@ O agente carregará as fontes oficiais (`sources_and_apis.md`), as fórmulas de 
 
 ---
 
-## 5. Licença e Aviso Legal (Disclaimer)
+## 6. Licença e Aviso Legal (Disclaimer)
 
 **Licença**: Este projeto é disponibilizado sob a licença **GNU General Public License v3.0 (GPL-3.0)**. Consulte o arquivo [LICENSE](LICENSE) para termos integrais.
 

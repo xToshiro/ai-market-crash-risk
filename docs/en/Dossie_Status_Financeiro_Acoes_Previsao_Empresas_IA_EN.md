@@ -2,7 +2,7 @@
 
 **Institutional Financial Audit, Earnings & CapEx Decomposition, 2-Year Market Performance (2024–2026), and Predictive Price/Multiple Matrix for the Next 2 Semesters (H1-2027 and H2-2027)**
 
-> 📑 **Full Executive Report in PDF (8 Pages):** [Download Relatorio_Status_Financeiro_Acoes_Previsao_Empresas_IA_EN.pdf](../../reports/en/Relatorio_Status_Financeiro_Acoes_Previsao_Empresas_IA_EN.pdf)
+> 📑 **Full Executive Report in PDF (8 Pages):** [Download Report_AI_Leaders_Financial_Status_2027_Forecasts.pdf](../../reports/en/Report_AI_Leaders_Financial_Status_2027_Forecasts.pdf)
 
 ---
 

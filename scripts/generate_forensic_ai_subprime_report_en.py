@@ -5,7 +5,7 @@ from utils_paths import get_chart_path, get_report_en_path
 generate_forensic_ai_subprime_report_en.py
 ------------------------------------------
 Generates the Institutional English Executive Report (4 pages):
-'Relatorio_Forense_Subprime_IA_Repacotamento_AAA_EN.pdf'
+'Report_Forensic_AI_Subprime_AAA_Repackaging.pdf'
 Forensic Analysis of Risk Repackaging in AI: 2008 Comparison, GPU-Backed Debt, and Tranche Durability.
 """
 
@@ -65,7 +65,7 @@ class NumberedCanvas(canvas.Canvas):
         
         self.restoreState()
 
-def build_pdf_report(output_filename="Relatorio_Forense_Subprime_IA_Repacotamento_AAA_EN.pdf"):
+def build_pdf_report(output_filename="Report_Forensic_AI_Subprime_AAA_Repackaging.pdf"):
     doc = SimpleDocTemplate(get_report_en_path(output_filename),
         pagesize=letter,
         leftMargin=54,
@@ -409,7 +409,7 @@ def build_pdf_report(output_filename="Relatorio_Forense_Subprime_IA_Repacotament
     print(f"Forensic Report successfully compiled: {output_filename}", flush=True)
 
 def main():
-    pdf_filename = "Relatorio_Forense_Subprime_IA_Repacotamento_AAA_EN.pdf"
+    pdf_filename = "Report_Forensic_AI_Subprime_AAA_Repackaging.pdf"
     build_pdf_report(pdf_filename)
     print(f"Generated: {os.path.abspath(pdf_filename)}", flush=True)
 

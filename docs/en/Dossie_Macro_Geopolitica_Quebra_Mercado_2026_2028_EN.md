@@ -2,7 +2,7 @@
 
 **Global Macro-Geopolitical Audit, Causal Disruption Decomposition, and Cartographic Regional Impact Analysis**
 
-> 📑 **Full Executive Report in PDF (10 Pages with Analytical Charts & Maps):** [Download Relatorio_Macro_Geopolitica_Quebra_Mercado_2026_2028_EN.pdf](../../reports/en/Relatorio_Macro_Geopolitica_Quebra_Mercado_2026_2028_EN.pdf)
+> 📑 **Full Executive Report in PDF (10 Pages with Analytical Charts & Maps):** [Download Report_Macro_Geopolitics_Market_Crash_2026_2028.pdf](../../reports/en/Report_Macro_Geopolitics_Market_Crash_2026_2028.pdf)
 
 ---
 

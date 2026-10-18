@@ -5,7 +5,7 @@ from utils_paths import get_chart_path, get_report_en_path
 generate_leverage_multiplier_report_en.py
 -----------------------------------------
 Generates the Institutional English Executive Report (4 pages):
-'Relatorio_Alavancagem_e_Vendor_Financing_IA_EN.pdf'
+'Report_AI_Leverage_and_Vendor_Financing.pdf'
 Quantitative Audit of Leverage and Vendor Financing in the AI Cycle (2023–2026).
 """
 
@@ -65,7 +65,7 @@ class NumberedCanvas(canvas.Canvas):
         
         self.restoreState()
 
-def build_pdf_report(output_filename="Relatorio_Alavancagem_e_Vendor_Financing_IA_EN.pdf"):
+def build_pdf_report(output_filename="Report_AI_Leverage_and_Vendor_Financing.pdf"):
     doc = SimpleDocTemplate(get_report_en_path(output_filename),
         pagesize=letter,
         leftMargin=54,
@@ -415,7 +415,7 @@ def build_pdf_report(output_filename="Relatorio_Alavancagem_e_Vendor_Financing_I
     print(f"Leverage Report successfully compiled: {output_filename}", flush=True)
 
 def main():
-    pdf_filename = "Relatorio_Alavancagem_e_Vendor_Financing_IA_EN.pdf"
+    pdf_filename = "Report_AI_Leverage_and_Vendor_Financing.pdf"
     build_pdf_report(pdf_filename)
     print(f"Generated: {os.path.abspath(pdf_filename)}", flush=True)
 

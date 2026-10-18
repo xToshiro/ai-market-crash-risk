@@ -5,7 +5,7 @@ from utils_paths import get_chart_path, get_report_en_path
 generate_us_market_report_en.py
 -------------------------------
 Generates the Institutional English Executive Report (8 pages):
-'Relatorio_Mercado_Financeiro_Americano_EN.pdf'
+'Report_US_Financial_Market_AI_Bubble.pdf'
 Comprehensive US Financial Market Assessment: Macro, $40T Debt, AI Capex, Subprime Analogues, and Predictive Model.
 """
 
@@ -65,7 +65,7 @@ class NumberedCanvas(canvas.Canvas):
         
         self.restoreState()
 
-def build_pdf_report(market_data=None, output_filename="Relatorio_Mercado_Financeiro_Americano_EN.pdf"):
+def build_pdf_report(market_data=None, output_filename="Report_US_Financial_Market_AI_Bubble.pdf"):
     if market_data is None:
         market_data = {
             '^GSPC': {'current_price': 7807.10},
@@ -595,7 +595,7 @@ def build_pdf_report(market_data=None, output_filename="Relatorio_Mercado_Financ
     print(f"US Market Report successfully compiled: {output_filename}", flush=True)
 
 def main():
-    pdf_path = "Relatorio_Mercado_Financeiro_Americano_EN.pdf"
+    pdf_path = "Report_US_Financial_Market_AI_Bubble.pdf"
     build_pdf_report(None, pdf_path)
     print(f"Generated: {os.path.abspath(pdf_path)}", flush=True)
 

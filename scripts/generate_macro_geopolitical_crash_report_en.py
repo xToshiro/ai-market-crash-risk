@@ -94,7 +94,7 @@ def _img(path, width_in):
     w = width_in * inch
     return Image(p, width=w, height=w * ih / iw)
 
-def build_pdf_report_en(d, rows, ranking, output_filename="Relatorio_Macro_Geopolitica_Quebra_Mercado_2026_2028_EN.pdf"):
+def build_pdf_report_en(d, rows, ranking, output_filename="Report_Macro_Geopolitics_Market_Crash_2026_2028.pdf"):
     f = FACTS
     doc = SimpleDocTemplate(get_report_en_path(output_filename), pagesize=letter, leftMargin=54, rightMargin=54,
                             topMargin=54, bottomMargin=54)
@@ -501,7 +501,7 @@ def main():
     ranking = sorted(((REGION_PT.get(k, k), float(np.mean(v)), len(v)) for k, v in by_region.items()), key=lambda t: t[1])
     
     print("\n=== COMPILING 10-PAGE ENGLISH EXECUTIVE PDF REPORT ===", flush=True)
-    pdf_filename = "Relatorio_Macro_Geopolitica_Quebra_Mercado_2026_2028_EN.pdf"
+    pdf_filename = "Report_Macro_Geopolitics_Market_Crash_2026_2028.pdf"
     build_pdf_report_en(d, rows, ranking, pdf_filename)
     print(f"Generated: {os.path.abspath(pdf_filename)}", flush=True)
 

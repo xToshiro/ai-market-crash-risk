@@ -5,7 +5,7 @@ from utils_paths import get_chart_path, get_report_en_path
 generate_data_center_abs_tranches_report_en.py
 ---------------------------------------------
 Generates the Institutional English Executive Report (4 pages):
-'Relatorio_Data_Center_ABS_Tranches_Oficiais_EN.pdf'
+'Report_Data_Center_ABS_Official_Tranches.pdf'
 Analyzing Data Center ABS Capital Structures: Class A, Class B, and Equity Tranches.
 """
 
@@ -65,7 +65,7 @@ class NumberedCanvas(canvas.Canvas):
         
         self.restoreState()
 
-def build_pdf_report(output_filename="Relatorio_Data_Center_ABS_Tranches_Oficiais_EN.pdf"):
+def build_pdf_report(output_filename="Report_Data_Center_ABS_Official_Tranches.pdf"):
     doc = SimpleDocTemplate(get_report_en_path(output_filename),
         pagesize=letter,
         leftMargin=54,
@@ -471,7 +471,7 @@ def build_pdf_report(output_filename="Relatorio_Data_Center_ABS_Tranches_Oficiai
     print(f"Report successfully compiled: {output_filename}", flush=True)
 
 def main():
-    pdf_filename = "Relatorio_Data_Center_ABS_Tranches_Oficiais_EN.pdf"
+    pdf_filename = "Report_Data_Center_ABS_Official_Tranches.pdf"
     build_pdf_report(pdf_filename)
     print(f"Generated: {os.path.abspath(pdf_filename)}", flush=True)
 

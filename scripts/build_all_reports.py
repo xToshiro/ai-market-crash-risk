@@ -40,6 +40,8 @@ REPORT_SCRIPTS = [
     ("generate_leverage_multiplier_report_en.py", "Leverage & Vendor Financing (EN, 4 Pages)"),
     ("generate_company_financial_forecast_report.py", "Status Empresas & Previsões (PT, 8 Págs)"),
     ("generate_company_financial_forecast_report_en.py", "Company Status & Forecasts (EN, 8 Pages)"),
+    ("generate_recent_market_update_report.py", "Atualização Mercado & Grid (PT, 8 Págs)"),
+    ("generate_recent_market_update_report_en.py", "Market Update & Grid (EN, 8 Pages)"),
 ]
 
 def run_step(cmd, desc):
@@ -66,26 +68,28 @@ def main():
     # Step 1: Generate charts
     ok_charts_en = run_step([sys.executable, "generate_charts_en.py"], "Step 1/4: Generating 31 English Charts (assets/charts/en/)")
     ok_charts_co = run_step([sys.executable, "generate_company_charts.py"], "Step 1/4 (cont): Generating Bilingual Company Charts (assets/charts/)")
+    ok_charts_up = run_step([sys.executable, "generate_recent_market_update_charts.py"], "Step 1/4 (cont): Generating Recent Market Update Charts (assets/charts/)")
 
-    # Step 2: Build all 14 PDFs
-    print("\n>>> Step 2/4: Compiling 14 Institutional PDF Reports (86 Pages)...")
+    # Step 2: Build all 16 PDFs
+    print("\n>>> Step 2/4: Compiling 16 Institutional PDF Reports (102 Pages)...")
     success_count = 0
     fail_count = 0
+    total_reports = len(REPORT_SCRIPTS)
     for idx, (script_name, label) in enumerate(REPORT_SCRIPTS, 1):
         script_path = os.path.join(SCRIPT_DIR, script_name)
         t0 = time.time()
         res = subprocess.run([sys.executable, script_path], cwd=SCRIPT_DIR, capture_output=True, text=True)
         elapsed = time.time() - t0
         if res.returncode == 0:
-            print(f"    [{idx:02d}/14] ✅ {label:<45} ({elapsed:.2f}s)")
+            print(f"    [{idx:02d}/{total_reports:02d}] ✅ {label:<45} ({elapsed:.2f}s)")
             success_count += 1
         else:
-            print(f"    [{idx:02d}/14] ❌ {label:<45} ({elapsed:.2f}s)")
+            print(f"    [{idx:02d}/{total_reports:02d}] ❌ {label:<45} ({elapsed:.2f}s)")
             print(res.stderr[:400])
             fail_count += 1
 
     # Step 3: Render Page Previews
-    ok_previews = run_step([sys.executable, "generate_page_previews.py"], "Step 3/4: Rendering 86 Page Previews (assets/previews/)")
+    ok_previews = run_step([sys.executable, "generate_page_previews.py"], "Step 3/4: Rendering 102 Page Previews (assets/previews/)")
 
     # Step 4: Run Validation Suite
     val_path = os.path.join(ROOT_DIR, ".agents", "skills", "ai-market-risk-updater", "scripts", "validate_models.py")

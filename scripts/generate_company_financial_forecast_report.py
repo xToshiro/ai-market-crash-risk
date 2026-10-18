@@ -49,12 +49,12 @@ class NumberedCanvas(canvas.Canvas):
         
         # Header on pages 2..N
         if self._pageNumber > 1:
-            self.setFont("Helvetica-Bold", 7.8)
+            self.setFont("Helvetica-Bold", 7.5)
             self.setFillColor(colors.HexColor("#0F172A"))
-            self.drawString(54, 750, "RELATÓRIO INSTITUCIONAL • AUDITORIA FINANCEIRA & PREVISÕES DE IA (2026–2027)")
-            self.setFont("Helvetica", 7.8)
+            self.drawString(54, 750, "AUDITORIA CORPORATIVA • LÍDERES DE IA (2026–2027)")
+            self.setFont("Helvetica", 7.4)
             self.setFillColor(colors.HexColor("#64748B"))
-            self.drawRightString(612 - 54, 750, "STATUS CORPORATIVO, HISTÓRICO DE AÇÕES & CENÁRIOS")
+            self.drawRightString(612 - 54, 750, "STATUS FINANCEIRO, AÇÕES & CENÁRIOS")
             
             self.setStrokeColor(colors.HexColor("#CBD5E1"))
             self.setLineWidth(0.7)
