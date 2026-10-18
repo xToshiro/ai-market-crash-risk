@@ -4,6 +4,7 @@
 <p align="center">
   <a href="#-english-version"><b>English Version</b></a> •
   <a href="#2-special-intelligence-update-october-2026-key-discoveries-vs-baseline-assumptions"><b>October 2026 Discoveries</b></a> •
+  <a href="references/"><b>📚 Master References & Link Audit</b></a> •
   <a href="#-versão-em-português"><b>Versão em Português</b></a> •
   <a href="#2-boletim-especial-de-inteligência-outubro-de-2026-novas-descobertas-vs-situação-antiga"><b>Descobertas de Hoje</b></a> •
   <a href="#5-pipeline-automatizado-de-dados-e-atualização-futura"><b>Pipeline de Dados</b></a>
@@ -16,6 +17,7 @@
   <img src="https://img.shields.io/badge/Soft_Landing_Probability-52%25_(Oct--2026)-475569?style=for-the-badge" alt="Soft Landing Probability 52%"/>
   <img src="https://img.shields.io/badge/Baseline_Model-30%25_(Q3--2026)-64748B?style=for-the-badge" alt="Baseline Model 30%"/>
   <img src="https://img.shields.io/badge/Model_Variance-%2B18_pp_(Oct--2026)-334155?style=for-the-badge" alt="+18 pp Model Variance"/>
+  <a href="references/"><img src="https://img.shields.io/badge/References-Audited_&_Online-0284C7?style=for-the-badge" alt="References"/></a>
   <img src="https://img.shields.io/badge/Asset_Classes-ABS_%7C_Private_Credit_%7C_Equities_%7C_Sovereign_Bonds-0A192F?style=for-the-badge" alt="Asset Classes"/>
   <img src="https://img.shields.io/badge/Coverage_Horizon-2026_--_2029-475569?style=for-the-badge" alt="Coverage Horizon"/>
   <img src="https://img.shields.io/badge/Reports-16_Executive_PDFs_(102_Pages)-2E7D32?style=for-the-badge" alt="Reports"/>
@@ -315,12 +317,28 @@ cd ai-market-crash-risk
 # Install required dependencies
 pip install reportlab matplotlib numpy pandas geopandas shapely pymupdf
 
-# Reproduce all 36 charts (EN & PT), compile all 14 PDF reports (86 pages), and generate 86 page previews:
+# Reproduce all 41 charts (EN & PT), compile all 16 PDF reports (102 pages), and generate 102 page previews:
 python scripts/build_all_reports.py
 
 # Validate full repository integrity:
 python .agents/skills/ai-market-risk-updater/scripts/validate_models.py
 ```
+
+---
+
+## 9. Master References, Primary Sources & Live Link Audit
+
+The repository features a dedicated, institutional-grade references directory located at:
+[`references/`](references/)
+
+| Document / Module | Scope & Description |
+| :--- | :--- |
+| **[`references/master_sources_catalog.md`](references/master_sources_catalog.md)** | Master taxonomy of all data feeds, SEC filings, power grid studies, rating criteria, and press articles. |
+| **[`references/url_connectivity_report.md`](references/url_connectivity_report.md)** | **Live HTTP audit log** testing each link with response codes (200 OK, WAF bot shields), latency (ms), and citation files. |
+| **[`references/data_feeds_and_apis.md`](references/data_feeds_and_apis.md)** | Technical specification for automated ingestion pipelines (FRED series, US Treasury Fiscal Data, SEC EDGAR CIKs, Yahoo Finance). |
+| **[`references/institutional_news_and_dossiers.md`](references/institutional_news_and_dossiers.md)** | Dossier of investigative reporting (FT, Bloomberg, WSJ, Reuters, The Information, DCD) on power bottlenecks and Anthropic valuation. |
+| **[`references/methodologies_and_rating_frameworks.md`](references/methodologies_and_rating_frameworks.md)** | Mathematical formulas: KBRA ABS criteria, DSCR covenants, GPU hyper-depreciation formulas, and Gaussian Copula modeling. |
+| **[`references/verify_all_links.py`](references/verify_all_links.py)** | Standalone verification script to re-test all repository links anytime: `py references/verify_all_links.py`. |
 
 ---
 ---
@@ -497,6 +515,22 @@ Ao solicitar uma nova atualização de relatório:
 2. O agente lê [`data/ai_agent_research_brief.md`](data/ai_agent_research_brief.md) e [`data/latest_market_metrics.csv`](data/latest_market_metrics.csv).
 3. O agente executa buscas na internet em sites institucionais confiáveis (*Financial Times, Bloomberg, Reuters, SEC EDGAR, KBRA, EIA, operadoras de rede PJM/National Grid*) para identificar os catalisadores qualitativos das mudanças observadas.
 4. O agente calibra os dicionários de premissas (`FACTS`, `SCENARIOS`, `TRANCHES`) e roda `py scripts/build_all_reports.py` para gerar os novos relatórios PDF e dossiês.
+
+---
+
+## 6. Diretório de Referências, Fontes Primárias e Auditoria de Links
+
+O repositório mantém uma pasta institucional dedicada com todas as fontes, links, notícias e metodologias catalogadas e testadas:
+[`references/`](references/)
+
+| Documento / Módulo | Escopo e Finalidade |
+| :--- | :--- |
+| **[`references/master_sources_catalog.md`](references/master_sources_catalog.md)** | Catálogo mestre de todas as fontes de dados, formulários da SEC, estudos da rede elétrica, critérios de agências de rating e notícias. |
+| **[`references/url_connectivity_report.md`](references/url_connectivity_report.md)** | **Relatório de Auditoria de Links HTTP**: resultado do teste ativo de cada URL com código de resposta, latência (ms) e arquivos que a utilizam. |
+| **[`references/data_feeds_and_apis.md`](references/data_feeds_and_apis.md)** | Especificações técnicas das APIs de ingestão automatizada (séries do FRED, API Fiscal Data do Tesouro dos EUA, CIKs da SEC e Yahoo Finance). |
+| **[`references/institutional_news_and_dossiers.md`](references/institutional_news_and_dossiers.md)** | Compilação de jornalismo investigativo (*FT, Bloomberg, WSJ, Reuters, The Information, DCD*) cobrindo o cancelamento de Essex e o valuation da Anthropic. |
+| **[`references/methodologies_and_rating_frameworks.md`](references/methodologies_and_rating_frameworks.md)** | Fórmulas matemáticas: metodologia KBRA Data Center ABS, covenants de ICSD, hiper-depreciação de GPUs e Cópula Gaussiana. |
+| **[`references/verify_all_links.py`](references/verify_all_links.py)** | Script independente para re-testar a conectividade de todos os links a qualquer momento: `py references/verify_all_links.py`. |
 
 ---
 

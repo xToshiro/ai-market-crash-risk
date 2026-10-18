@@ -75,7 +75,7 @@ def main():
     errors = 0
 
     # 1. Check PDFs
-    print("\n[1/5] Checking Executive PDF Reports (reports/pt & reports/en)...")
+    print("\n[1/6] Checking Executive PDF Reports (reports/pt & reports/en)...")
     total_pages = 0
     for fname, expected_pages in REPORTS:
         folder = "en" if fname.startswith("Report_") or fname.endswith("_EN.pdf") else "pt"
@@ -102,7 +102,7 @@ def main():
     print(f"  -> Total compiled pages verified: {total_pages} / 102 expected")
 
     # 2. Check Markdown Dossiers
-    print("\n[2/5] Checking Analytical Markdown Dossiers (docs/pt & docs/en)...")
+    print("\n[2/6] Checking Analytical Markdown Dossiers (docs/pt & docs/en)...")
     for base in DOSSIERS:
         pt_path = os.path.join(ROOT_DIR, "docs", "pt", f"{base}.md")
         en_path = os.path.join(ROOT_DIR, "docs", "en", f"{base}_EN.md")
@@ -119,7 +119,7 @@ def main():
                 errors += 1
 
     # 3. Check Bilingual Charts
-    print("\n[3/5] Checking Bilingual Visual Charts (assets/charts/pt & assets/charts/en)...")
+    print("\n[3/6] Checking Bilingual Visual Charts (assets/charts/pt & assets/charts/en)...")
     pt_charts = glob.glob(os.path.join(ROOT_DIR, "assets", "charts", "pt", "*.png"))
     en_charts = glob.glob(os.path.join(ROOT_DIR, "assets", "charts", "en", "*.png"))
     print(f"  ✅ Portuguese Charts: {len(pt_charts)} found in assets/charts/pt/")
@@ -128,7 +128,7 @@ def main():
         errors += 1
 
     # 4. Check Page Previews
-    print("\n[4/5] Checking Page Previews (assets/previews/pt & assets/previews/en)...")
+    print("\n[4/6] Checking Page Previews (assets/previews/pt & assets/previews/en)...")
     pt_prevs = glob.glob(os.path.join(ROOT_DIR, "assets", "previews", "pt", "*.png"))
     en_prevs = glob.glob(os.path.join(ROOT_DIR, "assets", "previews", "en", "*.png"))
     print(f"  ✅ Portuguese Page Previews: {len(pt_prevs)} / 51 found in assets/previews/pt/")
@@ -138,7 +138,7 @@ def main():
         errors += 1
 
     # 5. Check GeoJSON
-    print("\n[5/5] Checking Geospatial Data...")
+    print("\n[5/6] Checking Geospatial Data...")
     geopath = os.path.join(ROOT_DIR, "assets", "geo", "world_countries_110m.geojson")
     if os.path.exists(geopath):
         print(f"  ✅ OK: assets/geo/world_countries_110m.geojson ({os.path.getsize(geopath)/1024:.0f} KB)")
@@ -146,9 +146,28 @@ def main():
         print(f"  ❌ MISSING: assets/geo/world_countries_110m.geojson")
         errors += 1
 
+    # 6. Check References Suite
+    print("\n[6/6] Checking Institutional References Suite (references/)...")
+    REFERENCE_FILES = [
+        "README.md",
+        "master_sources_catalog.md",
+        "url_connectivity_report.md",
+        "data_feeds_and_apis.md",
+        "institutional_news_and_dossiers.md",
+        "methodologies_and_rating_frameworks.md",
+        "verify_all_links.py",
+    ]
+    for rfile in REFERENCE_FILES:
+        ref_path = os.path.join(ROOT_DIR, "references", rfile)
+        if os.path.exists(ref_path) and os.path.getsize(ref_path) > 0:
+            print(f"  ✅ OK: references/{rfile:<40} ({os.path.getsize(ref_path)/1024:.1f} KB)")
+        else:
+            print(f"  ❌ MISSING OR EMPTY: references/{rfile}")
+            errors += 1
+
     print("\n" + "=" * 70)
     if errors == 0:
-        print("  🎉 VALIDATION PASSED: All repository assets, bilingual charts, PDFs, and previews are intact!")
+        print("  🎉 VALIDATION PASSED: All repository assets, bilingual charts, PDFs, previews, and references are intact!")
     else:
         print(f"  ❌ VALIDATION FAILED: {errors} issues detected.")
     print("=" * 70)
