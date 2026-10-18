@@ -12,11 +12,12 @@
 ---
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Crash_Risk_Gauge-75%25_(CRITICAL_ALERT)-DC2626?style=for-the-badge" alt="Crash Risk Gauge 75%"/>
-  <img src="https://img.shields.io/badge/Baseline_Risk-30%25_(Q3--2026)-64748B?style=for-the-badge" alt="Baseline Risk 30%"/>
-  <img src="https://img.shields.io/badge/Risk_Surge-%2B45_pp_Deterioration-B91C1C?style=for-the-badge" alt="+45 pp Surge"/>
+  <img src="https://img.shields.io/badge/Crash_Scenario_Probability-75%25_(Oct--2026)-1E293B?style=for-the-badge" alt="Crash Scenario Probability 75%"/>
+  <img src="https://img.shields.io/badge/Soft_Landing_Probability-25%25_(Oct--2026)-475569?style=for-the-badge" alt="Soft Landing Probability 25%"/>
+  <img src="https://img.shields.io/badge/Baseline_Model-30%25_(Q3--2026)-64748B?style=for-the-badge" alt="Baseline Model 30%"/>
+  <img src="https://img.shields.io/badge/Model_Variance-%2B45_pp_(Oct--2026)-334155?style=for-the-badge" alt="+45 pp Model Variance"/>
   <img src="https://img.shields.io/badge/Asset_Classes-ABS_%7C_Private_Credit_%7C_Equities_%7C_Sovereign_Bonds-0A192F?style=for-the-badge" alt="Asset Classes"/>
-  <img src="https://img.shields.io/badge/Coverage_Horizon-2026_--_2029-C53030?style=for-the-badge" alt="Coverage Horizon"/>
+  <img src="https://img.shields.io/badge/Coverage_Horizon-2026_--_2029-475569?style=for-the-badge" alt="Coverage Horizon"/>
   <img src="https://img.shields.io/badge/Reports-16_Executive_PDFs_(102_Pages)-2E7D32?style=for-the-badge" alt="Reports"/>
   <img src="https://img.shields.io/badge/Bilingual_Charts-41_EN_%7C_41_PT-D97706?style=for-the-badge" alt="Bilingual Charts"/>
   <img src="https://img.shields.io/badge/Skills-Antigravity_Forecast_Updater-6B21A8?style=for-the-badge" alt="Skills"/>
@@ -27,27 +28,27 @@
 <!-- LIVE CRASH RISK PROBABILITY GAUGE -->
 <div align="center">
 
-## 🚨 CURRENT AI MARKET CRASH PROBABILITY GAUGE: **75%** (HIGH ALERT)
-> ### *Official Systemic Risk Barometer • Probability of Severe Credit Dislocation or Market Crash (2026–2029)*
-> *Barômetro Oficial de Risco Sistêmico • Probabilidade de Deslocamento de Crédito ou Quebra de Mercado (2026–2029)*
+## 📊 AI Market Stress & Crash Scenario Probability: **75%**
+> ### *Empirical Risk Modeling • Calibrated Probability of Severe Market Correction & Credit Dislocation (2026–2029)*
+> *Modelagem Empírica de Risco • Calibração Probabilística de Correção de Mercado e Deslocamento de Crédito (2026–2029)*
 
 <br>
 
 <p align="center">
   <img src="assets/charts/en/chart_crash_probability_evolution.png" width="920" alt="Historical Evolution of the AI Market Crash Risk Gauge (2026)"/>
   <br>
-  <em><b>Figure 0: AI Market Crash Risk Gauge Progression (2026)</b> — Version 1 (Initial Q3-2026 Baseline: 30%) vs. Version 2 (Current October 2026 Calibration: 75%). Attribution of the +45 pp surge driven by physical power transmission queue freezes (Essex cancellation), Anthropic ~60% valuation haircut, $700B hyperscaler CapEx shadow credit exposure, and 5.10% US 10Y yields.</em>
+  <em><b>Figure 0: AI Market Crash Risk Gauge Progression (2026)</b> — Version 1 (Initial Q3-2026 Baseline: 30%) vs. Version 2 (Current October 2026 Calibration: 75%). Attribution of the +45 pp shift based on physical power transmission queue freezes (Essex cancellation), Anthropic ~60% valuation haircut, $700B hyperscaler CapEx shadow credit exposure, and 5.10% US 10Y yields.</em>
 </p>
 
-| Risk Dimension / Scenario | Version 1: Initial Baseline (Q3-2026) | Version 2: Current Calibration (Oct-2026) | Trajectory Delta | Current Systemic Threat Level |
-|:---|:---:|:---:|:---:|:---:|
-| **OVERALL CRASH / SEVERE DISLOCATION RISK** | **30%** | **75%** | **+45 pp** 🔺 | 🔴 **CRITICAL ALERT (HIGH CONTAGION RISK)** |
-| **Scenario 1: Orderly Deflation** | 35% | 40% | +5 pp 🔺 | 🟡 Elevated (CapEx Slowdown & Multiple Compression) |
-| **Scenario 2: Credit & Grid Dislocation** | 20% | 45% | +25 pp 🔺 | 🔴 Severe Vulnerability (Stranded Assets & ABS Friction) |
-| **Scenario 3: Systemic Global Contagion** | 15% | 30% | +15 pp 🔺 | 🔴 High Tail Risk (US $40T Debt Cliff + Taiwan Supply Shock) |
-| **Benign Soft Landing (No Crash)** | **70%** | **25%** | **-45 pp** 🔻 | ⚠️ Collapsed Margin of Safety |
+| Risk Dimension / Scenario | Version 1: Initial Baseline (Q3-2026) | Version 2: Current Calibration (Oct-2026) | Trajectory Delta | Probability Regime & Transmission Channel |
+|:---|:---:|:---:|:---:|:---|
+| **Cumulative Stress / Crash Scenario Probability** | **30.0%** | **75.0%** | **+45.0 pp** | Dominant Distribution Regime (S1 + S2 + S3) |
+| **Scenario 1: Orderly Multiple Compression** | 35.0% | 40.0% | +5.0 pp | Enterprise ROI Normalization & Multiple Re-rating |
+| **Scenario 2: Credit & Grid Dislocation** | 20.0% | 45.0% | +25.0 pp | Stranded Infrastructure Assets & ABS Illiquidity |
+| **Scenario 3: Systemic Global Contagion** | 15.0% | 30.0% | +15.0 pp | Sovereign Yield Spillover & Semiconductor Chokepoint |
+| **Benign Soft Landing (No Dislocation)** | **70.0%** | **25.0%** | **-45.0 pp** | Subordinate Probability Regime |
 
-*📌 Note: This live gauge is continuously calibrated via `scripts/fetch_market_pipeline.py` and regenerated via `scripts/generate_crash_gauge_evolution_chart.py` whenever market fundamentals or forensic reports are updated.*
+*📌 Note: This probability distribution is empirically calibrated via `scripts/fetch_market_pipeline.py` and visualized via `scripts/generate_crash_gauge_evolution_chart.py` based on observed infrastructure and credit data.*
 
 </div>
 

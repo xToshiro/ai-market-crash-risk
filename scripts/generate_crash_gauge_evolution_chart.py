@@ -146,7 +146,8 @@ def generate_evolution_chart():
                 ax2.annotate(f"30%", xy=(width/2, y2[i]), ha='center', va='center',
                              fontsize=7.8, fontweight='bold', color='#FFFFFF')
             elif i == len(steps) - 1:
-                ax2.annotate(f"75% (ALERTA ELEVADO)", xy=(width/2, y2[i]), ha='center', va='center',
+                lbl_v2 = "75% (Out/2026)" if lang == 'pt' else "75% (Oct-2026)"
+                ax2.annotate(lbl_v2, xy=(width/2, y2[i]), ha='center', va='center',
                              fontsize=7.8, fontweight='bold', color='#FFFFFF')
             else:
                 ax2.annotate(f"+{width:.0f} pp (-> {cumulative[i]:.0f}%)", xy=(left + width + 1.2, y2[i]),
