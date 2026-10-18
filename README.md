@@ -3,7 +3,10 @@
 
 <p align="center">
   <a href="#-english-version"><b>English Version</b></a> •
-  <a href="#-versão-em-português"><b>Versão em Português</b></a>
+  <a href="#2-special-intelligence-update-october-2026-key-discoveries-vs-baseline-assumptions"><b>October 2026 Discoveries</b></a> •
+  <a href="#-versão-em-português"><b>Versão em Português</b></a> •
+  <a href="#2-boletim-especial-de-inteligência-outubro-de-2026-novas-descobertas-vs-situação-antiga"><b>Descobertas de Hoje</b></a> •
+  <a href="#5-pipeline-automatizado-de-dados-e-atualização-futura"><b>Pipeline de Dados</b></a>
 </p>
 
 ---
@@ -39,7 +42,37 @@ Between 2023 and 2026, over **$350 billion** in capital expenditure (CapEx) was 
 
 ---
 
-## 2. Core Forensic Pillars
+## 2. Special Intelligence Update (October 2026): Key Discoveries vs. Baseline Assumptions
+
+The October 2026 intelligence update incorporates critical developments in physical utility grid interconnection, private market tech valuations, hyperscaler capital expenditure velocity, and shadow credit structuring. Below is the forensic comparison between the earlier baseline assumptions and today's reality:
+
+### 📊 Comparative Matrix: Baseline Assumptions vs. October 2026 Ground Truth
+
+| Core Investigation Pillar | Baseline / Past Assumptions | Today's Ground Truth (October 2026) | Systemic Impact & Transmission Channel |
+|:---|:---|:---|:---|
+| **Power Grid & Data Center Delivery** | Projected unconstrained utility expansion; data centers assumed to energize within 18–24 months globally. | **The Physical Grid Wall**: Landmark cancellation of the **Microsoft–Nscale Essex data center deal** due to transmission incapacity. PJM and National Grid UK interconnection queues are frozen for **7 to 10 years (2033–2036)**. | Acquired land and ordered GPUs risk becoming **"stranded assets"**; non-operational facilities generate zero revenue while debt interest accumulates. |
+| **Frontier AI Lab Valuations** | Exponential ARR scaling (>300% YoY); private secondary markets pricing frontier labs (OpenAI, Anthropic) near **$1.5 Trillion** pre-IPO. | **Valuation Haircut & Deceleration**: Anthropic private valuation marked down by **~60% to $600B–$700B**; annual growth decelerated to **~85% YoY** amid enterprise inference cost pressure and open-weight model commoditization. | Impairs equity collateral value; stalls pre-IPO liquidity timelines; triggers multiple compression across public AI software peers. |
+| **Hyperscaler CapEx & Credit Leverage** | Annual CapEx assumed to plateau at ~$350B–$400B, fully funded by organic free cash flow from core advertising and enterprise software. | **$700B Hyper-CapEx & Shadow Debt**: Annual CapEx pace reached **$700 Billion run-rate**, increasingly funded via **off-balance-sheet SPVs and private credit** (Blackstone, Ares, Apollo) rather than cash flow alone. | Shifts credit risk into shadow banking; Debt Service Coverage Ratios (DSCR) breach default covenants ($<1.10x$) if tenant deployments lag. |
+| **Macro Interest Rates & Refinancing** | Projected rapid Federal Reserve rate cuts down to ~3.0%; benign debt rollover for tech issuers. | **Higher-for-Longer & $36.85T Debt**: US 10-Year Treasury yield holding firmly at **5.10%**; US national debt interest outlays surpass **$1.16 Trillion/year**; corporate debt refinancing costs remain elevated. | Widens high-yield credit spreads (`HYG/LQD` ratio compressed to 0.7433); raises hurdle rates for long-duration infrastructure investments. |
+| **Cumulative Crash Probabilities** | Soft-landing / Benign continuation estimated at **70%**; Systemic contagion treated as remote tail-risk (**<15%**). | **Recalibrated Risk Matrix (2026–2029)**:<br>• **Orderly Deflation (S1)**: **40%**<br>• **Credit Dislocation (S2)**: **45%**<br>• **Systemic Contagion (S3)**: **30%**<br>• *Benign Continuation*: Reduced to **25%**. | Subprime AI mechanics transition from theoretical vulnerability to empirical distress triggers. |
+
+<p align="center">
+  <img src="assets/charts/en/chart_grid_bottleneck_delays.png" width="440" alt="Grid Bottleneck Delays (EN)"/>
+  <img src="assets/charts/en/chart_anthropic_growth_deceleration_valuation.png" width="440" alt="Anthropic Growth Deceleration & Valuation Haircut (EN)"/>
+  <br>
+  <em>Figure 2: Physical power transmission queues vs. pre-IPO software revenue growth deceleration and valuation compression.</em>
+</p>
+
+<p align="center">
+  <img src="assets/charts/en/chart_hyperscaler_capex_vs_private_credit.png" width="440" alt="Hyperscaler CapEx vs Private Credit (EN)"/>
+  <img src="assets/charts/en/chart_updated_crash_probabilities_2026_2029.png" width="440" alt="Updated Crash Probabilities 2026-2029 (EN)"/>
+  <br>
+  <em>Figure 3: Hyperscaler $700B CapEx run-rate funded by private credit vs. recalibrated stress probabilities across 2026–2029.</em>
+</p>
+
+---
+
+## 3. Core Forensic Pillars
 
 ```
 +-----------------------------------------------------------------------------------+
@@ -68,7 +101,7 @@ Between 2023 and 2026, over **$350 billion** in capital expenditure (CapEx) was 
 <p align="center">
   <img src="assets/charts/en/chart_vendor_financing_loop.png" width="800" alt="Vendor Financing Closed Loop (EN)"/>
   <br>
-  <em>Figure 2: The closed-loop vendor financing dynamic between hardware providers, neoclouds, and hyper-scalers.</em>
+  <em>Figure 4: The closed-loop vendor financing dynamic between hardware providers, neoclouds, and hyper-scalers.</em>
 </p>
 
 ### Pillar B: GPU Collateral Mismatch & Collateral Run
@@ -78,7 +111,7 @@ Between 2023 and 2026, over **$350 billion** in capital expenditure (CapEx) was 
 <p align="center">
   <img src="assets/charts/en/chart_gpu_depreciation_vs_debt.png" width="800" alt="GPU Depreciation vs Debt Amortization (EN)"/>
   <br>
-  <em>Figure 3: Divergence between physical/economic GPU depreciation curves and amortizing debt schedules.</em>
+  <em>Figure 5: Divergence between physical/economic GPU depreciation curves and amortizing debt schedules.</em>
 </p>
 
 ### Pillar C: Data Center ABS & The "Subprime AI" Alchemy
@@ -88,7 +121,7 @@ Between 2023 and 2026, over **$350 billion** in capital expenditure (CapEx) was 
 <p align="center">
   <img src="assets/charts/en/chart_tranche_structure.png" width="800" alt="Data Center ABS Tranche Structure (EN)"/>
   <br>
-  <em>Figure 4: Data Center ABS Capital Structure (Senior Class A Notes, Subordinated Class B, and Residual Equity).</em>
+  <em>Figure 6: Data Center ABS Capital Structure (Senior Class A Notes, Subordinated Class B, and Residual Equity).</em>
 </p>
 
 ### Pillar D: Global Macro & Geopolitical Transmission
@@ -98,36 +131,44 @@ Between 2023 and 2026, over **$350 billion** in capital expenditure (CapEx) was 
 <p align="center">
   <img src="assets/charts/en/chart_map_vulnerability.png" width="900" alt="Global Geopolitical Vulnerability Map (EN)"/>
   <br>
-  <em>Figure 5: Systemic Vulnerability Index across global financial and technological epicenters (2026–2028).</em>
+  <em>Figure 7: Systemic Vulnerability Index across global financial and technological epicenters (2026–2028).</em>
 </p>
 
 ---
 
-## 3. Crash Scenarios (2026–2029) & Probability Buildup
+## 4. Crash Scenarios (2026–2029) & Recalibrated Probability Buildup
 
 Our multi-factor stress models project cumulative systemic stress across three primary scenarios:
 
 | Scenario | Horizon | Cumulative Probability | Catalyst | S&P 500 / Tech Impact | Credit Market Impact |
 |:---|:---:|:---:|:---|:---:|:---|
-| **Base Case: Orderly Deflation** | 2026–2027 | **35%** | CapEx growth decelerates to ~10%; enterprise ROI delays; multiple compression. | S&P -15% to -20%<br>Nasdaq -25% | Spreads widen +150 bps; minimal senior ABS impairments. |
-| **Severe Case: Credit Dislocation** | 2027–2028 | **45%** | Neocloud default wave; GPU secondary resale collapse; private credit liquidity freeze. | S&P -30% to -40%<br>Nasdaq -45% | High-yield spreads >750 bps; junior ABS wipeout; banking write-downs. |
-| **Systemic Case: Multi-Contagion** | 2027–2029 | **20%** | Geopolitical supply shock (Taiwan Strait) + US sovereign debt auction friction + AI revenue cliff. | S&P -50% to -60%<br>Nasdaq -65% | Global liquidity freeze; sovereign yield spike; emergency Fed interventions. |
+| **Base Case: Orderly Deflation (S1)** | 2026–2027 | **40%** | CapEx growth decelerates to ~10%; enterprise ROI delays; multiple compression. | S&P -15% to -20%<br>Nasdaq -25% | Spreads widen +150 bps; minimal senior ABS impairments. |
+| **Severe Case: Credit Dislocation (S2)** | 2027–2028 | **45%** | Neocloud default wave; GPU secondary resale collapse; private credit liquidity freeze. | S&P -30% to -40%<br>Nasdaq -45% | High-yield spreads >750 bps; junior ABS wipeout; banking write-downs. |
+| **Systemic Case: Multi-Contagion (S3)** | 2027–2029 | **30%** | Geopolitical supply shock (Taiwan Strait) + US sovereign debt auction friction + AI revenue cliff. | S&P -50% to -60%<br>Nasdaq -65% | Global liquidity freeze; sovereign yield spike; emergency Fed interventions. |
 
 <p align="center">
   <img src="assets/charts/en/chart_leverage_pyramid.png" width="800" alt="AI Credit Leverage Pyramid (EN)"/>
   <br>
-  <em>Figure 6: The AI Credit Leverage Pyramid — From physical silicon assets to synthetic credit derivatives.</em>
+  <em>Figure 8: The AI Credit Leverage Pyramid — From physical silicon assets to synthetic credit derivatives.</em>
 </p>
 
 ---
 
-## 4. Repository Architecture
+## 5. Repository Architecture
 
 ```text
 ai-market-crash-risk/
 ├── README.md                                   # Master bilingual project documentation
 ├── LICENSE                                     # GNU General Public License v3.0 (GPL-3.0)
 ├── .gitignore                                  # Git exclusion rules
+│
+├── data/                                       # Automated market intelligence datasets (CSV)
+│   ├── latest_market_metrics.csv               # Unified master asset & macro dataset
+│   ├── companies_valuation_metrics.csv         # Detailed equities valuation & 2-year history
+│   ├── macro_financial_condition.csv           # Treasury yields, dollar, debt & macro metrics
+│   ├── investment_flows_credit.csv             # Thematic ETFs & corporate credit spreads
+│   ├── snapshots/                              # Historical timestamped snapshot archive
+│   └── ai_agent_research_brief.md              # Research protocol & queries for AI Agent
 │
 ├── reports/                                    # Executive PDF Reports (ReportLab Platypus)
 │   ├── en/                                     # 8 English Institutional PDFs (51 pages)
@@ -138,6 +179,7 @@ ai-market-crash-risk/
 │   └── pt/                                     # 10 Portuguese technical research dossiers
 │
 ├── scripts/                                    # Python orchestration & generation scripts
+│   ├── fetch_market_pipeline.py                # Automated data ingestion & valuation pipeline
 │   ├── build_all_reports.py                    # Master pipeline runner
 │   ├── generate_charts_en.py                   # Dedicated English charts compiler
 │   ├── generate_company_charts.py              # Bilingual company forecast charts
@@ -165,7 +207,7 @@ ai-market-crash-risk/
 
 ---
 
-## 5. Deliverables Index: Reports & Dossiers
+## 6. Deliverables Index: Reports & Dossiers
 
 All executive reports are available in full institutional-grade PDF format (102 pages compiled) and detailed technical Markdown dossiers:
 
@@ -209,13 +251,19 @@ All executive reports are available in full institutional-grade PDF format (102 
 
 ---
 
-## 6. Updating Forecasts via Antigravity Skills
+## 7. Automated Data Pipeline & Updating via Antigravity Skills
 
 The repository includes a dedicated Antigravity Workspace Skill located at:
 `[.agents/skills/ai-market-risk-updater/](.agents/skills/ai-market-risk-updater/)`
 
-Whenever you want to update future forecasts, prompt the AI assistant:
-> *"Update the market crash risk projections with the latest Q3-2026 US Treasury debt figures and recompile the reports."*
+To perform a fast, fully automated data refresh:
+```bash
+# Step 1: Run quantitative market pipeline to refresh data/ CSVs
+py scripts/fetch_market_pipeline.py
+
+# Step 2: Prompt the AI Agent to review data/ai_agent_research_brief.md, conduct web news research, and rebuild reports:
+py scripts/build_all_reports.py
+```
 
 The skill automatically loads:
 1. **[Data Sources & Official Feeds](.agents/skills/ai-market-risk-updater/references/sources_and_apis.md)**: FRED, TreasuryDirect, SEC EDGAR, KBRA, TSMC.
@@ -225,7 +273,7 @@ The skill automatically loads:
 
 ---
 
-## 7. Technical Reproduction & Execution
+## 8. Technical Reproduction & Execution
 
 ```bash
 # Clone the repository
@@ -265,7 +313,37 @@ Entre 2023 e 2026, mais de **US$ 350 bilhões** em despesas de capital (CapEx) f
 
 ---
 
-## 2. Pilares Forenses da Investigação
+## 2. Boletim Especial de Inteligência (Outubro de 2026): Novas Descobertas vs. Situação Antiga
+
+A atualização de inteligência de outubro de 2026 incorpora desdobramentos cruciais na interconexão física da rede elétrica, nas avaliações do mercado privado de tecnologia, na aceleração do CapEx dos hiperscalers e na estruturação de crédito sombra. Abaixo está a confrontação forense entre as premissas antigas e as descobertas de hoje:
+
+### 📊 Matriz Comparativa: Premissas Anteriores vs. Realidade de Mercado (Outubro de 2026)
+
+| Pilar de Investigação | Premissa Anterior / Situação Antiga | Descobertas Reais de Hoje (Outubro de 2026) | Impacto Sistêmico e Canal de Transmissão |
+|:---|:---|:---|:---|
+| **Rede Elétrica e Entrega de Data Centers** | Expansão de energia presumida como ilimitada; data centers projetados para energização rápida em 18 a 24 meses em qualquer geografia. | **O Muro da Rede Elétrica**: Cancelamento emblemático do contrato de data center entre **Microsoft e Nscale em Essex (Reino Unido)** por falta de capacidade na rede de transmissão. Filas de conexão da PJM (EUA) e National Grid (UK) congeladas por **7 a 10 anos (2033–2036)**. | Terrenos adquiridos e GPUs compradas viram **"ativos encalhados" (*stranded assets*)**; infraestrutura inoperante gera zero receita enquanto os juros da dívida continuam correndo. |
+| **Valuations dos Laboratórios de IA** | Escala exponencial de receita ARR (>300% ao ano); transações privadas avaliando laboratórios de ponta (Anthropic, OpenAI) em até **US$ 1,5 Trilhão** pré-IPO. | **Desconto de Valuation e Desaceleração**: Valuation privado da Anthropic reajustado com **corte de ~60% para a faixa de US$ 600B–US$ 700B**; crescimento anual desacelerou para **~85% ao ano** diante do custo de inferência e comoditização por modelos abertos. | Redução drástica no valor de garantias societárias; adiamento de liquidez de IPOs; compressão de múltiplos em todas as empresas de software listadas. |
+| **CapEx dos Hiperscalers e Alavancagem** | Despesas de capital projetadas em patamar de ~US$ 350B–US$ 400B ao ano, 100% bancadas pelo fluxo de caixa operacional das Big Techs sem risco de crédito. | **Hiper-CapEx de US$ 700B e Dívida Sombra**: Ritmo anual de CapEx atingiu **US$ 700 Bilhões**, cada vez mais dependente de **SPEs fora do balanço e crédito privado** (Blackstone, Ares, Apollo) em vez de caixa puro. | Migração do risco para o setor bancário sombra; índices de cobertura da dívida (ICSD) caem abaixo de $1,10x$ caso as locações sofram atrasos operacionais. |
+| **Taxas de Juros Macro e Dívida Soberana** | Expectativa de corte rápido de juros pelo Federal Reserve para ~3,0%; refinanciamento tranquilo de dívidas corporativas de tecnologia. | **Juros Altos por Mais Tempo e Dívida de US$ 36,85T**: Yield dos Treasuries de 10 anos firme em **5,10%**; despesa anual com juros da dívida americana supera **US$ 1,16 Trilhão/ano**; custo de refinanciamento corporativo segue elevado. | Abertura de spreads de crédito corporativo (razão `HYG/LQD` em 0,7433); aumento na taxa de desconto de projetos de infraestrutura de longo prazo. |
+| **Probabilidades de Quebra Acumuladas** | Cenário benigno / "pouso suave" estimado em **70%**; contágio sistêmico considerado risco de cauda desprezível (**<15%**). | **Matriz de Risco Recalibrada (2026–2029)**:<br>• **Deflação Ordenada (S1)**: **40%**<br>• **Deslocamento de Crédito (S2)**: **45%**<br>• **Contágio Sistêmico Global (S3)**: **30%**<br>• *Continuação Benigna*: Reduzida a **25%**. | A mecânica do subprime de IA deixa de ser uma vulnerabilidade teórica e passa a apresentar gatilhos empíricos de inadimplência. |
+
+<p align="center">
+  <img src="assets/charts/pt/chart_grid_bottleneck_delays.png" width="440" alt="Gargalos da Rede Elétrica (PT)"/>
+  <img src="assets/charts/pt/chart_anthropic_growth_deceleration_valuation.png" width="440" alt="Desaceleração de Crescimento e Desconto Anthropic (PT)"/>
+  <br>
+  <em>Figura 2: Filas de interconexão na rede elétrica vs. desaceleração de receita pré-IPO e compressão de valuations.</em>
+</p>
+
+<p align="center">
+  <img src="assets/charts/pt/chart_hyperscaler_capex_vs_private_credit.png" width="440" alt="CapEx Hiperscalers vs Crédito Privado (PT)"/>
+  <img src="assets/charts/pt/chart_updated_crash_probabilities_2026_2029.png" width="440" alt="Probabilidades Recalibradas 2026-2029 (PT)"/>
+  <br>
+  <em>Figura 3: Ritmo de CapEx de US$ 700B financiado por crédito privado vs. probabilidades estressadas de quebra (2026–2029).</em>
+</p>
+
+---
+
+## 3. Pilares Forenses da Investigação
 
 ### Pilar 1: O Loop de Financiamento de Vendedores (Vendor Financing)
 Fabricantes líderes de tecnologia fornecem capital de investimento a startups de nuvem especializada (*neoclouds*) e laboratórios de IA. Os recursos recebidos são obrigatoriamente revertidos em aquisições de chips de ponta do próprio investidor. Essa circularidade infla artificialmente o faturamento de curto prazo e adia a descoberta de demanda real do mercado.
@@ -273,7 +351,7 @@ Fabricantes líderes de tecnologia fornecem capital de investimento a startups d
 <p align="center">
   <img src="assets/charts/pt/chart_vendor_financing_loop.png" width="800" alt="Ciclo Fechado de Vendor Financing (PT)"/>
   <br>
-  <em>Figura 2: O ciclo fechado de vendor financing entre provedores de hardware, neoclouds e hiperscalers.</em>
+  <em>Figura 4: O ciclo fechado de vendor financing entre provedores de hardware, neoclouds e hiperscalers.</em>
 </p>
 
 ### Pilar 2: Descasamento de Depreciação de Hardware e Dívida
@@ -282,7 +360,7 @@ Uma GPU de data center tem vida útil econômica de ponta restrita a 2 ou 3 anos
 <p align="center">
   <img src="assets/charts/pt/chart_gpu_depreciation_vs_debt.png" width="800" alt="Depreciação de GPUs vs Amortização de Dívida (PT)"/>
   <br>
-  <em>Figura 3: Divergência entre curvas de depreciação física/econômica de GPUs e cronogramas de amortização de dívida.</em>
+  <em>Figura 5: Divergência entre curvas de depreciação física/econômica de GPUs e cronogramas de amortização de dívida.</em>
 </p>
 
 ### Pilar 3: O "Subprime de IA" e o Repacotamento AAA
@@ -291,7 +369,7 @@ Data centers são empacotados em estruturas de securitização (Data Center ABS)
 <p align="center">
   <img src="assets/charts/pt/chart_tranche_structure.png" width="800" alt="Estrutura de Tranches de Data Center ABS (PT)"/>
   <br>
-  <em>Figura 4: Estrutura de capital de Data Center ABS (Notas Classe A Sênior, Classe B Mezanino e Equity Residual).</em>
+  <em>Figura 6: Estrutura de capital de Data Center ABS (Notas Classe A Sênior, Classe B Mezanino e Equity Residual).</em>
 </p>
 
 ### Pilar 4: Transmissão Geopolítica e Risco Soberano
@@ -300,28 +378,28 @@ O custo do capital global subiu estruturalmente. Com as taxas de juros americana
 <p align="center">
   <img src="assets/charts/pt/chart_map_vulnerability.png" width="900" alt="Mapa Global de Vulnerabilidade Geopolítica (PT)"/>
   <br>
-  <em>Figura 5: Índice de Vulnerabilidade Sistêmica nos epicentros financeiros e tecnológicos mundiais (2026–2028).</em>
+  <em>Figura 7: Índice de Vulnerabilidade Sistêmica nos epicentros financeiros e tecnológicos mundiais (2026–2028).</em>
 </p>
 
 <p align="center">
   <img src="assets/charts/pt/chart_leverage_pyramid.png" width="800" alt="Pirâmide de Alavancagem de Crédito de IA (PT)"/>
   <br>
-  <em>Figura 6: A Pirâmide de Alavancagem do Crédito de IA — Dos ativos físicos de silício aos derivativos sintéticos.</em>
+  <em>Figura 8: A Pirâmide de Alavancagem do Crédito de IA — Dos ativos físicos de silício aos derivativos sintéticos.</em>
 </p>
 
 ---
 
-## 3. Matriz de Cenários de Quebra (2026–2029)
+## 4. Matriz de Cenários de Quebra (2026–2029) Recalibrada
 
 | Cenário | Janela | Probabilidade Acumulada | Gatilho Primário | Impacto no Mercado de Ações | Mercado de Crédito Privado |
 |:---|:---:|:---:|:---|:---:|:---|
-| **Base: Desinflação Ordenada** | 2026–2027 | **35%** | Crescimento do CapEx desacelera; maturação e corte de múltiplos de avaliação. | S&P 500: -15% a -20%<br>Nasdaq: -25% | Spreads abrem +150 bps; perdas absorvidas pelas tranches de equity. |
-| **Severo: Deslocamento de Crédito** | 2027–2028 | **45%** | Onda de inadimplência em neoclouds; derrocada no mercado secundário de GPUs. | S&P 500: -30% a -40%<br>Nasdaq: -45% | Spreads de High Yield >750 bps; colapso de tranches subordinadas de ABS. |
-| **Sistêmico: Multi-Contágio Global** | 2027–2029 | **20%** | Choque logístico em semicondutores (Taiwan) + crise de liquidez na dívida soberana dos EUA. | S&P 500: -50% a -60%<br>Nasdaq: -65% | Congelamento de liquidez bancária; intervenção emergencial do Federal Reserve. |
+| **Base: Desinflação Ordenada (S1)** | 2026–2027 | **40%** | Crescimento do CapEx desacelera; maturação e corte de múltiplos de avaliação. | S&P 500: -15% a -20%<br>Nasdaq: -25% | Spreads abrem +150 bps; perdas absorvidas pelas tranches de equity. |
+| **Severo: Deslocamento de Crédito (S2)** | 2027–2028 | **45%** | Onda de inadimplência em neoclouds; derrocada no mercado secundário de GPUs. | S&P 500: -30% a -40%<br>Nasdaq: -45% | Spreads de High Yield >750 bps; colapso de tranches subordinadas de ABS. |
+| **Sistêmico: Multi-Contágio Global (S3)** | 2027–2029 | **30%** | Choque logístico em semicondutores (Taiwan) + crise de liquidez na dívida soberana dos EUA. | S&P 500: -50% a -60%<br>Nasdaq: -65% | Congelamento de liquidez bancária; intervenção emergencial do Federal Reserve. |
 
 ---
 
-## 4. Índice de Entregáveis: Relatórios Executivos e Dossiês
+## 5. Índice de Entregáveis: Relatórios Executivos e Dossiês
 
 Todos os relatórios executivos estão disponíveis em formato PDF institucional (102 páginas compiladas) e dossiês técnicos em Markdown:
 
@@ -384,7 +462,7 @@ Ao solicitar uma nova atualização de relatório:
 
 ---
 
-## 6. Licença e Aviso Legal (Disclaimer)
+## 7. Licença e Aviso Legal (Disclaimer)
 
 **Licença**: Este projeto é disponibilizado sob a licença **GNU General Public License v3.0 (GPL-3.0)**. Consulte o arquivo [LICENSE](LICENSE) para termos integrais.
 
