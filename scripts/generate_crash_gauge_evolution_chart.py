@@ -70,8 +70,8 @@ def generate_evolution_chart():
             title1 = 'Risk Gauge Evolution: Baseline vs. Current'
             xlabel1 = 'Estimated Probability (%)'
 
-        v1_probs = [70.0, 35.0, 20.0, 15.0, 30.0]
-        v2_probs = [52.0, 38.0, 34.0, 18.0, 48.0]
+        v1_probs = [70.0, 48.0, 34.0, 18.0, 30.0]
+        v2_probs = [52.0, 42.0, 40.0, 18.0, 48.0]
 
         y = np.arange(len(categories))
         h = 0.36
