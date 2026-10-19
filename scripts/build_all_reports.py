@@ -42,6 +42,8 @@ REPORT_SCRIPTS = [
     ("generate_company_financial_forecast_report_en.py", "Company Status & Forecasts (EN, 8 Pages)"),
     ("generate_recent_market_update_report.py", "Atualização Mercado & Grid (PT, 8 Págs)"),
     ("generate_recent_market_update_report_en.py", "Market Update & Grid (EN, 8 Pages)"),
+    ("generate_yen_macro_report.py", "Macro Iene & Carry Trade (PT, 6 Págs)"),
+    ("generate_yen_macro_report_en.py", "Macro Yen & Carry Trade (EN, 6 Pages)"),
 ]
 
 def run_step(cmd, desc):
@@ -70,9 +72,10 @@ def main():
     ok_charts_co = run_step([sys.executable, "generate_company_charts.py"], "Step 1/4 (cont): Generating Bilingual Company Charts (assets/charts/)")
     ok_charts_up = run_step([sys.executable, "generate_recent_market_update_charts.py"], "Step 1/4 (cont): Generating Recent Market Update Charts (assets/charts/)")
     ok_charts_ev = run_step([sys.executable, "generate_crash_gauge_evolution_chart.py"], "Step 1/4 (cont): Generating Crash Risk Gauge Evolution Charts (assets/charts/)")
+    ok_charts_yn = run_step([sys.executable, "generate_yen_carry_trade_charts.py"], "Step 1/4 (cont): Generating Japanese Yen & Carry Trade Charts (assets/charts/)")
 
-    # Step 2: Build all 16 PDFs
-    print("\n>>> Step 2/4: Compiling 16 Institutional PDF Reports (102 Pages)...")
+    # Step 2: Build all 18 PDFs
+    print("\n>>> Step 2/4: Compiling 18 Institutional PDF Reports (114 Pages)...")
     success_count = 0
     fail_count = 0
     total_reports = len(REPORT_SCRIPTS)
@@ -90,7 +93,7 @@ def main():
             fail_count += 1
 
     # Step 3: Render Page Previews
-    ok_previews = run_step([sys.executable, "generate_page_previews.py"], "Step 3/4: Rendering 102 Page Previews (assets/previews/)")
+    ok_previews = run_step([sys.executable, "generate_page_previews.py"], "Step 3/4: Rendering 114 Page Previews (assets/previews/)")
 
     # Step 4: Run Validation Suite
     val_path = os.path.join(ROOT_DIR, ".agents", "skills", "ai-market-risk-updater", "scripts", "validate_models.py")

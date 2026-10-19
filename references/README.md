@@ -1,7 +1,7 @@
 # Repository References, Primary Sources & Verification Directory
 
 > **Master Reference Library for the AI Infrastructure & Credit Risk Assessment Model (2026–2029)**  
-> *Audit Date: October 18, 2026 • Real-Time Connectivity Tested & Audited*
+> *Audit Date: October 19, 2026 • Real-Time Connectivity Tested & Audited*
 
 ---
 
@@ -22,9 +22,9 @@ This directory (`references/`) provides an exhaustive, institution-grade archive
 
 ## 🔍 Executive Summary of Verified Sources
 
-* **Total Curated Primary Sources**: 47
-* **Total Unique URLs Audited**: 67
-* **Online & Validated Endpoints**: 54
+* **Total Curated Primary Sources**: 51
+* **Total Unique URLs Audited**: 72
+* **Online & Validated Endpoints**: 57
 * **Coverage Scope**:
   * **Macroeconomic & Sovereign Debt**: FRED, US Treasury Fiscal Data, CBO, TIC.
   * **Silicon & Hyperscalers**: SEC EDGAR (NVDA, MSFT, GOOGL, AMZN, ORCL, META, AVGO), TSMC Monthly Revenues.

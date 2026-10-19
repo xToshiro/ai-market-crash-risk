@@ -39,8 +39,8 @@
 
 | Source Name | Access URL | Description & Key Audited Metrics | Repository Reports & Scripts Using This Source |
 |:---|:---|:---|:---|
-| **PJM Interconnection - Interconnection Queues & Transmission Planning** | [https://www.pjm.com/planning/services-requests/interconnection-queues](https://www.pjm.com/planning/services-requests/interconnection-queues)<br>`HTTP 200` | Official queue database tracking 5 to 7 year interconnection delays across 13 US states and D.C. | `Relatorio_Atualizacao_Mercado_Outubro_2026_Nscale_Anthropic_Grid.pdf`, `Dossie_Atualizacao_Mercado_Outubro_2026_Nscale_Anthropic_Grid.md` |
-| **PJM Interconnection - Reliability Pricing Model (RPM) Capacity Market** | [https://www.pjm.com/markets-and-operations/rpm](https://www.pjm.com/markets-and-operations/rpm)<br>`HTTP 200` | Base Residual Auction (BRA) clearing results showing capacity price surges from $28.92 to $269.92/MW-day. | `Relatorio_Atualizacao_Mercado_Outubro_2026_Nscale_Anthropic_Grid.pdf`, `chart_grid_bottleneck_delays.png` |
+| **PJM Interconnection - Interconnection Queues & Transmission Planning** | [https://www.pjm.com/planning/services-requests/interconnection-queues](https://www.pjm.com/planning/services-requests/interconnection-queues)<br>`ONLINE` | Official queue database tracking 5 to 7 year interconnection delays across 13 US states and D.C. | `Relatorio_Atualizacao_Mercado_Outubro_2026_Nscale_Anthropic_Grid.pdf`, `Dossie_Atualizacao_Mercado_Outubro_2026_Nscale_Anthropic_Grid.md` |
+| **PJM Interconnection - Reliability Pricing Model (RPM) Capacity Market** | [https://www.pjm.com/markets-and-operations/rpm](https://www.pjm.com/markets-and-operations/rpm)<br>`ONLINE` | Base Residual Auction (BRA) clearing results showing capacity price surges from $28.92 to $269.92/MW-day. | `Relatorio_Atualizacao_Mercado_Outubro_2026_Nscale_Anthropic_Grid.pdf`, `chart_grid_bottleneck_delays.png` |
 | **National Grid UK - Electricity Transmission** | [https://www.nationalgrid.com/electricity-transmission](https://www.nationalgrid.com/electricity-transmission)<br>`HTTP 403` | UK transmission system operator documentation on connection queue deferrals to the 2030s (triggering the Essex cancellation). | `Relatorio_Atualizacao_Mercado_Outubro_2026_Nscale_Anthropic_Grid.pdf`, `Fontes_Noticias_Recentes_Outubro_2026.md` |
 | **Federal Energy Regulatory Commission (FERC)** | [https://www.ferc.gov](https://www.ferc.gov)<br>`HTTP 403` | Federal regulatory agency governing interstate electric transmission and Order 2023 interconnection queue reforms. | `Relatorio_Atualizacao_Mercado_Outubro_2026_Nscale_Anthropic_Grid.pdf` |
 | **International Energy Agency (IEA) - Electricity 2024 / 2026 Analysis** | [https://www.iea.org/reports/electricity-2024](https://www.iea.org/reports/electricity-2024)<br>`HTTP 403` | Comprehensive global forecasts on data center and AI power demand doubling to >1,000 TWh by 2026. | `Relatorio_Atualizacao_Mercado_Outubro_2026_Nscale_Anthropic_Grid.pdf`, `Fontes_Noticias_Recentes_Outubro_2026.md` |
@@ -98,6 +98,17 @@
 | **BlackRock - Global AI Infrastructure Investment Partnership (GAIIP)** | [https://www.blackrock.com](https://www.blackrock.com)<br>`HTTP 200` | Consortium with GIP, Microsoft, and MGX targeting $30B-$100B in mobilized equity and debt for AI data centers. | `Relatorio_Atualizacao_Mercado_Outubro_2026_Nscale_Anthropic_Grid.pdf` |
 | **Blackstone Infrastructure & Private Credit** | [https://www.blackstone.com](https://www.blackstone.com)<br>`HTTP 403` | Leading global asset manager funding data center master trusts and private debt facilities for neoclouds. | `Relatorio_Atualizacao_Mercado_Outubro_2026_Nscale_Anthropic_Grid.pdf`, `Relatorio_Alavancagem_e_Vendor_Financing_IA.pdf` |
 | **Blue Owl Capital - Digital Infrastructure** | [https://www.blueowl.com](https://www.blueowl.com)<br>`HTTP 200` | Alternative asset manager originating direct lending and private credit for hyperscaler data center SPVs. | `Relatorio_Atualizacao_Mercado_Outubro_2026_Nscale_Anthropic_Grid.pdf` |
+
+---
+
+## Japanese Macro Policy, Bank of Japan (BoJ) & US Treasury TIC Data
+
+| Source Name | Access URL | Description & Key Audited Metrics | Repository Reports & Scripts Using This Source |
+|:---|:---|:---|:---|
+| **Bank of Japan (BoJ) Official Statistics** | [https://www.boj.or.jp](https://www.boj.or.jp)<br>`HTTP 200` | Official policy rate decisions, Uncollateralized Overnight Call Rate, and Financial System Reports. | `Relatorio_Macro_Iene_Carry_Trade_Impacto_IA.pdf`, `Report_Macro_Yen_Carry_Trade_AI_Impact.pdf` |
+| **U.S. Treasury International Capital (TIC) Data** | [https://ticdata.treasury.gov/Publish/mfh.txt](https://ticdata.treasury.gov/Publish/mfh.txt)<br>`HTTP 200` | Official monthly dataset of Major Foreign Holders of U.S. Treasury Securities (Japan $1,068B portfolio). | `Relatorio_Macro_Iene_Carry_Trade_Impacto_IA.pdf`, `Report_Macro_Yen_Carry_Trade_AI_Impact.pdf` |
+| **Ministry of Finance Japan (MoF)** | [https://www.mof.go.jp](https://www.mof.go.jp)<br>`HTTP 200` | Official foreign exchange intervention operations audit log (October 2022 and 2024 dollar sales). | `Relatorio_Macro_Iene_Carry_Trade_Impacto_IA.pdf`, `Report_Macro_Yen_Carry_Trade_AI_Impact.pdf` |
+| **Japanese Trade Union Confederation (RENGO)** | [https://www.jtuc-rengo.org](https://www.jtuc-rengo.org)<br>`HTTP 200` | Official Spring Wage Offensive (Shunto) statistics (+5.15% in 2026, +5.28% in 2024). | `Relatorio_Macro_Iene_Carry_Trade_Impacto_IA.pdf`, `Report_Macro_Yen_Carry_Trade_AI_Impact.pdf` |
 
 ---
 

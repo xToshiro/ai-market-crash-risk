@@ -422,6 +422,38 @@ CURATED_SOURCES = [
         "description": "Alternative asset manager originating direct lending and private credit for hyperscaler data center SPVs.",
         "reports_used": ["Relatorio_Atualizacao_Mercado_Outubro_2026_Nscale_Anthropic_Grid.pdf"],
         "api_endpoint": False
+    },
+    {
+        "category": "Japanese Macro Policy, Bank of Japan (BoJ) & US Treasury TIC Data",
+        "name": "Bank of Japan (BoJ) Official Statistics",
+        "url": "https://www.boj.or.jp",
+        "description": "Official policy rate decisions, Uncollateralized Overnight Call Rate, and Financial System Reports.",
+        "reports_used": ["Relatorio_Macro_Iene_Carry_Trade_Impacto_IA.pdf", "Report_Macro_Yen_Carry_Trade_AI_Impact.pdf"],
+        "api_endpoint": False
+    },
+    {
+        "category": "Japanese Macro Policy, Bank of Japan (BoJ) & US Treasury TIC Data",
+        "name": "U.S. Treasury International Capital (TIC) Data",
+        "url": "https://ticdata.treasury.gov/Publish/mfh.txt",
+        "description": "Official monthly dataset of Major Foreign Holders of U.S. Treasury Securities (Japan $1,068B portfolio).",
+        "reports_used": ["Relatorio_Macro_Iene_Carry_Trade_Impacto_IA.pdf", "Report_Macro_Yen_Carry_Trade_AI_Impact.pdf"],
+        "api_endpoint": True
+    },
+    {
+        "category": "Japanese Macro Policy, Bank of Japan (BoJ) & US Treasury TIC Data",
+        "name": "Ministry of Finance Japan (MoF)",
+        "url": "https://www.mof.go.jp",
+        "description": "Official foreign exchange intervention operations audit log (October 2022 and 2024 dollar sales).",
+        "reports_used": ["Relatorio_Macro_Iene_Carry_Trade_Impacto_IA.pdf", "Report_Macro_Yen_Carry_Trade_AI_Impact.pdf"],
+        "api_endpoint": False
+    },
+    {
+        "category": "Japanese Macro Policy, Bank of Japan (BoJ) & US Treasury TIC Data",
+        "name": "Japanese Trade Union Confederation (RENGO)",
+        "url": "https://www.jtuc-rengo.org",
+        "description": "Official Spring Wage Offensive (Shunto) statistics (+5.15% in 2026, +5.28% in 2024).",
+        "reports_used": ["Relatorio_Macro_Iene_Carry_Trade_Impacto_IA.pdf", "Report_Macro_Yen_Carry_Trade_AI_Impact.pdf"],
+        "api_endpoint": False
     }
 ]
 
