@@ -20,8 +20,8 @@
   <a href="references/"><img src="https://img.shields.io/badge/References-Audited_&_Online-0284C7?style=for-the-badge" alt="References"/></a>
   <img src="https://img.shields.io/badge/Asset_Classes-ABS_%7C_Private_Credit_%7C_Equities_%7C_Sovereign_Bonds-0A192F?style=for-the-badge" alt="Asset Classes"/>
   <img src="https://img.shields.io/badge/Coverage_Horizon-2026_--_2029-475569?style=for-the-badge" alt="Coverage Horizon"/>
-  <img src="https://img.shields.io/badge/Reports-18_Executive_PDFs_(114_Pages)-2E7D32?style=for-the-badge" alt="Reports"/>
-  <img src="https://img.shields.io/badge/Bilingual_Charts-45_EN_%7C_45_PT-D97706?style=for-the-badge" alt="Bilingual Charts"/>
+  <img src="https://img.shields.io/badge/Reports-20_Executive_PDFs_(126_Pages)-2E7D32?style=for-the-badge" alt="Reports"/>
+  <img src="https://img.shields.io/badge/Bilingual_Charts-49_EN_%7C_49_PT-D97706?style=for-the-badge" alt="Bilingual Charts"/>
   <img src="https://img.shields.io/badge/Skills-Antigravity_Forecast_Updater-6B21A8?style=for-the-badge" alt="Skills"/>
 </p>
 
@@ -205,12 +205,12 @@ ai-market-crash-risk/
 │   └── ai_agent_research_brief.md              # Research protocol & queries for AI Agent
 │
 ├── reports/                                    # Executive PDF Reports (ReportLab Platypus)
-│   ├── en/                                     # 8 English Institutional PDFs (51 pages)
-│   └── pt/                                     # 8 Portuguese Institutional PDFs (51 pages)
+│   ├── en/                                     # 10 English Institutional PDFs (63 pages)
+│   └── pt/                                     # 10 Portuguese Institutional PDFs (63 pages)
 │
 ├── docs/                                       # In-depth Analytical Markdown Dossiers
-│   ├── en/                                     # 10 English technical research dossiers
-│   └── pt/                                     # 10 Portuguese technical research dossiers
+│   ├── en/                                     # 11 English technical research dossiers
+│   └── pt/                                     # 11 Portuguese technical research dossiers
 │
 ├── scripts/                                    # Python orchestration & generation scripts
 │   ├── fetch_market_pipeline.py                # Automated data ingestion & valuation pipeline
@@ -218,18 +218,19 @@ ai-market-crash-risk/
 │   ├── generate_charts_en.py                   # Dedicated English charts compiler
 │   ├── generate_company_charts.py              # Bilingual company forecast charts
 │   ├── generate_recent_market_update_charts.py # Grid bottlenecks & Anthropic valuation charts
-│   ├── generate_page_previews.py               # High-res PDF page preview generator (102 images)
+│   ├── generate_fear_indices_charts.py         # VIX, MOVE, term structure & vol-targeting charts
+│   ├── generate_page_previews.py               # High-res PDF page preview generator (126 images)
 │   ├── utils_paths.py                          # Path resolution utility
-│   ├── generate_recent_market_update_report.py # October 2026 special update report
-│   └── ...                                     # 14 other modular report generators
+│   ├── generate_fear_indices_report.py         # Standalone Fear Indices executive PDF generator
+│   └── ...                                     # 18 other modular report generators
 │
 ├── assets/
-│   ├── charts/                                 # 80 Bilingual financial & risk charts
-│   │   ├── en/                                 # 40 English charts (chart_*.png)
-│   │   └── pt/                                 # 40 Portuguese charts (chart_*.png)
-│   ├── previews/                               # 102 High-resolution report page previews
-│   │   ├── en/                                 # 51 English report page preview PNGs
-│   │   └── pt/                                 # 51 Portuguese report page preview PNGs
+│   ├── charts/                                 # 98 Bilingual financial & risk charts
+│   │   ├── en/                                 # 49 English charts (chart_*.png)
+│   │   └── pt/                                 # 49 Portuguese charts (chart_*.png)
+│   ├── previews/                               # 126 High-resolution report page previews
+│   │   ├── en/                                 # 63 English report page preview PNGs
+│   │   └── pt/                                 # 63 Portuguese report page preview PNGs
 │   └── geo/                                    # world_countries_110m.geojson spatial database
 │
 └── .agents/skills/
@@ -243,16 +244,18 @@ ai-market-crash-risk/
 
 ## 6. Deliverables Index: Reports & Dossiers
 
-All executive reports are available in full institutional-grade PDF format (114 pages compiled) and detailed technical Markdown dossiers:
+All executive reports are available in full institutional-grade PDF format (126 pages compiled) and detailed technical Markdown dossiers:
 
 ### 📑 Executive PDF Reports (Institutional Format)
 
 | Document Title | Language | Pages | Download / Access | Page Previews |
 |:---|:---:|:---:|:---:|:---:|
-| **Market Update: Grid Choke Point & Anthropic Haircut (2026–2029)** | 🇺🇸 English | 8 | [Download PDF](reports/en/Report_Market_Update_Oct2026_Grid_Anthropic.pdf) | [View Previews](assets/previews/en/) |
-| **Atualização: Gargalo da Rede Elétrica e Desconto Anthropic (2026–2029)** | 🇧🇷 Português | 8 | [Download PDF](reports/pt/Relatorio_Atualizacao_Mercado_Outubro_2026_Nscale_Anthropic_Grid.pdf) | [Ver Prévias](assets/previews/pt/) |
+| **Fear Indices, VIX Term Structure & Systematic Deleveraging (2026–2029)** | 🇺🇸 English | 6 | [Download PDF](reports/en/Report_Fear_Indices_VIX_MOVE_AI_Impact.pdf) | [View Previews](assets/previews/en/) |
+| **Índices do Medo, Estrutura a Termo da Volatilidade e Desalavancagem (2026–2029)** | 🇧🇷 Português | 6 | [Download PDF](reports/pt/Relatorio_Indices_do_Medo_VIX_MOVE_Impacto_IA.pdf) | [Ver Prévias](assets/previews/pt/) |
 | **Japanese Yen Macro Dynamics & Carry Trade (2022–2026)** | 🇺🇸 English | 6 | [Download PDF](reports/en/Report_Macro_Yen_Carry_Trade_AI_Impact.pdf) | [View Previews](assets/previews/en/) |
 | **A Dinâmica Macroeconômica do Iene e Carry Trade (2022–2026)** | 🇧🇷 Português | 6 | [Download PDF](reports/pt/Relatorio_Macro_Iene_Carry_Trade_Impacto_IA.pdf) | [Ver Prévias](assets/previews/pt/) |
+| **Market Update: Grid Choke Point & Anthropic Haircut (2026–2029)** | 🇺🇸 English | 8 | [Download PDF](reports/en/Report_Market_Update_Oct2026_Grid_Anthropic.pdf) | [View Previews](assets/previews/en/) |
+| **Atualização: Gargalo da Rede Elétrica e Desconto Anthropic (2026–2029)** | 🇧🇷 Português | 8 | [Download PDF](reports/pt/Relatorio_Atualizacao_Mercado_Outubro_2026_Nscale_Anthropic_Grid.pdf) | [Ver Prévias](assets/previews/pt/) |
 | **Macro Geopolitical Market Crash (2026–2028)** | 🇺🇸 English | 10 | [Download PDF](reports/en/Report_Macro_Geopolitics_Market_Crash_2026_2028.pdf) | [View Previews](assets/previews/en/) |
 | **Macro Geopolítica Quebra de Mercado (2026–2028)** | 🇧🇷 Português | 10 | [Download PDF](reports/pt/Relatorio_Macro_Geopolitica_Quebra_Mercado_2026_2028.pdf) | [Ver Prévias](assets/previews/pt/) |
 | **US Financial Market & AI Bubble Architecture** | 🇺🇸 English | 8 | [Download PDF](reports/en/Report_US_Financial_Market_AI_Bubble.pdf) | [View Previews](assets/previews/en/) |
@@ -274,8 +277,9 @@ All executive reports are available in full institutional-grade PDF format (114 
 
 | Technical Dossier (English) | Dossier Técnico (Português) | Primary Research Subject |
 |:---|:---|:---|
-| [Market Update: Grid & Anthropic](docs/en/Dossie_Market_Update_October_2026_Nscale_Anthropic_Grid_EN.md) | [Dossiê Atualização: Grid & Anthropic](docs/pt/Dossie_Atualizacao_Mercado_Outubro_2026_Nscale_Anthropic_Grid.md) | Microsoft-Nscale Essex cancellation, Anthropic $1.5T valuation cut, utility queue freezes & recalibrated risk matrix. |
+| [Fear Indices & Algorithmic Deleveraging](docs/en/Dossie_Indices_do_Medo_VIX_MOVE_e_Desalavancagem_Algoritmica_EN.md) | [Dossiê Índices do Medo e Desalavancagem Algorítmica](docs/pt/Dossie_Indices_do_Medo_VIX_MOVE_e_Desalavancagem_Algoritmica.md) | Quantitative mechanics of CBOE VIX, ICE BofA MOVE, SKEW, VVIX, and Vol-Targeting / CTA forced selling thresholds. |
 | [Macro Yen & Global Carry Trade](docs/en/Dossie_Macro_Iene_Carry_Trade_e_Liquidez_Global_EN.md) | [Dossiê Macro Iene e Carry Trade](docs/pt/Dossie_Macro_Iene_Carry_Trade_e_Liquidez_Global.md) | BoJ monetary normalization (1.00%), US TIC data ($1.07T), August 2024 Black Monday shock, and tech multiple compression. |
+| [Market Update: Grid & Anthropic](docs/en/Dossie_Market_Update_October_2026_Nscale_Anthropic_Grid_EN.md) | [Dossiê Atualização: Grid & Anthropic](docs/pt/Dossie_Atualizacao_Mercado_Outubro_2026_Nscale_Anthropic_Grid.md) | Microsoft-Nscale Essex cancellation, Anthropic $1.5T valuation cut, utility queue freezes & recalibrated risk matrix. |
 | [October 2026 News Intelligence Sources](docs/en/Recent_News_Sources_October_2026.md) | [Fontes e Notícias Recentes Outubro 2026](docs/pt/Fontes_Noticias_Recentes_Outubro_2026.md) | Verified audit trail of press reports (FT, Euronext, Business Insider), SEC filings, National Grid UK notices. |
 | [AI Leaders Financial Audit & 2027 Forecasts](docs/en/Dossie_Status_Financeiro_Acoes_Previsao_Empresas_IA_EN.md) | [Dossiê Status Financeiro das Líderes e Previsões](docs/pt/Dossie_Status_Financeiro_Acoes_Previsao_Empresas_IA.md) | Corporate balance sheets, 2-year returns & semiannual predictive target price matrix. |
 | [Macro Geopolitics & Market Crash Dossier](docs/en/Dossie_Macro_Geopolitica_Quebra_Mercado_2026_2028_EN.md) | [Dossiê Macro Geopolítica e Quebra de Mercado](docs/pt/Dossie_Macro_Geopolitica_Quebra_Mercado_2026_2028.md) | US fiscal debt, Taiwan Strait, oil choke points & regional ranking. |
@@ -320,7 +324,7 @@ cd ai-market-crash-risk
 # Install required dependencies
 pip install reportlab matplotlib numpy pandas geopandas shapely pymupdf
 
-# Reproduce all 45 charts (EN & PT), compile all 18 PDF reports (114 pages), and generate 114 page previews:
+# Reproduce all 49 charts (EN & PT), compile all 20 PDF reports (126 pages), and generate 126 page previews:
 python scripts/build_all_reports.py
 
 # Validate full repository integrity:
@@ -460,16 +464,18 @@ O custo do capital global subiu estruturalmente. Com as taxas de juros americana
 
 ## 5. Índice de Entregáveis: Relatórios Executivos e Dossiês
 
-Todos os relatórios executivos estão disponíveis em formato PDF institucional (114 páginas compiladas) e dossiês técnicos em Markdown:
+All executive reports are available in full institutional-grade PDF format (126 pages compiled) and detailed technical Markdown dossiers:
 
 ### 📑 Relatórios Executivos em PDF (Formato Institucional)
 
 | Título do Documento | Idioma | Páginas | Download / Acesso | Prévias em Imagem |
 |:---|:---:|:---:|:---:|:---:|
-| **Atualização: Gargalo da Rede Elétrica e Desconto Anthropic (2026–2029)** | 🇧🇷 Português | 8 | [Baixar PDF](reports/pt/Relatorio_Atualizacao_Mercado_Outubro_2026_Nscale_Anthropic_Grid.pdf) | [Ver Prévias](assets/previews/pt/) |
-| **Market Update: Grid Choke Point & Anthropic Haircut (2026–2029)** | 🇺🇸 English | 8 | [Download PDF](reports/en/Report_Market_Update_Oct2026_Grid_Anthropic.pdf) | [View Previews](assets/previews/en/) |
+| **Índices do Medo, Estrutura a Termo da Volatilidade e Desalavancagem (2026–2029)** | 🇧🇷 Português | 6 | [Baixar PDF](reports/pt/Relatorio_Indices_do_Medo_VIX_MOVE_Impacto_IA.pdf) | [Ver Prévias](assets/previews/pt/) |
+| **Fear Indices, VIX Term Structure & Systematic Deleveraging (2026–2029)** | 🇺🇸 English | 6 | [Download PDF](reports/en/Report_Fear_Indices_VIX_MOVE_AI_Impact.pdf) | [View Previews](assets/previews/en/) |
 | **A Dinâmica Macroeconômica do Iene e Carry Trade (2022–2026)** | 🇧🇷 Português | 6 | [Baixar PDF](reports/pt/Relatorio_Macro_Iene_Carry_Trade_Impacto_IA.pdf) | [Ver Prévias](assets/previews/pt/) |
 | **Japanese Yen Macro Dynamics & Carry Trade (2022–2026)** | 🇺🇸 English | 6 | [Download PDF](reports/en/Report_Macro_Yen_Carry_Trade_AI_Impact.pdf) | [View Previews](assets/previews/en/) |
+| **Atualização: Gargalo da Rede Elétrica e Desconto Anthropic (2026–2029)** | 🇧🇷 Português | 8 | [Baixar PDF](reports/pt/Relatorio_Atualizacao_Mercado_Outubro_2026_Nscale_Anthropic_Grid.pdf) | [Ver Prévias](assets/previews/pt/) |
+| **Market Update: Grid Choke Point & Anthropic Haircut (2026–2029)** | 🇺🇸 English | 8 | [Download PDF](reports/en/Report_Market_Update_Oct2026_Grid_Anthropic.pdf) | [View Previews](assets/previews/en/) |
 | **Macro Geopolítica Quebra de Mercado (2026–2028)** | 🇧🇷 Português | 10 | [Baixar PDF](reports/pt/Relatorio_Macro_Geopolitica_Quebra_Mercado_2026_2028.pdf) | [Ver Prévias](assets/previews/pt/) |
 | **Mercado Financeiro Americano e Bolha de IA** | 🇧🇷 Português | 8 | [Baixar PDF](reports/pt/Relatorio_Mercado_Financeiro_Americano.pdf) | [Ver Prévias](assets/previews/pt/) |
 | **Status Financeiro, Ações e Previsões (2027)** | 🇧🇷 Português | 8 | [Baixar PDF](reports/pt/Relatorio_Status_Financeiro_Acoes_Previsao_Empresas_IA.pdf) | [Ver Prévias](assets/previews/pt/) |
@@ -484,8 +490,9 @@ Todos os relatórios executivos estão disponíveis em formato PDF institucional
 
 | Dossiê Técnico (Português) | Technical Dossier (English) | Tema Central de Pesquisa |
 |:---|:---|:---|
-| [Dossiê Atualização: Grid & Anthropic](docs/pt/Dossie_Atualizacao_Mercado_Outubro_2026_Nscale_Anthropic_Grid.md) | [Market Update: Grid & Anthropic](docs/en/Dossie_Market_Update_October_2026_Nscale_Anthropic_Grid_EN.md) | Cancelamento Essex da Microsoft-Nscale, corte de valuation de $1,5T da Anthropic e gargalo elétrico. |
+| [Dossiê Índices do Medo e Desalavancagem Algorítmica](docs/pt/Dossie_Indices_do_Medo_VIX_MOVE_e_Desalavancagem_Algoritmica.md) | [Fear Indices & Algorithmic Deleveraging](docs/en/Dossie_Indices_do_Medo_VIX_MOVE_e_Desalavancagem_Algoritmica_EN.md) | Mecânica quantitativa do CBOE VIX, ICE BofA MOVE, SKEW, VVIX e gatilhos de venda forçada de fundos de Vol-Targeting e CTAs. |
 | [Dossiê Macro Iene e Carry Trade](docs/pt/Dossie_Macro_Iene_Carry_Trade_e_Liquidez_Global.md) | [Macro Yen & Global Carry Trade](docs/en/Dossie_Macro_Iene_Carry_Trade_e_Liquidez_Global_EN.md) | Desmonte estrutural do BoJ, dados TIC do Tesouro, contágio da Segunda-Feira Negra e sensibilidade de múltiplos. |
+| [Dossiê Atualização: Grid & Anthropic](docs/pt/Dossie_Atualizacao_Mercado_Outubro_2026_Nscale_Anthropic_Grid.md) | [Market Update: Grid & Anthropic](docs/en/Dossie_Market_Update_October_2026_Nscale_Anthropic_Grid_EN.md) | Cancelamento Essex da Microsoft-Nscale, corte de valuation de $1,5T da Anthropic e gargalo elétrico. |
 | [Fontes e Notícias Recentes Outubro 2026](docs/pt/Fontes_Noticias_Recentes_Outubro_2026.md) | [October 2026 News Intelligence Sources](docs/en/Recent_News_Sources_October_2026.md) | Pistas de auditoria da cobertura de imprensa (FT, Euronext, Business Insider), filings SEC e National Grid UK. |
 | [Dossiê Status Financeiro das Líderes e Previsões](docs/pt/Dossie_Status_Financeiro_Acoes_Previsao_Empresas_IA.md) | [AI Leaders Financial Audit & 2027 Forecasts](docs/en/Dossie_Status_Financeiro_Acoes_Previsao_Empresas_IA_EN.md) | Balanços corporativos, retornos de 2 anos e matriz preditiva de preços semestrais. |
 | [Dossiê Macro Geopolítica e Quebra de Mercado](docs/pt/Dossie_Macro_Geopolitica_Quebra_Mercado_2026_2028.md) | [Macro Geopolitics & Market Crash Dossier](docs/en/Dossie_Macro_Geopolitica_Quebra_Mercado_2026_2028_EN.md) | Dívida fiscal dos EUA, Estreito de Taiwan, gargalos de petróleo e ranking regional de vulnerabilidade. |

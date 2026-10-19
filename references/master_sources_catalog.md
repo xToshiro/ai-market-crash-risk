@@ -112,3 +112,15 @@
 
 ---
 
+## Market Volatility, Fear Indices & Algorithmic Triggers (CBOE & ICE BofA)
+
+| Source Name | Access URL | Description & Key Audited Metrics | Repository Reports & Scripts Using This Source |
+|:---|:---|:---|:---|
+| **CBOE (Chicago Board Options Exchange) - VIX Index** | [https://www.cboe.com/tradable_products/vix/](https://www.cboe.com/tradable_products/vix/)<br>`HTTP 200` | Real-time calculation of 30-day forward implied volatility for the S&P 500; triggers systematic Vol-Targeting fund selling at >25. | `Relatorio_Indices_do_Medo_VIX_MOVE_Impacto_IA.pdf`, `Report_Fear_Indices_VIX_MOVE_AI_Impact.pdf`, `Dossie_Indices_do_Medo_VIX_MOVE_e_Desalavancagem_Algoritmica.md` |
+| **ICE Benchmark Administration - ICE BofA MOVE Index** | [https://www.theice.com/market-data/indices/ice-bofa-indices](https://www.theice.com/market-data/indices/ice-bofa-indices)<br>`HTTP 200` | Treasury bond implied volatility index (Merrill Lynch Option Volatility Estimate); benchmark for bond market stress and Data Center ABS spread widening at >120. | `Relatorio_Indices_do_Medo_VIX_MOVE_Impacto_IA.pdf`, `Report_Fear_Indices_VIX_MOVE_AI_Impact.pdf`, `Dossie_Indices_do_Medo_VIX_MOVE_e_Desalavancagem_Algoritmica.md` |
+| **CBOE - SKEW Index** | [https://www.cboe.com/tradable_products/vix/skew_index/](https://www.cboe.com/tradable_products/vix/skew_index/)<br>`HTTP 200` | Measures tail risk sentiment and perceived probability of outlier negative events (Black Swan index) in US equities. | `Relatorio_Indices_do_Medo_VIX_MOVE_Impacto_IA.pdf`, `Report_Fear_Indices_VIX_MOVE_AI_Impact.pdf` |
+| **CBOE - VVIX Index (Volatility of VIX)** | [https://www.cboe.com/tradable_products/vix/vvix_index/](https://www.cboe.com/tradable_products/vix/vvix_index/)<br>`HTTP 200` | Measures expected volatility of the 30-day forward price of the VIX, gauging panic hedging velocity. | `Relatorio_Indices_do_Medo_VIX_MOVE_Impacto_IA.pdf`, `Report_Fear_Indices_VIX_MOVE_AI_Impact.pdf` |
+| **CBOE Futures Exchange (CFE) - VIX Term Structure** | [https://www.cboe.com/us/futures/market_statistics/](https://www.cboe.com/us/futures/market_statistics/)<br>`HTTP 200` | Futures curve tracking Contango (normal) vs Inverted Backwardation (acute margin calls and liquidity freeze). | `Relatorio_Indices_do_Medo_VIX_MOVE_Impacto_IA.pdf`, `Report_Fear_Indices_VIX_MOVE_AI_Impact.pdf`, `chart_vix_term_structure_contango_backwardation.png` |
+
+---
+

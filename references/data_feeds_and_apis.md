@@ -53,7 +53,11 @@ This technical manual documents the specific API endpoints, ticker symbols, seri
 | **Nasdaq 100 Index** | `^IXIC` | Tech concentration benchmark (P/E ~29.5x). |
 | **High Yield Corporate ETF** | `HYG` | Risk appetite barometer in sub-investment-grade corporate debt. |
 | **Investment Grade Corporate**| `LQD` | Senior corporate credit spread benchmark (`HYG/LQD` ratio: 0.7433). |
-| **CBOE Volatility Index** | `^VIX` | Implied equity market volatility index. |
+| **CBOE Volatility Index** | `^VIX` | Implied equity market volatility index (S&P 500 30-day forward). |
+| **ICE BofA MOVE Index** | `^MOVE` / `MOVE` | Treasury bond implied volatility index across 1M options on 2Y, 5Y, 10Y, 30Y Treasuries. |
+| **CBOE VIX of VIX Index** | `^VVIX` | Volatility of the VIX, tail risk sentiment and demand for out-of-the-money VIX calls. |
+| **CBOE SKEW Index** | `^SKEW` | Tail risk pricing measuring asymmetry/out-of-the-money put skew on S&P 500 options. |
+| **USD/JPY Spot FX** | `USDJPY=X` | US Dollar to Japanese Yen exchange rate (Carry trade funding barometer). |
 
 ---
 
@@ -68,3 +72,20 @@ This technical manual documents the specific API endpoints, ticker symbols, seri
 | **Alphabet Inc.** | `0001652044` | Segment Reporting (Google Cloud Operating Income), Capital Expenditures. |
 | **Amazon.com, Inc.** | `0001018724` | AWS Segment Financials, Lease Liabilities (Operating vs. Financing). |
 | **Oracle Corporation** | `0001341439` | Debt Maturity Schedule, Cloud Infrastructure Obligations. |
+
+---
+
+## 5. Volatility & Algorithmic Deleveraging Feeds (CBOE & ICE BofA)
+
+* **Primary Feeds**: CBOE Market Data Services & ICE Benchmark Administration
+* **Ingestion Script**: `scripts/generate_fear_indices_charts.py`
+* **Reports**: `Relatorio_Indices_do_Medo_VIX_MOVE_Impacto_IA.pdf`, `Report_Fear_Indices_VIX_MOVE_AI_Impact.pdf`
+
+| Metric / Index | Provider / Host | Calculation Method / Parameter Role | Systemic Deleveraging Trigger Threshold |
+| :--- | :--- | :--- | :--- |
+| **VIX (CBOE Volatility Index)** | CBOE (`cboe.com`) | Real-time, 30-day forward-looking SPX option-implied variance. | **VIX > 25.0**: Systematic Vol-Target / CTA fund forced equity selling ($160B-$250B). |
+| **ICE BofA MOVE Index** | ICE / BofA (`theice.com`) | Weighted average of normalized implied vol on 1-month OTC Treasury options (2Y, 5Y, 10Y, 30Y). | **MOVE > 120.0 - 140.0**: Primary syndication freezes in Data Center ABS; spread widening +150 to +300 bps. |
+| **CBOE VVIX Index** | CBOE (`cboe.com`) | Volatility of the VIX, derived from VIX options contracts. | **VVIX > 120.0**: Acute crash hedging and panic demand for non-linear protection. |
+| **CBOE SKEW Index** | CBOE (`cboe.com`) | Slope of the implied vol smile; tail risk indicator ($SKEW = 100 - 10 \times S$). | **SKEW > 145.0**: Elevated institutional demand for extreme downside Black Swan tail puts. |
+| **VIX Term Structure (M1 vs M3)** | CBOE Futures (`cfe.cboe.com`) | Spread between spot/1st month future vs 3rd month future. | **Spot > M3 (Backwardation > +5 pts)**: Acute margin crisis and severe collateral squeeze. |
+

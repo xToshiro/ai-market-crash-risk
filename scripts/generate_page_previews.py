@@ -48,6 +48,7 @@ REPORT_SLUGS = {
     "Relatorio_Status_Financeiro_Acoes_Previsao_Empresas_IA.pdf": "company_financial_forecast",
     "Relatorio_Atualizacao_Mercado_Outubro_2026_Nscale_Anthropic_Grid.pdf": "market_update_oct2026",
     "Relatorio_Macro_Iene_Carry_Trade_Impacto_IA.pdf": "yen_macro_carry_trade",
+    "Relatorio_Indices_do_Medo_VIX_MOVE_Impacto_IA.pdf": "fear_indices_vix_move",
 
     # English reports
     "Report_Macro_Geopolitics_Market_Crash_2026_2028.pdf": "macro_geopolitics",
@@ -59,6 +60,7 @@ REPORT_SLUGS = {
     "Report_AI_Leaders_Financial_Status_2027_Forecasts.pdf": "company_financial_forecast",
     "Report_Market_Update_Oct2026_Grid_Anthropic.pdf": "market_update_oct2026",
     "Report_Macro_Yen_Carry_Trade_AI_Impact.pdf": "yen_macro_carry_trade",
+    "Report_Fear_Indices_VIX_MOVE_AI_Impact.pdf": "fear_indices_vix_move",
 
     # Legacy English filenames
     "Relatorio_Macro_Geopolitica_Quebra_Mercado_2026_2028_EN.pdf": "macro_geopolitics",
