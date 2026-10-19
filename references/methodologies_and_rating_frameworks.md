@@ -62,3 +62,27 @@ Simulates joint default probabilities across tech equities, corporate credit, an
 $$P(X_1 \le x_1, X_2 \le x_2) = \Phi_2\left(\Phi^{-1}(F_1(x_1)), \Phi^{-1}(F_2(x_2)); \rho\right)$$
 
 Where correlation parameter $\rho$ increases from $0.25$ in benign regimes to **$>0.75$** during liquidity contractions.
+
+---
+
+## 5. Japanese Yen Carry-Trade Breakeven & Velocity Deleveraging Model
+
+* **Application**: Used in `Report_Macro_Yen_Carry_Trade_AI_Impact.pdf` and `Dossie_Macro_Iene_Carry_Trade_e_Liquidez_Global.md`.
+
+Quantifies the net return of yen-funded leverage into dollar-denominated tech assets and identifies the structural breaking thresholds:
+
+### 5.1 Net Carry Hurdle Formulation
+$$R_{\text{carry}}(t) = \int_0^t \left( r_{\text{Fed}}(\tau) - r_{\text{BoJ}}(\tau) \right) d\tau - \left( \frac{S(0) - S(t)}{S(0)} \right)$$
+
+Where $S(t)$ is the USD/JPY spot exchange rate.
+
+### 5.2 Forensic Rupture Thresholds
+1. **Warning Level ($S = 140.00$)**:
+   $$\text{Recent Tranche De-risking} \implies \text{VIX} \in [25, 35], \quad \Delta \text{Nasdaq} \approx -8\%$$
+2. **Global Carry Breakeven ($S^* = 130.00$)**:
+   $$R_{\text{carry}}(t) \le 0 \implies \text{Mandatory Voluntary Unwind / Margin Liquidation}$$
+3. **Global Systemic Rupture Boundary ($S^{**} \le 125.00$)**:
+   $$\text{VaR Breach Event} \implies \text{Credit Freeze}, \quad \text{ABS Spreads} > +300\text{ bps}, \quad \Delta \text{Big Tech P/E} \approx -35\%$$
+4. **Dynamic Velocity Trigger**:
+   $$\text{Systemic Dislocation Condition} \iff S(t) < 130.00 \quad \text{AND} \quad \left| \frac{dS}{dt} \right| \ge 1.50 \text{ JPY/day}$$
+

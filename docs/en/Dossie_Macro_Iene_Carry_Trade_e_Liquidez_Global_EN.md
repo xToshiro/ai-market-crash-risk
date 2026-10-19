@@ -170,6 +170,48 @@ A U.S. fiscal refunding disruption or policy mismatch coincides with emergency B
 
 ---
 
+### 6.1 Forensic Rupture Thresholds: The Global Yen Breaking Point
+
+In the quantitative stress testing conducted by institutional macro desks and multilateral authorities (BIS, IMF), the pivotal question is: **what exact exchange rate threshold cannot be breached without triggering a global systemic market crash?**
+
+We identify **three discrete linear thresholds and one dynamic velocity trigger**:
+
+```
+[165.00+]   ---> DEVALUATION CEILING (Massive Treasury Sales by Japan MoF)
+  ...
+[149.20]    ---> CURRENT SPOT (October 2026 - Managed Latent Tension)
+  ...
+[140.00]    ---> THRESHOLD 1: Warning & Technical De-Rating Zone (-5% to -10% in Big Tech)
+  ...
+[130.00]    ---> THRESHOLD 2: Systemic Breakeven Point of the Global Carry Trade
+  ...
+[120 - 125] ---> THRESHOLD 3: GLOBAL SYSTEMIC RUPTURE ZONE (VaR Shock & Liquidity Freeze)
+```
+
+#### A. Threshold 1: USD/JPY at 140.00 (Warning & Intermediate De-Risking)
+* **Mechanics**: Tested during the *Black Monday* shock on August 5, 2024 (trough of 141.70). Erases recent carry trade profits entered in 2024.
+* **Market Impact**: Induces pronounced volatility across high-beta AI equities (NVIDIA, Broadcom, semiconductor futures), with the VIX fluctuating between 25 and 35. This represents a cyclical, technical correction (-5% to -10%) that **does not trigger institutional insolvency**.
+
+#### B. Threshold 2: USD/JPY at 130.00 (The Global Carry Trade Breakeven Line)
+* **Mechanics**: The bulk of the multi-trillion dollar modern carry trade was accumulated between 2022 and 2023 when USD/JPY traded within the 130.00–135.00 band.
+* **Market Impact**: Below 130.00, **the cumulative carry trade enters negative net principal returns**. Accumulated interest carry (3% to 5% p.a.) is wiped out by FX capital losses on yen-denominated liabilities.
+* **Systemic Effect**: Voluntary rolling of yen liabilities ceases. Macro funds and corporate treasuries initiate **mandatory deleveraging**, selling liquid technology equities and corporate credit to repay Tokyo debt. The Nasdaq enters a severe correction (-15% to -20%).
+
+#### C. Threshold 3: USD/JPY between 120.00 and 125.00 (The Global Systemic Rupture Zone)
+* **Mechanics**: A 20% to 25% rapid appreciation of the Yen breaches institutional *Value-at-Risk (VaR)* limits across global primary dealers and multi-strategy platforms.
+* **Systemic Cascade**:
+  1. **Forced Cross-Asset Fire Sales**: To cover multi-trillion-dollar yen liability calls, funds exhaust equity liquidity and aggressively dump **private credit tranches, investment-grade bonds, gold, and U.S. Treasuries**;
+  2. **Interbank Liquidity Freeze**: A scramble for pure cash dollar and yen liquidity ensues; credit spreads widen by +300 bps+, freezing private credit markets and data center ABS issuances;
+  3. **Insolvency Cascade**: Leveraged neoclouds face technical debt defaults as debt service explodes and collateral values drop, mirroring 2008-style liquidity gridlock.
+
+#### D. The Dynamic Velocity Trigger ($\frac{\Delta S}{\Delta t}$)
+The transition speed is more dangerous than the nominal spot rate:
+* **Orderly Glide Path (2 to 3 years)**: Allows market participants to roll contracts, establish foreign exchange hedges, and de-risk portfolios gradually without systemic contagion;
+* **Flash Shock (2 to 4 weeks)**: A drop from 149 to 125 in days causes FX order book depth to evaporate, forcing instantaneous liquidations and structural market disruption.
+
+#### E. The Opposite Ceiling: Runaway Yen Depreciation (USD/JPY > 165.00–170.00)
+A runaway depreciation past 165–170 creates imported hyper-inflation in Japan. The MoF would be compelled to launch an **emergency liquidation of $200B–$300B in U.S. Treasuries**, driving the **US 10Y yield past 5.50%–6.00%**, triggering an interest-rate-driven crash across U.S. commercial real estate and leveraged corporate debt.
+
 ## 7. Institutional Recommendations for Risk Managers & Macro Allocators
 
 1. **Incorporate Real U.S.-Japan Rate Differentials into AI Valuation Models**: Equity analysts and risk managers must integrate 2-year and 10-year sovereign rate differentials between the U.S. and Japan into systemic risk models, recognizing JPY as a primary liquidity transmission driver;
