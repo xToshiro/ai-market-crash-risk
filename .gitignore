@@ -9,3 +9,7 @@ test_imports.py
 # Ignore loose screenshots at repository root and scripts directory
 /*.png
 /scripts/*.png
+
+# Local SQLite databases
+*.db
+*.sqlite
