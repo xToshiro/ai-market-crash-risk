@@ -22,6 +22,7 @@
   <img src="https://img.shields.io/badge/Coverage_Horizon-2026_--_2029-475569?style=for-the-badge" alt="Coverage Horizon"/>
   <img src="https://img.shields.io/badge/Reports-20_Executive_PDFs_(126_Pages)-2E7D32?style=for-the-badge" alt="Reports"/>
   <img src="https://img.shields.io/badge/Bilingual_Charts-49_EN_%7C_49_PT-D97706?style=for-the-badge" alt="Bilingual Charts"/>
+  <img src="https://img.shields.io/badge/Live_Dashboard-Unified_Cockpit_V3_(SQLite)-0284C7?style=for-the-badge" alt="Live Unified Dashboard"/>
   <img src="https://img.shields.io/badge/Skills-Antigravity_Forecast_Updater-6B21A8?style=for-the-badge" alt="Skills"/>
 </p>
 
@@ -292,7 +293,43 @@ All executive reports are available in full institutional-grade PDF format (126 
 
 ---
 
-## 7. Automated Data Pipeline & Updating via Antigravity Skills
+## 7. Real-Time Executive Crisis Dashboard (Unified Cockpit V3 & SQLite)
+
+The repository includes a dedicated, self-contained real-time monitoring desk engineered for persistent display:
+`scripts/run_market_crisis_dashboard.py`
+
+```bash
+# Launch the real-time panoramic cockpit:
+py scripts/run_market_crisis_dashboard.py
+```
+
+### ⚡ Key Capabilities & Architecture:
+1. **100% Real-Time Data from Public APIs**:
+   - Live quotes for CBOE VIX (`^VIX`), CBOE SKEW (`^SKEW`), CBOE VVIX (`^VVIX`), Japanese Yen (`USDJPY=X`), US 10-Year Treasury Yield (`^TNX`), Corporate Credit Spreads (`HYG/LQD`), and US Total Public Debt ($40.39T).
+2. **Unified Panoramic Layout (No Tabs)**:
+   - Single-screen cockpit displaying the Calibrated Stress Gauge (48% / 52%), the 3 Mathematical Scenarios, 6 Real-time Velocimeters, 4 Time-series Charts, the AI Stock Radar, and SQLite stats.
+3. **5-Day Real Historical Data Pre-Loaded**:
+   - Charts are immediately populated on startup with 45–68 real hourly points from Yahoo Finance; e.g. VIX, Yen, Credit ratio, and Treasury yield curves are fully drawn from second one.
+4. **Mathematical Approximation of the 3 Crash Scenarios**:
+   - **Scenario 1 (Multiple Compression)**: Base 42% + dynamic sensitivity to 10Y yields and Nasdaq momentum.
+   - **Scenario 2 (Credit Dislocation & Grid Shock)**: Base 40% + sensitivity to HYG/LQD credit spreads and VIX > 20.
+   - **Scenario 3 (Global Systemic Multi-Contagion)**: Base 18% + sensitivity to Yen carry trade rupture (USD/JPY < 152) and tail risk skew.
+   - **Soft Landing (Productive Absorption)**: 100% - Overall Stress (Base 52%).
+5. **AI & Energy Company Radar (10 Key Entities)**:
+   - Silicon: NVIDIA (`NVDA`), TSMC (`TSM`), Broadcom (`AVGO`).
+   - Hyperscalers: Microsoft (`MSFT`), Alphabet (`GOOGL`), Amazon (`AMZN`), Meta (`META`), Oracle (`ORCL`).
+   - Power Grid Bottlenecks: Constellation Energy (`CEG`), Vistra Corp (`VST`).
+   - Interactive 52-week visual range bars showing current valuation relative to annual highs and lows.
+6. **Embedded Local Database (SQLite)**:
+   - All historical ticks, scenario calculations, company snapshots, and alert events are persisted into `data/crisis_dashboard.db`.
+7. **Emergency Crisis Sirens**:
+   - Dual-tone Web Audio API warning siren (880 Hz / 587 Hz) pulsing in browser upon critical trigger violation, accompanied by a Windows hardware sound fallback (`winsound.Beep`).
+8. **Zero Socket Conflict**:
+   - Automatic port fallback (5050 to 5070) with `allow_reuse_address` preventing any port collision.
+
+---
+
+## 8. Automated Data Pipeline & Updating via Antigravity Skills
 
 The repository includes a dedicated Antigravity Workspace Skill located at:
 `[.agents/skills/ai-market-risk-updater/](.agents/skills/ai-market-risk-updater/)`
@@ -314,7 +351,7 @@ The skill automatically loads:
 
 ---
 
-## 8. Technical Reproduction & Execution
+## 9. Technical Reproduction & Execution
 
 ```bash
 # Clone the repository
@@ -327,13 +364,16 @@ pip install reportlab matplotlib numpy pandas geopandas shapely pymupdf
 # Reproduce all 49 charts (EN & PT), compile all 20 PDF reports (126 pages), and generate 126 page previews:
 python scripts/build_all_reports.py
 
+# Launch the live panoramic crisis monitoring dashboard:
+python scripts/run_market_crisis_dashboard.py
+
 # Validate full repository integrity:
 python .agents/skills/ai-market-risk-updater/scripts/validate_models.py
 ```
 
 ---
 
-## 9. Master References, Primary Sources & Live Link Audit
+## 10. Master References, Primary Sources & Live Link Audit
 
 The repository features a dedicated, institutional-grade references directory located at:
 [`references/`](references/)
@@ -505,7 +545,43 @@ All executive reports are available in full institutional-grade PDF format (126 
 
 ---
 
-## 5. Pipeline Automatizado de Dados e Atualização Futura
+## 5. Cockpit Executivo em Tempo Real (Dashboard V3 Unificada & SQLite)
+
+O repositório disponibiliza um painel operacional em tempo real autônomo, desenhado para monitoramento contínuo em tela única:
+`scripts/run_market_crisis_dashboard.py`
+
+```bash
+# Iniciar o cockpit panorâmico em tempo real:
+py scripts/run_market_crisis_dashboard.py
+```
+
+### ⚡ Destaques de Arquitetura e Funcionalidades:
+1. **Dados 100% Reais de APIs Públicas Oficiais**:
+   - Cotações ao vivo de VIX (`^VIX`), SKEW (`^SKEW`), VVIX (`^VVIX`), Iene (`USDJPY=X`), Rendimento de 10 Anos dos EUA (`^TNX`), Spreads de Crédito (`HYG/LQD`) e Dívida Soberana dos EUA ($40,39T).
+2. **Layout Panorâmico Unificado (Sem Abas)**:
+   - Cockpit em tela única integrando Gauge de Risco Calibrado (48% / 52%), Decomposição Matemática dos 3 Cenários, 6 Velocímetros, 4 Gráficos com Histórico de 5 Dias, Tabela de Ações e Estatísticas do SQLite.
+3. **Séries Históricas de 5 Dias Pré-Carregadas**:
+   - Os gráficos abrem instantaneamente preenchidos com 45–68 pontos horários reais da Yahoo Finance (sem telas vazias de 0 a 1,0).
+4. **Aproximação Matemática dos 3 Cenários de Quebra**:
+   - **Cenário 1 (Compressão de Múltiplos)**: Base 42% + sensibilidade a juros de 10A e momento de Nasdaq.
+   - **Cenário 2 (Deslocamento de Crédito e Gargalo Elétrico)**: Base 40% + sensibilidade a spreads HYG/LQD e VIX > 20.
+   - **Cenário 3 (Multi-Contágio Sistêmico Global)**: Base 18% + sensibilidade ao desmonte do Iene (USD/JPY < 152) e demanda por puts de cauda (SKEW).
+   - **Soft Landing (Absorção Produtiva)**: Base 52% (Margem de segurança orgânica).
+5. **Radar de Ações de IA, Hiperscalers e Energia (10 Empresas)**:
+   - Semicondutores: NVIDIA (`NVDA`), TSMC (`TSM`), Broadcom (`AVGO`).
+   - Hiperscalers: Microsoft (`MSFT`), Alphabet (`GOOGL`), Amazon (`AMZN`), Meta (`META`), Oracle (`ORCL`).
+   - Gargalo Elétrico & Nuclear: Constellation Energy (`CEG`), Vistra Corp (`VST`).
+   - Barras visuais de amplitude de 52 semanas indicando o posicionamento atual em relação a máximas e mínimas anuais.
+6. **Banco de Dados Local SQLite Embutido**:
+   - Persistência contínua de ticks, probabilidades de cenários e registros de auditoria em `data/crisis_dashboard.db`.
+7. **Sirene de Crise Integrada**:
+   - Alerta sonoro de dois tons (880 Hz / 587 Hz) gerado via Web Audio API no navegador ao cruzar gatilhos críticos, com suporte a bipe de console no Windows (`winsound.Beep`).
+8. **Alocação Dinâmica de Porta**:
+   - Detecção automática de portas livres (5050 a 5070), impedindo conflitos de soquete (`WinError 10048`).
+
+---
+
+## 6. Pipeline Automatizado de Dados e Atualização Futura
 
 Para atualizar o observatório de mercado no futuro de forma rápida, reprodutível e orientada a dados, o repositório disponibiliza um pipeline numérico em Python integrado à skill do Antigravity:
 
@@ -531,7 +607,7 @@ Ao solicitar uma nova atualização de relatório:
 
 ---
 
-## 6. Diretório de Referências, Fontes Primárias e Auditoria de Links
+## 7. Diretório de Referências, Fontes Primárias e Auditoria de Links
 
 O repositório mantém uma pasta institucional dedicada com todas as fontes, links, notícias e metodologias catalogadas e testadas:
 [`references/`](references/)
@@ -547,7 +623,7 @@ O repositório mantém uma pasta institucional dedicada com todas as fontes, lin
 
 ---
 
-## 7. Licença e Aviso Legal (Disclaimer)
+## 8. Licença e Aviso Legal (Disclaimer)
 
 **Licença**: Este projeto é disponibilizado sob a licença **GNU General Public License v3.0 (GPL-3.0)**. Consulte o arquivo [LICENSE](LICENSE) para termos integrais.
 

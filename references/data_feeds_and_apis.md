@@ -89,3 +89,20 @@ This technical manual documents the specific API endpoints, ticker symbols, seri
 | **CBOE SKEW Index** | CBOE (`cboe.com`) | Slope of the implied vol smile; tail risk indicator ($SKEW = 100 - 10 \times S$). | **SKEW > 145.0**: Elevated institutional demand for extreme downside Black Swan tail puts. |
 | **VIX Term Structure (M1 vs M3)** | CBOE Futures (`cfe.cboe.com`) | Spread between spot/1st month future vs 3rd month future. | **Spot > M3 (Backwardation > +5 pts)**: Acute margin crisis and severe collateral squeeze. |
 
+---
+
+## 6. Real-Time Interactive Streaming Layer (`scripts/run_market_crisis_dashboard.py`)
+
+* **Execution**: `py scripts/run_market_crisis_dashboard.py`
+* **Local Web Interface**: `http://localhost:5050` (with dynamic fallback up to port 5070)
+* **Embedded Local Database**: `data/crisis_dashboard.db` (SQLite3)
+  * `market_ticks`: High-frequency quotes, 1h velocity, and 52-week ranges.
+  * `scenario_history`: Dynamic multi-factor crash probabilities ($S_1$, $S_2$, $S_3$, Soft Landing).
+  * `company_snapshots`: Live corporate valuations (NVDA, TSM, AVGO, MSFT, GOOGL, AMZN, META, ORCL, CEG, VST).
+  * `alert_events`: Persistent chronological audit trail of all triggered crisis alarms.
+* **REST API Endpoints**:
+  * `GET /`: Serves the unified panoramic single-page trading terminal.
+  * `GET /api/state`: JSON snapshot of live metrics, 5-day historical chart series, active triggers, and scenario probabilities.
+  * `GET /api/db-stats`: Real-time query counts and SQLite database storage statistics.
+  * `GET /api/test-alert`: Operator trigger simulation for Web Audio API sirens.
+
